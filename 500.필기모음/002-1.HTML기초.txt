@@ -1,0 +1,12 @@
+[ HTML 기초 ]
+
+1. HTML은 Hyper Text Markup Language를 나타냅니다.
+
+: 하이퍼텍스트(Hyper Text)란?
+- 순서가 없는 정보를 담고 있는 텍스트
+
+: 마크업(Markup) 이란?
+- 정보를 구조화하여 순서대로 웹 페이지에 띄우는것
+
+-> Hyper Text Markup Language란?
+
