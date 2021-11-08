@@ -9,10 +9,10 @@ https://www.w3schools.com/
 
 4. 소스 빌드용 폴더 생성하기
 
-5. 강의 동영상 백업 유튜브: 코드제로원
+5. 강의 동영상 백업 유튜브: 코드제로원 시즌2
 
 6. 소스깃허브
-https://github.com/tombap8/KNG-FED211
+https://github.com/tombap8/KITA-FED212
 
 7. 사이트 벤치마킹 포털
 (1) 디비컷
