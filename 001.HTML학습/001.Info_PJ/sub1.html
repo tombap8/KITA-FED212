@@ -5,16 +5,16 @@
     <meta charset="utf-8">
     <title>네이버 요약뉴스 - 정치</title>
     <!-- style요소 : 스타일 시트 영역 태그 -->
+    <!-- [ 인터널방식의 CSS ] -->
     <style>
+        /* css주석 */
         /* 
-                css주석
+            CSS형식
 
-                CSS형식
-
-                요소명{
-                    속성명:값;
-                }
-            */
+            요소명{
+                속성명:값;
+            }
+        */
         .wrap {
             width: 727px;
             margin: 0 auto;
@@ -25,6 +25,39 @@
         .tac {
             text-align: center;
         }
+
+
+        /* 1. 타입선택자(요소명) */
+        address{
+            font-style: normal;
+            /* 글자스타일 */
+            color: green;
+            /* 글자색 */
+            font-size: 14px;
+            /* 글자크기 */
+            line-height: 20px;
+            /* 줄간격 */
+        }
+
+        /* 2. 자손선택자(띄어쓰기) */
+        header a{
+            color: #ff0b7d;
+            /* 글자색 */
+            text-decoration: none;
+            /* 밑줄없앰 */
+        }
+        /* 3. 직계자식선택자(>) */
+        main>a{
+            color: yellow;
+            /* 글자색 */
+            text-decoration: none;
+            /* 밑줄없앰 */
+            font-size: 20px;
+            /* 글자크기 */
+            text-shadow: 1px 1px 1px #000;
+            /* 글자그림자: x y blur 색 */
+        }
+
     </style>
 </head>
 
@@ -38,7 +71,9 @@
             <nav>
                 <a href="index.html">
                     <img src="./images/naver.png" alt="네이버로고" style="width: 20px;">
-                    <!-- style속성: css셋팅값적용 -->
+                    <!-- 
+                        [ 인라인방식의 CSS ]
+                        style속성: css셋팅값적용 -->
                 </a>
                 <a href="sub1.html">정치</a> |
                 <a href="sub2.html">경제</a> |
@@ -95,8 +130,10 @@
             #이재명 #더불어<i>민주당</i> #<i>민주당</i> #김혜경 #대선후보 #일정취소
             김나경 기자 (dearname@fnnews.com)
 
+            <br><br>
             <!-- 원본기사 -->
-            https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=100&oid=014&aid=0004736544
+            <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=100&oid=014&aid=0004736544" target="_blank">원본기사</a>
+            
 
             <h3>더불어 민주당</h3>
             <blockquote cite="https://namu.wiki/w/더불어민주당">
