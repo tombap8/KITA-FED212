@@ -58,6 +58,30 @@
             /* 글자그림자: x y blur 색 */
         }
 
+        main>p>q{
+            color: green;
+            background-color: pink;
+        }
+
+        /* 4. 아이디 선택자(#) */
+        #logo{
+            vertical-align: 2px;
+            /* 인라인요소간 세로정렬 */
+            margin-right: 3px;
+            /* 오른쪽마진 */
+        }
+
+        /* 5. 클래스 선택자(.) */
+        .tit{
+            font-family: "궁서체";
+            /* 글씨체 */
+            letter-spacing: -3px;
+            /* 자간 */
+            word-spacing: -2px;
+            /* 단어사이 */
+            white-space: nowrap;
+            /* 줄바꿈 금지 */
+        }
     </style>
 </head>
 
@@ -70,7 +94,7 @@
             <!-- 1.2.메뉴 -->
             <nav>
                 <a href="index.html">
-                    <img src="./images/naver.png" alt="네이버로고" style="width: 20px;">
+                    <img src="./images/naver.png" alt="네이버로고" style="width: 20px;" id="logo">
                     <!-- 
                         [ 인라인방식의 CSS ]
                         style속성: css셋팅값적용 -->
