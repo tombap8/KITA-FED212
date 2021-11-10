@@ -45,3 +45,23 @@ header a {
     text-decoration: none;
     /* 밑줄없앰 */
 }
+
+/* 4. 아이디 선택자(#) */
+#logo {
+    vertical-align: -4px;
+    /* 인라인요소간 세로정렬 */
+    margin-right: 3px;
+    /* 오른쪽마진 */
+}
+
+/* 5. 클래스 선택자(.) */
+.tit {
+    font-family: "궁서체";
+    /* 글씨체 */
+    letter-spacing: -3px;
+    /* 자간 */
+    word-spacing: -2px;
+    /* 단어사이 */
+    white-space: nowrap;
+    /* 줄바꿈 금지 */
+}
