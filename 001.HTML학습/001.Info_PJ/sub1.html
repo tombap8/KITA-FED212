@@ -26,6 +26,19 @@
             text-align: center;
         }
 
+        /* 배경색 class */
+        .bgc{
+            background-color: #e9e9e9;
+            padding: 10px 0;
+            /* 안쪽여백: 위아래 양쪽 */
+        }
+
+        /* 큰제목 */
+        h1#mtit{
+            color: #0c9400;
+            text-shadow: 2px 2px 2px #888;
+        }
+
 
         /* 1. 타입선택자(요소명) */
         address {
@@ -108,15 +121,59 @@
         ol.list{
             background-color: lightgreen;
         }
+
+        /* 8.속성선택자([]) */
+        /* 
+            속성선택시 이퀄을 쓰는 방법
+            1. = 정확히 같은 값을 찾음
+            2. ^= 시작하는 문자를 찾음(웃으면서 시작!)
+            3. $= 끝나는문자(돈받고 끝나라!)
+            4. *= 모두찾음(별은 하늘에 모두봄!)
+        */
+        [alt="스크림"]{
+            border: 20px ridge goldenrod;
+        }
+        /* ^= 시작하는문자 */
+        [href^="http"]{
+            background-color: lime;
+        }
+        /* $= 끝나는문자 */
+        [href$="RANKING"]{
+            color: orangered;
+            font-weight: bold;
+        }
+        /* *= 있기만하면 모두 찾음 */
+        /* ::after 가상요소(맨뒤) */
+        [href*="news"]::after{
+            content: '★';
+        }
+
+        /* 9. 형제 선택자(+) */
+        /* ::before 가상요소(맨앞) */
+        li+li::before{/* 앞에 li형제가 있는 li요소를 선택 */
+            content: '♥';
+        }
+
+        /* 10. 다중형제선택자(~틸드) */
+        .tt~p{/* 클래스가 tt인요소 뒤의 p형제요소 모두를 선택 */
+            background-color: lightpink;
+        }
+
+        /* 테이블 첫번째 tr의 첫번째 td에 width 주기 */
+        .wd{
+            width: 250px;
+        }
+
+
     </style>
 </head>
 
 <body>
     <div class="wrap">
         <!-- 1. 상단영역 -->
-        <header class="tac">
+        <header class="tac bgc">
             <!-- 1.1.제목 -->
-            <h1>네이버 요약 뉴스 - 정치</h1>
+            <h1 id="mtit">네이버 요약 뉴스 - 정치</h1>
             <!-- 1.2.메뉴 -->
             <nav>
                 <a href="index.html">
@@ -171,7 +228,7 @@
 
             <p>김 전 비서관은 이어 "크게 다치신 것은 아니고 낙상 원인은 알려지지 않았다"면서 "과로와 스트레스로 인한 것이 아닌가 보고 있다"고 설명했다.</p>
 
-            <p>선대위에서 김혜경씨 비서실장을 맡고 있는 이해식 의원은 기자들과 만나 "좀 다치셨는데 병원에 입원했고 후보가 병원에 가서 간호를 하는 상황으로 들었다"고 했다.</p>
+            <p class="tt">선대위에서 김혜경씨 비서실장을 맡고 있는 이해식 의원은 기자들과 만나 "좀 다치셨는데 병원에 입원했고 후보가 병원에 가서 간호를 하는 상황으로 들었다"고 했다.</p>
 
             <p>입원할 정도로 부상이 큰 것인지 묻자 이 의원은 "그렇게 듣고 있다"면서, 계단이나 빗길에서 넘어졌는지 여부 등 사고 경위에 대해서는 "어디서 다쳤는지, 이유를 잘 모르겠다"고 했다.
                 <del>어떻게 다친걸 모를 수 있지?</del>
@@ -305,7 +362,7 @@
             <h3>언론사별 가장 많이 본 뉴스</h3>
             <table>
                 <tr>
-                    <td>
+                    <td class="wd">
                         <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=469&aid=0000640165&rankingType=RANKING" target="_blank">
                             靑 "요소수, 비료인 줄"... '요소수 대란'은 정부 부 …
                         </a>
@@ -345,7 +402,7 @@
         </main>
         <hr>
         <!-- 3. 하단영역 -->
-        <footer class="tac">
+        <footer class="tac bgc">
             <address>
                 서울시 강남구 대호빌딩 8층 <br>
                 대표: Tom Brace Parker <br>
