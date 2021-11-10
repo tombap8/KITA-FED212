@@ -46,6 +46,18 @@ header a {
     /* 밑줄없앰 */
 }
 
+/* 3. 직계자식선택자(>) */
+main>a {
+    color: yellow;
+    /* 글자색 */
+    text-decoration: none;
+    /* 밑줄없앰 */
+    font-size: 20px;
+    /* 글자크기 */
+    text-shadow: 1px 1px 1px #000;
+    /* 글자그림자: x y blur 색 */
+}
+
 /* 4. 아이디 선택자(#) */
 #logo {
     vertical-align: -4px;
