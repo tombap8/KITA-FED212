@@ -57,8 +57,14 @@
     /* 안쪽여백 */
 }
 /* 드라마제목 */
-.drama a {
+/* 선택시 직계자식선택할 경우 정확한 경로를 모두 써야함
+단, 테이블에서 tbody는 코딩하지 않아도 기본적으로 생긴다! */
+.drama > tbody > tr > td > a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
+}
+/* 제목 마우스 오버시 */
+.drama a:hover {
+    color: #f00;
 }
