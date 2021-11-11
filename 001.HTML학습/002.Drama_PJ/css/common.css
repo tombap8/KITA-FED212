@@ -53,9 +53,31 @@
     /* 글자크기 : 기본글자크기는 16px */
     line-height: 2;
     /* 줄간격: 숫자는 글자크기를 기준한 배수(px등 단위사용가능) */
+    letter-spacing: -1px;
+    /* 자간 */
     padding: 5px;
     /* 안쪽여백 */
 }
+
+/* 테이블 데이터별 가로크기 지정하기 */
+/* 
+    가상클래스
+    :nth-child(순번) 같은종류의 요소 중 몇번째 자식
+    -> 순번에 even을 쓰면 짝수, odd를 쓰면 홀수번째 선택
+*/
+/* 홀수번째 td */
+.drama td:nth-child(odd){
+    width: 20%;
+    /* background-color: #f00; */
+}
+/* 짝수번째 td */
+.drama td:nth-child(even){
+    width: 30%;
+    /* background-color: #ff0; */
+}
+
+
+
 /* 드라마제목 */
 /* 선택시 직계자식선택할 경우 정확한 경로를 모두 써야함
 단, 테이블에서 tbody는 코딩하지 않아도 기본적으로 생긴다! */
