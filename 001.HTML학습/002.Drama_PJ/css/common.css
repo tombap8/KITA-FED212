@@ -67,4 +67,13 @@
 /* 제목 마우스 오버시 */
 .drama a:hover {
     color: #f00;
+    /* 글자색 */
+    text-decoration: underline;
+    /* 밑줄 */
+}
+
+/* 포스터 이미지 */
+.drama img{
+    border-radius: 10px;
+    /* 둥근모서리 */
 }
