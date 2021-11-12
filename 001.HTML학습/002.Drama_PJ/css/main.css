@@ -1,13 +1,15 @@
 @charset "utf-8";
 /* 한국최신드라마 리스트 CSS - main.css */
 
-html,body{/* 콤마(,)는 그룹선택자 */
+html,
+body {
+    /* 콤마(,)는 그룹선택자 */
     margin: 0;
     padding: 0;
 }
 
 /* 테이블 공통 */
-.tbl{
+.tbl {
     font-family: "궁서체", "굴림";
     /* 글씨체 - 순서대로 있는 글씨체를 적용함! */
     color: #222;
@@ -18,7 +20,7 @@ html,body{/* 콤마(,)는 그룹선택자 */
 }
 
 /* 드라마 리스트 테이블 */
-#drama{
+#drama {
     font-size: 24px;
     /* 글자크기 - 기본값은 16px (단위: px,em,rem,%) */
     margin: 0 auto;
@@ -102,5 +104,28 @@ html,body{/* 콤마(,)는 그룹선택자 */
     /* 패딩: 위아래 양쪽 */
 }
 
+/* 구분 테이블 */
+table#gubun {
+    font-size: 20px;
+    /* 글자크기 */
+    border: 1px solid #999;
+    /* 보더 */
+}
 
+/* 구분 테이블 td */
+#gubun td {
+    padding: 10px;
+}
 
+/* 구분테이블 첫번째 tr의
+첫번째 td에 오른쪽 점선 보더주기 */
+#gubun tr:first-child td:first-child {
+    border-right: 1px dotted #999;
+}
+
+/* 구분테이블의 tr중 앞에 tr형제가 있는
+tr의 자식 td만 윗쪽 점선 보더 주기 */
+/* tr+tr 앞에 tr있는 형제 tr요소를 선택 */
+#gubun tr+tr td {
+    border-top: 1px dotted #999;
+}
