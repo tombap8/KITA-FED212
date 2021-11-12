@@ -39,3 +39,20 @@ html,body{/* 콤마(,)는 그룹선택자 */
     /* 여기서는 가로크기설정함! */
 }
 
+/* 테이블 제목 */
+#drama caption {
+    font-size: 35px;
+    /* 글자크기 */
+    font-weight: bold;
+    /* 글자두껍게 */
+    letter-spacing: 5px;
+    /* 글자간격(자간) */
+    word-spacing: 5px;
+    /* 단어사이간격 */
+    padding-top: 50px;
+    /* 위쪽패딩 */
+    padding-bottom: 20px;
+    /* 아래쪽패딩 */
+
+}
+
