@@ -94,4 +94,13 @@ html,body{/* 콤마(,)는 그룹선택자 */
     background-color: #f0f0f0;
 }
 
+/* 하단부분(tfoot) */
+#drama tfoot td {
+    text-align: center;
+    /* 텍스트 중앙정렬 */
+    padding: 45px 0;
+    /* 패딩: 위아래 양쪽 */
+}
+
+
 
