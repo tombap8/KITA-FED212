@@ -89,6 +89,9 @@ html,body{/* 콤마(,)는 그룹선택자 */
 
 /* 본문(tbody)의 짝수번째 tr의 td
 배경색 넣기 */
-
+/* 짝수는 even, 홀수는 odd */
+#drama tbody tr:nth-child(even) td {
+    background-color: #f0f0f0;
+}
 
 
