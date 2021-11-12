@@ -6,3 +6,14 @@ html,body{/* 콤마(,)는 그룹선택자 */
     padding: 0;
 }
 
+/* 테이블 공통 */
+.tbl{
+    font-family: "궁서체", "굴림";
+    /* 글씨체 - 순서대로 있는 글씨체를 적용함! */
+    color: #222;
+    /* 글자색 */
+    border-collapse: collapse;
+    /* 기본값이 seperate이고 테이블 td의 사이 간극이 존재함!
+    이것을 없애는 설정값이 collapse! */
+}
+
