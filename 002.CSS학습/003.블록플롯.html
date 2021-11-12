@@ -161,11 +161,25 @@
     <h1>003.블록요소의 float</h1>
     
     <h2>경우1</h2>
+    <h3>첫번째 float:left, 두번째 float:right, 세번째 clear:both</h3>
     <div class="wrap">
-        <div class="bx bx1"></div>
-        <div class="bx bx2"></div>
-        <div class="bx bx3"></div>
+        <div class="bx bx1 fll"></div>
+        <div class="bx bx2 flr"></div>
+        <div class="bx bx3 clb"></div>
         <div class="bx bx4"></div>
+    </div>
+
+    <h2>경우2</h2>
+    <h3>첫번째 float:left, 두번째 float:right, 
+        세번째 clear:both + float:left, 네번째 float:right</h3>
+    <div class="wrap">
+        <div class="bx bx1 fll"></div>
+        <div class="bx bx2 flr"></div>
+        <div class="bx bx3 clb fll"></div>
+        <div class="bx bx4 flr"></div>
+        
+        <!-- clear를 위한 block박스 -->
+        <div class="clb"></div>
     </div>
     
 </body>
