@@ -32,6 +32,14 @@ body{
 }
 
 /****************** 1.상단영역 *********************/
+.top {
+    min-height: 123px;
+    /* 최소높이 123px보다 내용이 많아지면 늘어남! */
+    background-color: #fff;
+    padding-top: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
 
 /****************** 2.컨텐츠영역 *********************/
 /* 2-1. 캐릭터박스 */
@@ -80,7 +88,7 @@ body{
 }
 /* 캐릭터박스에 오버시 마진탑 변경하기 */
 .cat:hover {
-    margin-top: -9%;
+    margin-top: -13%;
 }
 
 /* 캐릭터 이미지 */
@@ -126,6 +134,7 @@ body{
     background: url(../images/eachBG.jpg) no-repeat center/cover;
     border-radius: 20px 0 0 20px;
     /* 둥근모서리: 왼위 오른위 오른아래 왼아래 (시계방향) */
+    margin-top: 15px;
 
     /* 트랜지션: 속시이지 */
     transition: height .6s ease-out;
