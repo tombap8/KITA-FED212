@@ -53,6 +53,13 @@ body{
     /* 나는 왼쪽있고 아래쪽요소는 오른쪽으로 흘러가라! */
 
     /* outline: 5px dashed red; */
+
+    /* 트랜지션: 속시이지 */
+    transition: margin-top .6s ease-out;
+}
+/* 캐릭터박스에 오버시 마진탑 변경하기 */
+.cat:hover {
+    margin-top: -9%;
 }
 
 /* 캐릭터 이미지 */
@@ -96,8 +103,11 @@ body{
     overflow-y: scroll;
     /* y축 스크롤만 생겨서 넘치는 자식요소 보이기 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .6s ease-out;
 }
-/* .cat에 오버시 */
+/* .cat에 오버시 설명박스 */
 .cat:hover .cd {
     height: 250px;
 }
