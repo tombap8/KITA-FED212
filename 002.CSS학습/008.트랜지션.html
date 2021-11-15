@@ -68,7 +68,14 @@
             
 
             /* #tr1에 트랜지션 설정 */
-            
+            #tr1 span{
+                transition: 2s;
+                /* 앞에 속성을 생략하면 all과 같다! */
+            }
+            #tr1:hover span {
+                left: 50%;
+                background-color: red;
+            }
 
             /* #tr2에 트랜지션 설정 */
            
