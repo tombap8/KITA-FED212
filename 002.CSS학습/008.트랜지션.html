@@ -78,10 +78,15 @@
             }
 
             /* #tr2에 트랜지션 설정 */
+            #tr2 span{
+                left: -40%;
+                background-color: orange;
+                /* 원본에 트랜지션 없음! */
+            }
             #tr2:hover span {
                 left: 70%;
                 background-color: lime;
-                transition: all 3s;
+                transition: all 3s;/* 트랜지션! */
             }
            
             /* #tr3에 트랜지션 설정 */
