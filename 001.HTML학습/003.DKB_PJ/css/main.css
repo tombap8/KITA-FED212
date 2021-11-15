@@ -49,10 +49,36 @@ body{
     outline: 5px dashed red;
 }
 
-.cat img{
+/* 캐릭터 이미지 */
+.ci > img{ /* 직계자식(>)이미지만 선택! */
     width: 100%;
+    /* 이미지의 height는 자동(비율유지) */
 }
 
+/* 캐릭터 이름 */
+.ci span{
+    display: block;
+    /* 블록으로 변경! */
+    text-align: center;
+    /* 내용 인라인요소 가로중앙 */
+}
+/* 캐릭터 이름 이미지 */
+.ci span img {
+    width: 40%;
+}
+/* 캐릭터 이름 첫번째 이미지 숨기기 */
+.ci span img:first-child {
+    display: none;
+}
+/* .cat박스에 마우스 오버시 */
+/* 캐릭터 이름 첫번째 이미지 보이기 */
+.cat:hover .ci span img:first-child{
+    display: inline;
+}
+/* 캐릭터 이름 마지막 이미지 숨기기 */
+.cat:hover .ci span img:last-child{
+    display: none;
+}
 
 
 /****************** 3.하단영역 *********************/
