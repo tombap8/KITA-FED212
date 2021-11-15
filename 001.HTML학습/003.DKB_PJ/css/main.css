@@ -20,6 +20,16 @@ body{
     /* 전체 스크롤바 크기변경 */
     width: 7px;
 }
+.scbar::-webkit-scrollbar-thumb {
+    /* 스크롤바 */
+    background-color: #666;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-track {
+    /* 스크롤바 트랙 */
+    background-color: #ddd;
+    border-radius: 5px;
+}
 
 /****************** 1.상단영역 *********************/
 
@@ -53,6 +63,10 @@ body{
 .cat{
     width: 25%;/* 4등분 */
     /* height: 100%; */
+
+    padding: 10px;
+    box-sizing: border-box;
+    /* 패딩때문에 박스가 커지지 않게 패딩을 내부로 포함! */
 
     /* block박스는 옆에 다른요소가 못오므로
     float속성으로 옆으로 흘러가게 해준다! */
@@ -110,6 +124,8 @@ body{
     overflow-y: scroll;
     /* y축 스크롤만 생겨서 넘치는 자식요소 보이기 */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
+    border-radius: 20px 0 0 20px;
+    /* 둥근모서리: 왼위 오른위 오른아래 왼아래 (시계방향) */
 
     /* 트랜지션: 속시이지 */
     transition: height .6s ease-out;
