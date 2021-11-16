@@ -18,6 +18,8 @@
 
         #a1 {
             position: absolute;
+            top: 0;
+            left: 0;
             /* 
                 [ 3. absolute 포지션 ]
 
@@ -37,11 +39,16 @@
                  - 위치이동값을 사용한 부분에 대해서만!!!!
                  앱솔루트가 위치를 잡을때 부모요소는?????
                  static이 아닌 싸고 있는 요소가 부모다!!!
+
                  -> static이 아닌 포지션이란?
                  relative / absolute / fixed
 
                  -> 위치이동값을 쓰지 않는 부분은 젠틀하다!
-                 
+
+                 -> 부모자격이 있는 부모요소들 중 가장 가까운것이
+                 부모가 된다!
+
+
                  
                  - 앱솔루트끼리는 서롭 겹쳐진다
 
@@ -74,6 +81,25 @@
             background-color: yellow;
         }
 
+        /* 부모찾는 앱솔루트 */
+        .bx{
+            width: auto;
+            height: auto;
+            padding: 50px;
+        }
+
+        .s5{
+            position: relative;
+        }
+        .s6{
+            position: relative;
+        }
+        .s7{
+            position: relative;
+        }
+        .s8{
+            position: relative;
+        }
 
 
     </style>
@@ -84,6 +110,19 @@
     <div id="a1">a1</div>
     <div id="r2">r2</div>
     <div id="s3">s3</div>
+
+    <!-- 부모를 찾는 absolute요소 -->
+    <div class="bx s5">s5
+        <div class="bx s6">s6
+            <div class="bx s7">s7
+                <div class="bx s8">s8
+                    <div class="a2">a2</div>
+                    <div class="a3">a3</div>
+                    <span class="sa">나는 span앱솔루트다!</span>
+                </div>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
