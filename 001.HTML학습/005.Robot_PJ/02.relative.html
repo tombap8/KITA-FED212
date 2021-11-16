@@ -52,6 +52,8 @@
                     위아래 관계가 성립된다!
                     기본적인 위아래 관계는 아래와 같다!
                     1) static보다 항상 위
+                    -> static보다 아래로 내려가는 방법은?
+                        z-index를 음수값으로 준다!
                     2) static이 아닌 포지션인 경우
                         나중에 그려진 요소가 위
                         (손 놓고 손등때리기!)
@@ -72,12 +74,21 @@
                     -> 결론적으로 포지션이 있는 경우에만 z-index를
                     사용할 수 있다!!!
 
+                    - 유의사항!!!
+                    -> z-index 비교시에 같은 형제레벨에 
+                    있어야 비교가 된다!!!
+                    만약 자손요소의 z-index를 아무리 높이 줘도
+                    부모요소의 다른 형제요소가 z-index가 높다면
+                    결과 위로 올라갈 수 없다!
+
 
 
 
             */
             top: 50px;
             left: 50px;
+            z-index: 1;
+            /* 1만줘도 올라감! */
 
             background-color: red;
         }
@@ -85,6 +96,9 @@
             position: relative;
             bottom: 75px;
             right: -86px;
+            z-index: -1;
+            /* static보다 아래! 마이너스값! */
+
             background-color: skyblue;
         }
         #s2{
