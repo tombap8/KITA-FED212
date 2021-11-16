@@ -18,7 +18,11 @@
 
         #f1{
             position: fixed;
-
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff0;
+            z-index: 999;
             /* 
                 [ 4. fixed 포지션 ]
 
@@ -51,6 +55,16 @@
             
 
             */
+        }
+
+        #f2{
+            position: fixed;
+            bottom: 0;
+            /* 보이는 화면 아랫선기준! */
+            left: 0;
+            width: 100%;
+            background-color: lightgreen;
+            z-index: 100;
         }
 
         #a1 {
@@ -103,10 +117,11 @@
         }
 
         .a2{
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
-            /* 나의 부모는 누구인가? */
+            /* fixed로 바꾸면 보이는 화면이 부모다! */
+            z-index: 999999;
 
             width: auto;
             height: auto;
