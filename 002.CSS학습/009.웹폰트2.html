@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>웹폰트 CDN방식으로 적용하기</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Special+Elite&display=swap" rel="stylesheet">
+    <!-- 
+        링크방식으로 head태그 영역에서 호출함!
+        font-family: 'Orbitron', sans-serif;
+        font-family: 'Special Elite', cursive;
+     -->
     <style>
-       
-
         /* 
             [ CDN 방식으로 웹폰트 불러오기 ]
             - Content Delivery Network
@@ -42,23 +45,32 @@
             
              */
         /* import방식 CDN 웹폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yellowtail&display=swap');
 
+        /* 
+            font-family: 'Press Start 2P', cursive;
+            font-family: 'Yellowtail', cursive;
+        */
 
 
         /* CDN 웹폰트 적용하기 */
         .cdn1 {
+            font-family: 'Orbitron', sans-serif;
             color: darkviolet;
         }
 
         .cdn2 {
+            font-family: 'Special Elite', cursive;
             color: darkgreen;
         }
 
         .cdn3 {
+            font-family: 'Press Start 2P', cursive;
             color: darkred;
         }
 
         .cdn4 {
+            font-family: 'Yellowtail', cursive;
             color: darkcyan;
         }
     </style>
