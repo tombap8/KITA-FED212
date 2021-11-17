@@ -138,6 +138,9 @@ h1.logo {
     position: absolute;
     /* 젠틀앱솔루트! */
 
+    /* 서브메뉴 숨기기 */
+    height: 0;
+    overflow: hidden;
 }
 
 .smenu li {
