@@ -104,6 +104,10 @@ h1.logo{
     font-size: 13px;
     line-height: 54px;
 }
+/* 상위메뉴 a요소에 오버시 보더로 밑줄만들기 */
+.gnb>ul>li>a:hover {
+    border-bottom: 4px solid red;
+}
 
 
 /****************** 2.컨텐츠영역 *********************/
