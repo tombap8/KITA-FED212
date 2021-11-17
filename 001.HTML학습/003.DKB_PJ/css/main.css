@@ -238,7 +238,7 @@ h1.logo {
     -> 가로크기에 따라 위치가 들쑥날쑥해서 사용안함!*/
 
 
-    outline: 10px dotted blue;
+    /* outline: 10px dotted blue; */
     /* outline: 두께 종류 색상;
     외곽선 - 다른요소에 영향없이 외곽선을 표시함
     박스모델의 필수 요소가 아니다!
