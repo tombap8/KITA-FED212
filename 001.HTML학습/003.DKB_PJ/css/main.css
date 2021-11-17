@@ -198,6 +198,9 @@ h1.logo {
     height: 0;
     /* 각각의 li마다 오버시 높이값 다름! */
     background-color: #fff;
+    /* 상단영역 하단보더 1px 보이게 하기위해 
+    마진탑으로 1px 아래로 밀기! (top으로 밀지말자!) */
+    margin-top: 1px;
 
     /* 트랜지션: 속시이지 */
     transition: height .4s ease-out;
