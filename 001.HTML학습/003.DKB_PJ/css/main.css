@@ -94,6 +94,11 @@ h1.logo{
     display: block;
     /* 높이값 적용위해 */
     height: 54px;
+
+    /* a요소 기본설정 변경하기! */
+    color: #000;
+    text-decoration: none;
+
     font-family: 'Nanum Gothic', sans-serif;
     /* 웹폰트 - 나눔고딕체 적용! */
     font-size: 13px;
