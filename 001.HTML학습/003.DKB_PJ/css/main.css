@@ -179,6 +179,14 @@ h1.logo {
     height: 60px;
 }
 
+/* 상위메뉴 li에 마우스 오버시 서브메뉴 배경가상요소
+아래쪽 보더 만들기 */
+.gnb>ul>li:nth-child(1):hover::after,
+.gnb>ul>li:nth-child(3):hover::after,
+.gnb>ul>li:nth-child(4):hover::after {
+    border-bottom: 2px solid red;
+}
+
 /* JS없이 가상요소로 서브메뉴 전체 배경 만들기! */
 .gnb>ul>li::after {
     content: '';
@@ -192,7 +200,7 @@ h1.logo {
     부모자격이란? static이 아닌 relative,absolute,fixed
     top방향은 설정하지 않았으므로 젠틀하다! 위있는 a요소
     존중해서 바로 아래부터 나옴! */
-    
+
     width: 100%;
     /* 무엇을 기준하여 100%인가? 
     부모자격이 있는 요소를 기준함! 여기서는 보이는 화면! */
