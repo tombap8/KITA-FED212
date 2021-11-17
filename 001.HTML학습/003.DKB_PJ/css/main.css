@@ -45,6 +45,20 @@ body{
     background-color: #fff;
     border-bottom: 1px solid #ccc;
 }
+/* 1-1.로고박스 */
+h1.logo{
+    margin: 0;
+    /* 마진탑이 부모박스 바깥쪽으로 나감(기본속성)
+    부모박스가 overflow:hidden 처리가 되면 자식 마진탑을
+    내부에 포함한다! 그런데 여기기서는 GNB서브메뉴 때문에
+    이 설정을 할 수 없다! (마진없애고 패딩으로 대신함!) */
+    padding-top: 20px;
+    text-align: center;/* 가로중앙 */
+}
+/* 로고이미지 가로크기조정(세로는 자동) */
+.logo img{
+    width: 100px;
+}
 
 
 /****************** 2.컨텐츠영역 *********************/
