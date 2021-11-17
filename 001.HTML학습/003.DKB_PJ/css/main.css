@@ -344,6 +344,7 @@ h1.logo {
 .cd h3 {
     font-family: 'Jua', sans-serif;
     font-size: 24px;
+    font-weight: normal;
     padding: 5px 10px 0px;
     /* 패딩: 위 양쪽 아래 */
 }
