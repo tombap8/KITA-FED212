@@ -128,8 +128,9 @@ h1.logo {
     보더박스 설정을 해준다! */
 }
 
-/* 상위메뉴 a요소에 오버시 보더로 밑줄만들기 */
-.gnb>ul>li>a:hover {
+/* 상위메뉴 li에 오버시 a요소에 보더로 밑줄만들기 */
+/* 어느요소에 :hover할 것인가? */
+.gnb>ul>li:hover>a {
     border-bottom: 4px solid red;
 }
 
