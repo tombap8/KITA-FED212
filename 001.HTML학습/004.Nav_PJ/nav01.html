@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>유형1.가로네비 서브별 드롭다운 세로형</title>
+    <style>
+        /* ul,ol 초기화셋팅 */
+        ul,
+        ol {
+            /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 가상요소 float해제 */
+        ul::after,
+        ol::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 리스트 옆으로 흐르게 */
+        li {
+            float: left;
+        }
+
+        /* GNB 메뉴 */
+        .gnb {
+            background-color: #0e7cc5;
+        }
+
+        .gnb>ul {
+            width: 800px;
+            margin: 0 auto;
+            /* 마영오! */
+        }
+        .gnb>ul>li{
+            width: 200px;
+            text-align: center;
+            outline: 2px dashed red;
+        }
+        /* a요소 - 글자색, 밑줄처리 */
+        .gnb>ul>li>a{
+            display: block;
+            /* 디자인적용위해 */
+            width: 200px;
+            height: 50px;
+
+            /* 글자색변경, 밑줄없앰 */
+            color: #fff;
+            text-decoration: none;
+
+            /* 글자세로 중앙은 줄간격을 사용
+            -> 높이값과 동일하게 셋팅하면 세로중앙위치함 */
+            line-height: 50px;
+
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>유형1.가로네비 서브별 드롭다운 세로형</h1>
+
+    <!-- GNB 네비게이션 박스 -->
+    <!-- GNB(Global Navigation Bar) -->
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">웹개발</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">프로필</a></li>
+        </ul>
+    </nav>
+
+
+
+</body>
+
+</html>
