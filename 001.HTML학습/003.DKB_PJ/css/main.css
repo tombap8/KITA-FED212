@@ -192,12 +192,15 @@ h1.logo {
     부모자격이란? static이 아닌 relative,absolute,fixed
     top방향은 설정하지 않았으므로 젠틀하다! 위있는 a요소
     존중해서 바로 아래부터 나옴! */
+    
     width: 100%;
     /* 무엇을 기준하여 100%인가? 
     부모자격이 있는 요소를 기준함! 여기서는 보이는 화면! */
+    
     height: 0;
     /* 각각의 li마다 오버시 높이값 다름! */
     background-color: #fff;
+
     /* 상단영역 하단보더 1px 보이게 하기위해 
     마진탑으로 1px 아래로 밀기! (top으로 밀지말자!) */
     margin-top: 1px;
