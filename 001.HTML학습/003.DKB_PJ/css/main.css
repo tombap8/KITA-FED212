@@ -141,6 +141,9 @@ h1.logo {
     /* 서브메뉴 숨기기 */
     height: 0;
     overflow: hidden;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .4s ease-out;
 }
 
 .smenu li {
@@ -153,6 +156,22 @@ h1.logo {
     line-height: 30px;
 }
 
+/* 상위메뉴 li에 마우스 오버시 서브메뉴 보이기 */
+/* 첫번째 상위메뉴 li - 메뉴개수 3개 
+-> 30px * 3 = 90px */
+.gnb>ul>li:nth-child(1):hover .smenu {
+    height: 90px;
+}
+/* 세번째 상위메뉴 li - 메뉴개수 4개 
+-> 40px * 3 = 120px */
+.gnb>ul>li:nth-child(3):hover .smenu {
+    height: 120px;
+}
+/* 네번째 상위메뉴 li - 메뉴개수 2개 
+-> 30px * 2 = 60px */
+.gnb>ul>li:nth-child(4):hover .smenu {
+    height: 60px;
+}
 
 /****************** 2.컨텐츠영역 *********************/
 /* 2-1. 캐릭터박스 */
