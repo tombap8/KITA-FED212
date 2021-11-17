@@ -144,6 +144,9 @@ h1.logo {
 
     /* 트랜지션: 속시이지 */
     transition: height .4s ease-out;
+
+    /* 배경가상요소 보다 위! 서브메뉴가 보이도록함! */
+    z-index: 1;
 }
 
 .smenu li {
@@ -159,7 +162,8 @@ h1.logo {
 /* 상위메뉴 li에 마우스 오버시 서브메뉴 보이기 */
 /* 첫번째 상위메뉴 li - 메뉴개수 3개 
 -> 30px * 3 = 90px */
-.gnb>ul>li:nth-child(1):hover .smenu {
+.gnb>ul>li:nth-child(1):hover .smenu,
+.gnb>ul>li:nth-child(1):hover::after {
     height: 90px;
 }
 /* 세번째 상위메뉴 li - 메뉴개수 4개 
