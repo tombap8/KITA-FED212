@@ -43,7 +43,6 @@ body{
     min-height: 123px;
     /* 최소높이 123px보다 내용이 많아지면 늘어남! */
     background-color: #fff;
-    padding-top: 20px;
     border-bottom: 1px solid #ccc;
 }
 
