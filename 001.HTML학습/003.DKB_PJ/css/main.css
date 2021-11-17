@@ -219,13 +219,23 @@ h1.logo {
 }
 
 /****************** 2.컨텐츠영역 *********************/
+.cont{
+    min-height: 800px;
+}
 /* 2-1. 캐릭터박스 */
 #cbx {
+    position: relative;
+    /* absolute가 아닌 relative를 쓴 이유는? 
+    top위치 속성이 적용되며 margin:0 auto(마영오!)도
+    적용되어 가로 중앙정렬이 유지된다! */
+    top: 400px;
+    /* 원래위치로 부터 400px위치! */
     width: 90%;
     /* height: 300px; */
     margin: 0 auto;
     /* 블록요소 가로중앙정렬 - 마영오! */
-    margin-top: 30%;
+    /* margin-top: 30%; 
+    -> 가로크기에 따라 위치가 들쑥날쑥해서 사용안함!*/
 
 
     outline: 10px dotted blue;
