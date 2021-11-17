@@ -9,15 +9,17 @@ font-family: 'Jua', sans-serif;
 font-family: 'Yeon Sung', cursive;
 */
 
-html,body{
+html,
+body {
     margin: 0;
     padding: 0;
     /* 초기화! */
 }
-body{
-    background: 
-    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
-    url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+
+body {
+    background:
+        url(../images/bg_logo_a_01.png) no-repeat fixed 10% 30%/10%,
+        url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
     /* 배경 크기에 cover를 줄경우 이미지의 양쪽, 위아래를 적절히
     조정하여 대상 박스를 꽉채움! */
 }
@@ -30,11 +32,13 @@ body{
     /* 전체 스크롤바 크기변경 */
     width: 7px;
 }
+
 .scbar::-webkit-scrollbar-thumb {
     /* 스크롤바 */
     background-color: #666;
     border-radius: 5px;
 }
+
 .scbar::-webkit-scrollbar-track {
     /* 스크롤바 트랙 */
     background-color: #ddd;
@@ -42,59 +46,66 @@ body{
 }
 
 /* 리스트초기화 */
-ul, ol{/* 3無 */
+ul,
+ol {
+    /* 3無 */
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 /* 가상요소 clear */
-ul::after,ol::after{
+ul::after,
+ol::after {
     content: '';
     display: block;
     clear: both;
 }
+
 /* 리스트 옆으로 흐르게 */
-li{
+li {
     float: left;
 }
 
 /****************** 1.상단영역 *********************/
 .top {
-    min-height: 123px;
-    /* 최소높이 123px보다 내용이 많아지면 늘어남! */
+    min-height: 122px;
+    /* 최소높이 122px보다 내용이 많아지면 늘어남! */
     background-color: #fff;
     border-bottom: 1px solid #ccc;
 }
+
 /* 1-1.로고박스 */
-h1.logo{
+h1.logo {
     margin: 0;
     /* 마진탑이 부모박스 바깥쪽으로 나감(기본속성)
     부모박스가 overflow:hidden 처리가 되면 자식 마진탑을
     내부에 포함한다! 그런데 여기기서는 GNB서브메뉴 때문에
     이 설정을 할 수 없다! (마진없애고 패딩으로 대신함!) */
     padding-top: 20px;
-    text-align: center;/* 가로중앙 */
+    text-align: center;
+    /* 가로중앙 */
 }
+
 /* 로고이미지 가로크기조정(세로는 자동) */
-.logo img{
+.logo img {
     width: 100px;
 }
 
 /* 1-2. GNB메뉴 */
 .gnb {
     width: 635px;
-    margin: 0 auto;/* 마영오! */
+    margin: 0 auto;
+    /* 마영오! */
 }
-.gnb>ul>li{
+
+.gnb>ul>li {
     padding: 0 17px;
     /* 양쪽을 동일하게 밀고 사이간격은 34px */
 }
-/* gnb 상위메뉴 a요소 */
-.gnb>ul>li>a{
-    display: block;
-    /* 높이값 적용위해 */
-    height: 54px;
 
+/* gnb a요소 공통 */
+.gnb a {
     /* a요소 기본설정 변경하기! */
     color: #000;
     text-decoration: none;
@@ -102,6 +113,13 @@ h1.logo{
     font-family: 'Nanum Gothic', sans-serif;
     /* 웹폰트 - 나눔고딕체 적용! */
     font-size: 13px;
+}
+
+/* gnb 상위메뉴 a요소 */
+.gnb>ul>li>a {
+    display: block;
+    /* 높이값 적용위해 */
+    height: 54px;
     line-height: 54px;
 
     box-sizing: border-box;
@@ -109,15 +127,31 @@ h1.logo{
     커지므로 이를 방지하기 위해 보더,패딩을 포함하는
     보더박스 설정을 해준다! */
 }
+
 /* 상위메뉴 a요소에 오버시 보더로 밑줄만들기 */
 .gnb>ul>li>a:hover {
     border-bottom: 4px solid red;
 }
 
+/* 서브메뉴 */
+.smenu {
+    position: absolute;
+    /* 젠틀앱솔루트! */
+
+}
+
+.smenu li {
+    float: none;
+    /* float해제 */
+}
+
+/* 서브메뉴 a요소 */
+.smenu a {}
+
 
 /****************** 2.컨텐츠영역 *********************/
 /* 2-1. 캐릭터박스 */
-#cbx{
+#cbx {
     width: 90%;
     /* height: 300px; */
     margin: 0 auto;
@@ -134,16 +168,18 @@ h1.logo{
     /* overflow: hidden; */
     /* float처리된 자식요소의 높이값 인식을 위함! */
 }
+
 /* 가상요소로 부모박스 clear:both만들기 */
-#cbx::after{
+#cbx::after {
     content: '';
     display: block;
     clear: both;
 }
 
 /* 캐릭터박스 공통 */
-.cat{
-    width: 25%;/* 4등분 */
+.cat {
+    width: 25%;
+    /* 4등분 */
     /* height: 100%; */
 
     padding: 10px;
@@ -160,19 +196,21 @@ h1.logo{
     /* 트랜지션: 속시이지 */
     transition: margin-top .6s ease-out;
 }
+
 /* 캐릭터박스에 오버시 마진탑 변경하기 */
 .cat:hover {
     margin-top: -13%;
 }
 
 /* 캐릭터 이미지 */
-.ci > img{ /* 직계자식(>)이미지만 선택! */
+.ci>img {
+    /* 직계자식(>)이미지만 선택! */
     width: 100%;
     /* 이미지의 height는 자동(비율유지) */
 }
 
 /* 캐릭터 이름 */
-.ci span{
+.ci span {
     display: block;
     /* 블록으로 변경! */
     text-align: center;
@@ -181,21 +219,25 @@ h1.logo{
     /* 비율로 이미지가 변경되므로
     마진도 상대작으로 변경되게함! */
 }
+
 /* 캐릭터 이름 이미지 */
 .ci span img {
     width: 40%;
 }
+
 /* 캐릭터 이름 첫번째 이미지 숨기기 */
 .ci span img:first-child {
     display: none;
 }
+
 /* .cat박스에 마우스 오버시 */
 /* 캐릭터 이름 첫번째 이미지 보이기 */
-.cat:hover .ci span img:first-child{
+.cat:hover .ci span img:first-child {
     display: inline;
 }
+
 /* 캐릭터 이름 마지막 이미지 숨기기 */
-.cat:hover .ci span img:last-child{
+.cat:hover .ci span img:last-child {
     display: none;
 }
 
@@ -213,6 +255,7 @@ h1.logo{
     /* 트랜지션: 속시이지 */
     transition: height .6s ease-out;
 }
+
 /* .cat에 오버시 설명박스 */
 .cat:hover .cd {
     height: 250px;
@@ -225,6 +268,7 @@ h1.logo{
     padding: 5px 10px 0px;
     /* 패딩: 위 양쪽 아래 */
 }
+
 /* 캐릭터 설명 문단 */
 .cd p {
     font-family: 'Yeon Sung', cursive;
@@ -238,7 +282,7 @@ h1.logo{
 
 
 /****************** 3.하단영역 *********************/
-.info{
+.info {
     min-height: 240px;
     background-color: rgba(255, 255, 255, 0.7);
     /* 반투명 배경색(알파값이 투명도) */
