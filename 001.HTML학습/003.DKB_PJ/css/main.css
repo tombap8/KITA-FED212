@@ -168,12 +168,14 @@ h1.logo {
 }
 /* 세번째 상위메뉴 li - 메뉴개수 4개 
 -> 40px * 3 = 120px */
-.gnb>ul>li:nth-child(3):hover .smenu {
+.gnb>ul>li:nth-child(3):hover .smenu,
+.gnb>ul>li:nth-child(3):hover::after {
     height: 120px;
 }
 /* 네번째 상위메뉴 li - 메뉴개수 2개 
 -> 30px * 2 = 60px */
-.gnb>ul>li:nth-child(4):hover .smenu {
+.gnb>ul>li:nth-child(4):hover .smenu,
+.gnb>ul>li:nth-child(4):hover::after {
     height: 60px;
 }
 
