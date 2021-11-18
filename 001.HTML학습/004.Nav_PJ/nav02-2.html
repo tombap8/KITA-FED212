@@ -156,8 +156,17 @@
             left: 0;
             /* 부모는? .gnb */
             width: 100%;
-            height: 200px;
-            background-color: red;
+            height: 0;/* 처음에 안보임! */
+            background-color: lightskyblue;
+
+            /* 트랜지션: 속시이지 -> 서브메뉴와 동일! */
+            transition: height .4s ease-out;
+        }
+        /* 상위 li 두번째, 세번째 오버시 서브배경보이기 */
+        .gnb>ul>li:nth-child(2)::after,
+        .gnb>ul>li:nth-child(3)::after {
+            height: 50px;
+            border-bottom: 2px solid blue;
         }
 
 
