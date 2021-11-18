@@ -241,7 +241,17 @@
             word-break: break-all;
             /* 단어깨기 - 다깨! 단어단위로 붙어 있어서 양쪽정렬시
             중간이 비어보이므로 단어를 글자단위로 모두 분리함! */
+            text-indent: 20px;
+            /* 첫줄 들여쓰기(마이너스값을 주면 내어쓰기) */
         }
+
+        /* 가상요소로 첫글자 크게하기! - ::first-letter */
+        #rdesc p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+            color: lightsalmon;
+        }
+
 
     </style>
 </head>
