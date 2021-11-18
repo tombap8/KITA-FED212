@@ -156,13 +156,13 @@
         /* 스크린 */
         #screen {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 16px;
+            left: 10px;
             /* 나의부모는? #tv */
-            width: 100px;
-            height: 100px;
+            width: 143px;
+            height: 104px;
             background-color: red;
-            border-radius: 5px;
+            border-radius: 11px;
         }
 
     </style>
@@ -201,7 +201,16 @@
         <div id="tv">
             <!-- 스크린 -->
             <div id="screen">
-
+                <!-- 유튜브 iframe -->
+                <iframe src="https://www.youtube.com/embed/u1yKAaW5_vc"></iframe>
+                <!-- 
+                    iframe 요소 (inline frame)
+                    - 다른 url의 외부 페이지를 호출하여
+                    한 페이지 안에 보여줄때 사용하는 요소
+                    - src 속성: 실제로 불러올 페이지 경로
+                    - 스타일 시트에서 width, height, border:0
+                    등을 설정해 준다!(기본보더가 있어서 없애야함)
+                 -->
             </div>
         </div>
     </div>
