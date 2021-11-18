@@ -87,6 +87,58 @@
             right: -50px;
         }
 
+        /* 로봇 몸통 */
+        #body {
+            position: relative;
+            /* 부모자격 */
+            width: 250px;
+            height: 300px;
+            margin: 0 auto;
+            /* 마영오! */
+            margin-top: 50px;
+            background: url(./images/metal01.jpg) no-repeat center/cover;
+        }
+
+        /* 목 */
+        #neck {
+            position: absolute;
+            top: -50px;
+            left: 100px;
+            /* 나의부모? #body */
+            width: 50px;
+            height: 50px;
+            background: url(./images/metal02.jpg) no-repeat 0/100% 100%;
+        }
+
+        /* 팔,다리 공통 */
+        .part {
+            position: absolute;
+            /* 위치이동시 나의부모? #body */
+            width: 50px;
+            height: 250px;
+            background: url(./images/metal02.jpg) repeat-y 0/100%;
+        }
+        /* 왼팔 */
+        #arm1 {
+            top: 0;
+            left: -50px;
+        }
+        /* 오른팔 */
+        #arm2 {
+            top: 0;
+            right: -50px;
+        }
+        /* 왼다리 */
+        #leg1 {
+            bottom: -250px;
+            left: 0;
+        }
+        /* 오른다리 */
+        #leg2 {
+            bottom: -250px;
+            right: 0;
+        }
+
     </style>
 </head>
 <body>
