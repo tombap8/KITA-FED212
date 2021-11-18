@@ -14,9 +14,31 @@
         }
 
         body * {
-            outline: 2px dashed lime;
+            outline: 5px dashed lime;
         }
-        
+
+        /* 로봇머리 */
+        #head{
+            position: relative;
+            /* 부모자격 */
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background: url(./images/metal01.jpg) no-repeat center/cover;
+        }
+
+        /* 눈1 */
+        #eye1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 부모는? #head */
+            width: 50px;
+            height: 50px;
+            background: url(./images/e1.jpg) no-repeat 0/100% 100%;
+        }
+
     </style>
 </head>
 <body>
