@@ -153,6 +153,18 @@
             background: url(./images/tv.jpg) no-repeat 0/100% 100%;
         }
 
+        /* 스크린 */
+        #screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 나의부모는? #tv */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -186,7 +198,12 @@
         <!-- 오른다리 -->
         <div id="leg2" class="part"></div>
         <!-- TV -->
-        <div id="tv"></div>
+        <div id="tv">
+            <!-- 스크린 -->
+            <div id="screen">
+
+            </div>
+        </div>
     </div>
     
 </body>
