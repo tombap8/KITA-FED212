@@ -363,8 +363,33 @@ h1.logo {
 
 /****************** 3.하단영역 *********************/
 .info {
+    font-family: 'Nanum Gothic', sans-serif;
     min-height: 240px;
     background-color: rgba(255, 255, 255, 0.7);
     /* 반투명 배경색(알파값이 투명도) */
     padding: 15px;
+}
+
+/* 하단링크 */
+ul.bmenu {
+    max-width: 720px;
+    /* 최대width로 잡으면 최대 720px 보다 부모가 큰
+    경우 720px을 유지하다가 이것 보다 작아지면 auto로
+    전환한다! */
+    margin: 0 auto;
+    /* 마영오! 가로중앙 */
+}
+.bmenu a {
+    color: #222;
+    /* 글자색 */
+    text-decoration: none;
+    /*  밑줄없앰 */
+    font-weight: bold;
+    /* 글자두껍게 */
+    font-size: 14px;
+    /* 글자크기 */
+    line-height: 2;
+    /* 줄간격 */
+    margin: 0 5px;
+    /* 양쪽마진 */
 }
