@@ -162,22 +162,22 @@ h1.logo {
 
 /* 상위메뉴 li에 마우스 오버시 서브메뉴 보이기 */
 /* 첫번째 상위메뉴 li - 메뉴개수 3개 
--> 30px * 3 = 90px */
+-> 30px * 3 = 90px + 20px(여유공간) */
 .gnb>ul>li:nth-child(1):hover .smenu,
 .gnb>ul>li:nth-child(1):hover::after {
-    height: 90px;
+    height: 110px;
 }
 /* 세번째 상위메뉴 li - 메뉴개수 4개 
--> 40px * 3 = 120px */
+-> 40px * 3 = 120px + 20px(여유공간) */
 .gnb>ul>li:nth-child(3):hover .smenu,
 .gnb>ul>li:nth-child(3):hover::after {
-    height: 120px;
+    height: 140px;
 }
 /* 네번째 상위메뉴 li - 메뉴개수 2개 
--> 30px * 2 = 60px */
+-> 30px * 2 = 60px + 20px(여유공간) */
 .gnb>ul>li:nth-child(4):hover .smenu,
 .gnb>ul>li:nth-child(4):hover::after {
-    height: 60px;
+    height: 80px;
 }
 
 /* 상위메뉴 li에 마우스 오버시 서브메뉴 배경가상요소
@@ -364,7 +364,7 @@ h1.logo {
 /****************** 3.하단영역 *********************/
 .info {
     font-family: 'Nanum Gothic', sans-serif;
-    min-height: 240px;
+    /* min-height: 240px; */
     background-color: rgba(255, 255, 255, 0.7);
     /* 반투명 배경색(알파값이 투명도) */
     padding: 15px;
