@@ -393,3 +393,8 @@ ul.bmenu {
     margin: 0 5px;
     /* 양쪽마진 */
 }
+/* 오버시 */
+.bmenu a:hover {
+    color: red;
+    text-decoration: underline;
+}
