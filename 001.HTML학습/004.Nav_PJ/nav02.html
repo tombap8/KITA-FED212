@@ -33,6 +33,8 @@
         }
 
         .gnb>ul {
+            position: relative;/* 유형2변경 */
+            /* 서브메뉴(.smenu)의 부모자격! */
             width: 800px;
             margin: 0 auto;
             /* 마영오! */
@@ -79,7 +81,7 @@
             position: absolute;
             /* 위치이동값 없는 앱솔루트는 젠틀하다!
              젠틀앱솔루트!!! */
-            width: 200px;
+            width: 800px;/* 유형2변경 */
             height: 0;
             /* 높이값 없앰 */
             overflow: hidden;
@@ -98,13 +100,8 @@
         }
 
         /* 상위메뉴 li에 오버시 서브메뉴보이기 */
-        /* 2번째 상위메뉴 li -> 서브메뉴 높이값 200px */
-        .gnb>ul>li:nth-child(2):hover .smenu {
-            height: 200px;
-        }
-        /* 3번째 상위메뉴 li -> 서브메뉴 높이값 100px */
-        .gnb>ul>li:nth-child(3):hover .smenu {
-            height: 100px;
+        .gnb>ul>li:hover .smenu {
+            height: 50px;/* 유형2변경 */
         }
     </style>
 </head>
