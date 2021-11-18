@@ -33,7 +33,8 @@
         }
 
         .gnb>ul {
-            position: relative;/* 유형2변경 */
+            position: relative;
+            /* 유형2변경 */
             /* 서브메뉴(.smenu)의 부모자격! */
             width: 800px;
             margin: 0 auto;
@@ -81,9 +82,11 @@
             position: absolute;
             /* 위치이동값 없는 앱솔루트는 젠틀하다!
              젠틀앱솔루트!!! */
-            left: 0;/* left만 부모를 찾음! 누구? .gnb>ul */
+            left: 0;
+            /* left만 부모를 찾음! 누구? .gnb>ul */
             /* 유형2변경 */
-            width: 800px;/* 유형2변경 */
+            width: 800px;
+            /* 유형2변경 */
             height: 0;
             /* 높이값 없앰 */
             overflow: hidden;
@@ -95,6 +98,30 @@
             transition: height .4s ease-out;
         }
 
+        /* 유형2변경
+            - a요소가 기존변경에서 block이었으므로 이것을
+            inline으로 변경하여 메뉴 간격을 좁혀준다!
+            - 기존 디자인의 width, height는 적용되지않는다!
+            - 적용우선순위로 인하여 .gnb부터 써준다!
+        */
+        .gnb .smenu a {
+            display: inline;
+            padding: 2px 7px;
+            margin: 0px 5px;
+        }
+
+        /* 
+            유형2변경
+            - 두번째 상위 li 아래 .smenu 아래 첫번째 li 마진밀기
+            - 세번째 상위 li 아래 .smenu 아래 첫번째 li 마진밀기
+        */
+        .gnb>ul>li:nth-child(2) .smenu li:first-child {
+            margin-left: 200px;
+        }
+        .gnb>ul>li:nth-child(3) .smenu li:first-child {
+            margin-left: 400px;
+        }
+
         /* 하위메뉴 a요소에 오버시 글자색,배경색 */
         .smenu a:hover {
             color: navy;
@@ -103,7 +130,8 @@
 
         /* 상위메뉴 li에 오버시 서브메뉴보이기 */
         .gnb>ul>li:hover .smenu {
-            height: 50px;/* 유형2변경 */
+            height: 50px;
+            /* 유형2변경 */
         }
     </style>
 </head>
