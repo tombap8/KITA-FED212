@@ -146,6 +146,24 @@
             height: 50px;
             /* 유형2변경 */
         }
+
+        /* 유형2-2변경 */
+        /* 서브메뉴 전체배경 li가상요소로 만들기 */
+        .gnb>ul>li::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            /* 부모는? .gnb */
+            width: 100%;
+            height: 200px;
+            background-color: red;
+        }
+
+
+
+
+
     </style>
 </head>
 
