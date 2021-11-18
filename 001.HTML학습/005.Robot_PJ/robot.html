@@ -161,8 +161,20 @@
             /* 나의부모는? #tv */
             width: 143px;
             height: 104px;
-            background-color: red;
+            background-color: #000;
             border-radius: 11px;
+            overflow: hidden;
+            /* 넘치는 자식요소(아이프레임) 숨기기! */
+        }
+
+        /* 아이프레임 */
+        #screen iframe {
+            position: absolute;
+            top: -26px;
+            left: -25px;
+            /* 나의 부모는? #screen */
+            width: 200px;
+            border: none;/* 또는 0 -> 보더없앰 */
         }
 
     </style>
