@@ -398,3 +398,26 @@ ul.bmenu {
     color: red;
     text-decoration: underline;
 }
+
+/* 주소박스 */
+.info address {
+    max-width: 720px;
+
+    margin: 20px  auto;
+    /* 마진: 위아래 양쪽 */
+    font-style: normal;
+    /* address요소는 기본 이탤릭체임. 이것을 해제! */
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+
+    border: 5px double #555;
+    padding: 10px 0;
+    /* 패딩: 위아래 양쪽 */
+}
+
+/* 하단로고 박스 */
+.blogo{
+    text-align: center;
+    /* 이미지 가운데 정렬 */
+}
