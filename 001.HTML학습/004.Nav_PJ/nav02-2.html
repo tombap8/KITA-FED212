@@ -96,7 +96,12 @@
                 calc(%수치 - px수치)
                 (중요: 마이너스기호 앞뒤에 띄어쓰기 필수!!!)
             */
-            /* left만 부모를 찾음! 누구? .gnb>ul */
+            /* left만 부모를 찾음! 누구? .gnb */
+            z-index: 1;
+            /* 유형변경2-2
+            li가상요소 서브메뉴 배경보다 위에 오도록! */
+
+
             /* 유형2변경 */
             width: 800px;
             /* 유형2변경 */
@@ -163,8 +168,8 @@
             transition: height .4s ease-out;
         }
         /* 상위 li 두번째, 세번째 오버시 서브배경보이기 */
-        .gnb>ul>li:nth-child(2)::after,
-        .gnb>ul>li:nth-child(3)::after {
+        .gnb>ul>li:nth-child(2):hover::after,
+        .gnb>ul>li:nth-child(3):hover::after {
             height: 50px;
             border-bottom: 2px solid blue;
         }
