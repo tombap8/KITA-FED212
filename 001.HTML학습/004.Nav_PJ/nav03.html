@@ -97,14 +97,18 @@
             background-color: lightgrey;
         }
 
-        /* 상위메뉴 li에 오버시 서브메뉴보이기 */
-        /* 2번째 상위메뉴 li -> 서브메뉴 높이값 200px */
-        .gnb>ul>li:nth-child(2):hover .smenu {
-            height: 200px;
+        /* GNB박스에 오버시 서브메뉴보이기 */
+        .gnb:hover>ul>li .smenu {
+            height: 250px;
         }
-        /* 3번째 상위메뉴 li -> 서브메뉴 높이값 100px */
-        .gnb>ul>li:nth-child(3):hover .smenu {
-            height: 100px;
+        /* 서브메뉴 전체배경 가상요소로 만들기 */
+        .gnb::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background-color: #f00;
         }
     </style>
 </head>
