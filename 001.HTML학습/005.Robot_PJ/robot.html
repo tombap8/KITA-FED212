@@ -17,6 +17,18 @@
             outline: 5px dashed lime;
         } */
 
+        /* 로봇 페이지 로고 */
+        h1#logo{
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* fixed의 부모는 보이는 화면이다! */
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 50%;/* 원 */
+        }
+
         /* 로봇머리 */
         #head{
             position: relative;
@@ -256,6 +268,9 @@
     </style>
 </head>
 <body>
+
+    <!-- 로봇 페이지 로고 -->
+    <h1 id="logo">R2D2</h1>
 
     <!-- 로봇머리 -->
     <div id="head">
