@@ -269,7 +269,7 @@
 
             /* 타이틀 가상요소 변경 */
             .tit::after {
-                content: '830px';
+                content: '830px 이하';
                 color: lightseagreen;
             }
             /* 여섯번째 이미지 숨기기 */
@@ -285,13 +285,64 @@
         
 
 
-        /* 810px 이하 */
+        /******************** 810px 이하 ********************/
+        @media only screen and (max-width:810px){
+
+            /* 타이틀 가상요소 변경 */
+            .tit::after {
+                content: '810px 이하';
+                color: lightcyan;
+            }
+            /* 일곱번째 이미지 숨기기 */
+            .screen img:nth-child(7){
+                display: none;
+            }
+            /* 여덟번째 이미지 보이기 */
+            .screen img:nth-child(8){
+                display: inline;
+            }
+
+        }/* 810px 이하 */
+
+        /******************* 790px 이하 *******************/
+        @media only screen and (max-width:790px){
+
+            /* 타이틀 가상요소 변경 */
+            .tit::after {
+                content: '790px 이하';
+                color: lightskyblue;
+            }
+            /* 여덟번째이미지 숨기기 */
+            .screen img:nth-child(8){
+                display: none;
+            }
+            /* 아홉번째이미지 보이기 */
+            .screen img:nth-child(9){
+                display: inline;
+            }
+
+        }/* 790px 이하 */
+
+        /******************* 770px 이하 *******************/
+        @media only screen and (max-width:770px){
+            
+            /* 타이틀 가상요소 변경 */
+            .tit::after {
+                content: '770px 이하';
+                color: greenyellow;
+            }
+            /* 아홉번째 이미지 숨기기 */
+            .screen img:nth-child(9){
+                display: none;
+            }
+            /* 마지막 이미지 보이기 */
+            .screen img:last-child {
+                display: inline;
+            }
 
 
-        /* 790px 이하 */
+        }/* 770px 이하 */
 
-
-        /* 770px 이하 */
     </style>
 </head>
 
