@@ -67,7 +67,21 @@
             background-position: center 10px;
             /* 배경위치: 가로 세로 */
             background-size: 160px;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: logoAni 2s ease-in-out 1s forwards;
         }
+
+
+        /* 로봇 페이지 로고 키프레임 */
+        @keyframes logoAni {
+            /* 시작값은 초기설정값과 같아서 from생략! */
+            to{
+                top: 50px;
+                left: 50px;
+            }
+        } /* 키프레임 */
+
 
         /* 
             *************************************************
