@@ -11,6 +11,8 @@
         body{
             /* background: 색이반고윙/크; */
             background: url(./images/bg.jpg) no-repeat fixed top/cover;
+            overflow-x: hidden;
+            /* x축 스크롤바 없애기 */
         }
 
         /* body * {
@@ -20,8 +22,10 @@
         /* 로봇 페이지 로고 */
         h1#logo{
             position: fixed;
-            top: 0;
-            left: 0;
+            top: calc(50% - 100px);
+            left: calc(50% - 100px);
+            /* calc(50% - 100px) 
+            화면의 50%를 밀고 크기의 절반을 빼서 정중앙위치! */
             /* fixed의 부모는 보이는 화면이다! */
             width: 200px;
             height: 200px;
@@ -136,6 +140,8 @@
         #head{
             position: relative;
             /* 부모자격 */
+            left: 100%;
+            /* 머리가 왼쪽 바깥에 나가있음! */
             width: 250px;
             height: 250px;
             margin: 0 auto;
@@ -208,6 +214,8 @@
         #body {
             position: relative;
             /* 부모자격 */
+            left: -100%;
+            /* 왼쪽 바깥에 나가있음 */
             width: 250px;
             height: 300px;
             margin: 0 auto;
