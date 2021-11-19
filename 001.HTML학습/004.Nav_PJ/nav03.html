@@ -43,7 +43,7 @@
         .gnb>ul>li {
             width: 200px;
             text-align: center;
-            outline: 2px dashed red;
+            /* outline: 2px dashed red; */
         }
 
         /* a요소 - 글자색, 밑줄처리 */
@@ -124,6 +124,10 @@
         /* GNB박스에 오버시 가상요소 높이값 변경 */
         .gnb:hover::after {
             height: 250px;
+        }
+        /* GNB박스에 오버시 GNB박스 배경색 변경 */
+        .gnb:hover {
+            background-color: lightskyblue;
         }
     </style>
 </head>
