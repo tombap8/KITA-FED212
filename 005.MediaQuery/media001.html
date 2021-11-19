@@ -185,7 +185,25 @@
 
         /* 1200px이하 */
 
-        /* 1100px 이하 */
+        /***************** 1100px 이하 *****************/
+        @media only screen and (max-width:1100px){
+            /* 타이틀 가상요소 변경 */
+            .tit::after {
+                content: '1100px 이하';
+                color: lime;
+            }
+            /* 두번째 이미지 숨기기 */
+            .screen img:nth-child(2){
+                display: none;
+            }
+
+            /* 세번째 이미지 보이기 */
+            .screen img:nth-child(3) {
+                display: inline;
+            }
+
+
+        }/* 1100px 이하 */
 
 
 
