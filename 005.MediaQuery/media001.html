@@ -50,6 +50,7 @@
                 하지만 일반적인 명칭으로 반응형웹으로 부른다!
 
                 [ 구현방법 ]
+
                 @media only screen and (max-width:최대px) and (min-width:최소px){
                     CSS코딩구역
                 }
@@ -74,6 +75,24 @@
                 5) and : 구문 사이 연결자
                     -> 주의사항 - and 앞뒤에 공백필수!
 
+                [ 미디어 쿼리 코딩시 주의사항! ]
+
+                1. 기존 CSS 선택자와 동일하게 코딩한다!
+                (그래야 덮어쓰기가 원활하다!)
+                2. max-width로 셋팅한 경우 큰 사이즈부터 작은
+                사이즈 순으로 코딩한다!(min-width는 순서반대)
+                3. 미디어쿼리를 외부css파일로 만들어 쓴 경우
+                @import방식으로 호출하면 적용되지 않는다!
+                이유는 미디어 쿼리는 덮어쓰기 방식이므로
+                기존 css코드 보다 아래 있어야함!
+                link방식으로 html코드 상단에 기존 css보다
+                아래에서 호출하면 된다!
+
+                예) 
+                <head>
+                    <link rel="stylesheet" href="일반css">
+                    <link rel="stylesheet" href="미디어쿼리css">
+                </head>
             */
         /* 초기화 */
         html,
