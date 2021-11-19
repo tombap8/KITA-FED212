@@ -264,9 +264,25 @@
 
         }/* 850px 이하 */
 
+        /****************** 830px 이하 ******************/
+        @media only screen and (max-width:830px){
 
+            /* 타이틀 가상요소 변경 */
+            .tit::after {
+                content: '830px';
+                color: lightseagreen;
+            }
+            /* 여섯번째 이미지 숨기기 */
+            .screen img:nth-child(6){
+                display: none;
+            }
+            /* 일곱번째 이미지 보이기 */
+            .screen img:nth-child(7){
+                display: inline;
+            }
 
-        /* 830px 이하 */
+        } /* 830px 이하 */
+        
 
 
         /* 810px 이하 */
