@@ -29,6 +29,8 @@
 
         /* GNB 메뉴 */
         .gnb {
+            position: relative;
+            /* 가상요소 after의 부모! */
             background-color: #006efd;
         }
 
@@ -89,6 +91,9 @@
 
             /* 트랜지션: 속시이지 */
             transition: height .4s ease-out;
+
+            z-index: 1;
+            /* 서브메뉴 배경보다 위! */
         }
 
         /* 하위메뉴 a요소에 오버시 글자색,배경색 */
@@ -106,9 +111,19 @@
             content: '';
             display: block;
             position: absolute;
+            /* 젠틀앱솔루트! */
             width: 100%;
+            /* width의 기준은 부모자격박스임!
+            -> .gnb에 부모자격 부여! */
+            height: 0px;/* 오버시 250px로 변경! */
+            background-color: lightskyblue;
+
+            /* 트랜지션: 속시이지 */
+            transition: height .4s ease-out;
+        }
+        /* GNB박스에 오버시 가상요소 높이값 변경 */
+        .gnb:hover::after {
             height: 250px;
-            background-color: #f00;
         }
     </style>
 </head>
