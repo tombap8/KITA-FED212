@@ -1,3 +1,23 @@
 @charset "utf-8";
 /* 도깨비 PJ 미디어쿼리 CSS - media.css */
 
+/******** 800px 이하 모바일 미디어쿼리 ********/
+@media only screen and (max-width:800px){
+
+    /* 1. GNB메뉴 숨기기 */
+    .gnb {
+        display: none;
+    }
+
+    /* 상단영역박스(.top) 최소높이 없애기 */
+    .top {
+        min-height: auto;
+    }
+
+    /* 2. 햄버거버튼 보이기 */
+
+    /* 3. 캐릭터 박스 한줄에 하나씩 오기 */
+
+    /* 4. 하단링크 숨기기 */
+
+}/* 800px 이하 */
