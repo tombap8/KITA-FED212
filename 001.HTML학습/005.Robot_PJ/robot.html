@@ -68,6 +68,9 @@
             /* 배경위치: 가로 세로 */
             background-size: 160px;
 
+            /* 처음에 로고 2배크기로 보이게함! */
+            transform: scale(2);
+
             /* 애니메이션: 이시이지반방마 */
             animation: logoAni 2s ease-in-out 2s forwards,
             logoAni2 .5s ease-in-out 4s infinite alternate;
@@ -76,8 +79,13 @@
 
         /* 로봇 페이지 로고 키프레임 */
         @keyframes logoAni {
-            /* 시작값은 초기설정값과 같아서 from생략! */
-            to{
+            /* 시작값은 초기설정값과 같아서 from(0%)생략! */
+            80%{
+                top: 50px;
+                left: 50px;
+                transform: rotate(0deg);
+            }
+            100%{
                 top: 50px;
                 left: 50px;
                 transform: rotate(-20deg);
