@@ -32,7 +32,8 @@ body {
 }
 /* 1-1.페이지 타이틀 */
 h1.tit{
-    height: 100%;
+    /* height: 100%; 
+    - 안줘도 줄간격이 높이를 만들어줌 */
     color: aquamarine;
     font-size: 40px;
     line-height: 80px;
@@ -40,7 +41,12 @@ h1.tit{
     text-align: center;
     font-family: 'Jua', sans-serif;
     /* 웹폰트 - 주아체 */
+
+    /* 그림자를 이용한 Glow효과 */
+    text-shadow: 0 0 12px aquamarine;
 }
+
+
 /*************** 2. 메인영역 ***************/
 #cont{
     height: 788px;
