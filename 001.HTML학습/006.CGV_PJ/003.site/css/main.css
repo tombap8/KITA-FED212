@@ -71,6 +71,21 @@ h1.tit{
     border: none;
     /* 기본보더 없앰 */
 }
+/* 2-2.예고편선택메뉴 */
+.mlist{
+    position: absolute;
+    bottom: 56px;
+    left: 252px;
+}
+/* li디자인 */
+.mlist ul>li{
+    margin: 0 10px;
+}
+/* 포스터 이미지 */
+.mlist img{
+    width: 99px;
+    height: 140px;
+}
 
 /*************** 3. 하단영역 ***************/
 #info{
