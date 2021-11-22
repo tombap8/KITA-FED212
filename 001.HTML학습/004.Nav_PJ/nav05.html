@@ -29,17 +29,19 @@
 
         /* GNB 메뉴 */
         .gnb {
-            width: 200px;/* 유형4변경 */
+            width: 200px;/* 유형5변경 */
             background-color: #006efd;
         }
 
         .gnb>ul {
-            /* width: 800px; *//* 유형4변경 */
+            /* width: 800px; *//* 유형5변경 */
             margin: 0 auto;
             /* 마영오! */
         }
 
         .gnb>ul>li {
+            position: relative;
+            /* 부모자격 - .smenu 유형5변경*/
             width: 200px;
             text-align: center;
             outline: 2px dashed red;
@@ -77,9 +79,11 @@
 
         /* 서브메뉴 */
         .smenu {
-            /* position: absolute; *//* 유형4변경 */
-            /* 포지션이 없어야 static이므로 자리를 차지하고
-            하위메뉴가 아래쪽으로 밀고 나갈 수 있다! */
+            position: absolute;/* 유형5변경 */
+            top: 0;/* top위치는 부모li에 맞춘다 */
+            left: 100%;/* left위치는 부모li만큼 오른쪽위치 */
+            /* .gnb>li가 부모로써 위치를 잡는다! */
+            
             width: 200px;
             height: 0;
             /* 높이값 없앰 */
