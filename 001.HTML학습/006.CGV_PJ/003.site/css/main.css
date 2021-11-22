@@ -25,11 +25,21 @@ body {
 
 /*************** 1. 상단영역 ***************/
 #top{
+    position: relative;
+    /* 부모자격 - .gnb */
     height: 80px;
+    background: url(../images/curtain.jpg) repeat-x;
 }
 /* 1-1.페이지 타이틀 */
 h1.tit{
     height: 100%;
+    color: aquamarine;
+    font-size: 40px;
+    line-height: 80px;
+    /* 글자 세로 중앙정렬 높이값과 같은 줄간격! */
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+    /* 웹폰트 - 주아체 */
 }
 /*************** 2. 메인영역 ***************/
 #cont{
