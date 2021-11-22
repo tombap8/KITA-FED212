@@ -69,7 +69,8 @@
             background-size: 160px;
 
             /* 애니메이션: 이시이지반방마 */
-            animation: logoAni 2s ease-in-out 2s forwards;
+            animation: logoAni 2s ease-in-out 2s forwards,
+            logoAni2 .5s ease-in-out 4s infinite alternate;
         }
 
 
@@ -79,6 +80,17 @@
             to{
                 top: 50px;
                 left: 50px;
+                transform: rotate(-20deg);
+                /* 처음에 흔들기 시작각도로 셋팅! */
+            }
+        } /* 키프레임 */
+        /* 로고 흔들기 키프레임 */
+        @keyframes logoAni2 {
+            from{
+                transform: rotate(-20deg);
+            }
+            to{
+                transform: rotate(20deg);
             }
         } /* 키프레임 */
 
