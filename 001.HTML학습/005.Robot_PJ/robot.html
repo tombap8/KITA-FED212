@@ -281,9 +281,31 @@
             top: -19px;
             right: -50px;
             border-radius: 25px 25px 0 0;
-            transform: rotate(-160deg);
+            transform: rotate(0deg);
             transform-origin: center 20px;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: arm2Ani .8s ease-in-out 5s forwards,
+                waving .4s ease-in-out 5.8s infinite;
         }
+
+        /* 오른쪽팔 애니 키프레임 */
+        @keyframes arm2Ani {
+            to{
+                transform: rotate(-160deg);
+            }
+        } /* 키프레임 */
+        /* 오른쪽팔 흔들기 키프레임 */
+        @keyframes waving {
+            from{
+                transform: rotate(-160deg);
+            }
+            to{
+                transform: rotate(-130deg);
+            }
+        }/* 키프레임 */
+
+
         /* 왼다리 */
         #leg1 {
             bottom: -250px;
