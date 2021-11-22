@@ -446,6 +446,24 @@
             color: lightsalmon;
         }
 
+        /* 글박스 유도 링크 */
+        .link {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            font-size: 40px;
+            text-shadow: 2px 2px 2px #000;
+        }
+        .link a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* 오버시 */
+        .link a:hover {
+            color: #f00;
+            text-decoration: underline;
+        }
+
 
     </style>
 </head>
@@ -453,6 +471,17 @@
 
     <!-- 로봇 페이지 로고 -->
     <h1 id="logo">R2D2</h1>
+
+    <!-- 내용보기 링크 타이틀 -->
+    <h2 class="link">
+        <a href="#rdesc">What is Robot?</a>
+    </h2>
+    <!-- 
+        a요소에 href속성값으로 "#아이디명"을 사용하면
+        같은 페이지 안에 있는 아이디 요소명 박스의 상단
+        라인 위치로 스크롤이동됨(아이디만 됨!!!)
+        - a요소 기본기능임!
+     -->
 
     <!-- 로봇머리 -->
     <div id="head">
