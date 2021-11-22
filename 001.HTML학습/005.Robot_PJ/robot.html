@@ -399,6 +399,13 @@
 
         /* 로봇설명제목 */
         #rdesc h2 {
+            position: sticky;
+            top: 0;
+            /* sticky 포지션은 top값에 따라 스크롤시
+            fixed로 화면에 고정시키는 포지션이다! */
+
+            background-color: rgba(255, 255, 255, 0.4);
+            /* 배경색 반투명처리 */
             color: lime;
             /* 글자색 */
             font-size: 35px;
@@ -505,7 +512,7 @@
             */
 
             /* 애니메이션: 이시이지반방마 */
-            animation: opa .7s ease-in 7s forwards;
+            animation: opa .5s ease-in 5s forwards;
         }
 
         /* 투명도 변화 키프레임 */
