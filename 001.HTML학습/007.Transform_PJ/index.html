@@ -114,7 +114,8 @@
             - 이동방향: + 는 오른쪽, - 는 왼쪽
           */
           #trans3:hover img{
-              
+              transform: translateX(-50%);
+              /* 이미지 크기의 절반만큼 왼쪽방향으로 이동 */
           }
           /* 
             4. translateY(거리) - Y축이동
@@ -125,7 +126,7 @@
             - 이동방향: + 는 아랫쪽, - 는 윗쪽
           */
           #trans4:hover img{
-              
+              transform: translateY(100%);
           }
            /* 
             5. translate(X축거리,Y축거리) - X,Y축이동
@@ -138,7 +139,7 @@
                         - 는 왼쪽/윗쪽
           */
           #trans5:hover img{
-              
+              transform: translate(-200%, 100%);
           }
           /* 
             6. rotate(각도deg) - 원형회전
@@ -148,11 +149,14 @@
                 (변경가능: transform-origin)
            */
            #trans6:hover img{
-               
+               transform: rotate(5432deg);
+               transition-duration: 10s;
            }
            /* 회전축 변경하기 */
            #trans6 img{
-               
+               /* transform-origin: right bottom; */
+               /* transform-origin: 70px 90px; */
+               /* transform-origin: 25% 75%; */
                /* 
                   [트랜스폼 축변경 속성]
                   transform-origin: 가로값 세로값;
