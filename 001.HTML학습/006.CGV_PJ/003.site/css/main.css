@@ -60,11 +60,11 @@ h1.tit{
 /* 2-1.스크린박스 */
 #screen {
     position: absolute;
-    top: 136px;
-    left: 257px;
+    top: 17.2%;
+    left: 21.3%;
     /* 나의 부모는? #cont */
-    width: 701px;
-    height: 398px;
+    width: 58.6%;
+    height: 50.6%;
     background-color: #000;
 }
 /* 스크린 아이프레임 */
