@@ -74,17 +74,25 @@ h1.tit{
 /* 2-2.예고편선택메뉴 */
 .mlist{
     position: absolute;
-    bottom: 56px;
-    left: 252px;
+    bottom: 6%;
+    left: 50%;
+    /* 나의 부모는? .cont */
+    transform: translateX(-50%);
+    /* 자기크기의 절반만큼 반대방향(왼쪽)이동 */
+    width: 60%;
+    outline: 4px dashed yellow;
 }
 /* li디자인 */
 .mlist ul>li{
-    margin: 0 10px;
+    width: 14.66%;
+    /* 6등분(16.66%) - 양쪽마진2% */
+    margin: 0 1%;
 }
 /* 포스터 이미지 */
 .mlist img{
-    width: 99px;
-    height: 140px;
+    width: 100%;
+    /* 가로만 li박스에 채움!
+    세로는 자동으로 비율유지함! */
 }
 
 /*************** 3. 하단영역 ***************/
