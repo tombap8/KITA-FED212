@@ -20,20 +20,19 @@
         // 변수는 따옴표없이 사용한 문자이며
         // 변수는 값을 저장하는 저장소
         // 변수명은 저장주소!
-        function goMv(code){ // code는 전달변수
+        function goMv(code) { // code는 전달변수
             // 호출확인
             // alert("나 불렀어?"+code);
 
             // 전체문서.가져와아이디(아이디명).속성명
-            document.getElementById("ifr").src = 
-            // 이퀄(=) 오른쪽의 값이 왼쪽으로 들어감!
-            // 결과적으로 src속성에 변경된 값이 할당!
-            "https://www.youtube.com/embed/"+
-            code+
-            "?autoplay=1&playsinline=1";
+            document.getElementById("ifr").src =
+                // 이퀄(=) 오른쪽의 값이 왼쪽으로 들어감!
+                // 결과적으로 src속성에 변경된 값이 할당!
+                "https://www.youtube.com/embed/" +
+                code +
+                "?autoplay=1&playsinline=1";
 
         } /// goMv 함수 ////////////
-
     </script>
 </head>
 
@@ -47,15 +46,71 @@
             <ul class="glist">
                 <li>
                     <a href="#">영화</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">무비차트</a>
+                            </li>
+                            <li>
+                                <a href="#">HD 트레일러</a>
+                            </li>
+                            <li>
+                                <a href="#">무비파인더</a>
+                            </li>
+                            <li>
+                                <a href="#">CGV아트하우스</a>
+                            </li>
+                        </ol>
+                    </div>
                 </li>
                 <li>
                     <a href="#">예매</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">빠른예매</a>
+                            </li>
+                            <li>
+                                <a href="#">상영시간표</a>
+                            </li>
+                        </ol>
+                    </div>
                 </li>
                 <li>
                     <a href="#">극장</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">CGV 극장</a>
+                            </li>
+                            <li>
+                                <a href="#">특별관</a>
+                            </li>
+                            <li>
+                                <a href="#">CLUB 서비스</a>
+                            </li>
+                        </ol>
+                    </div>
                 </li>
                 <li>
                     <a href="#">이벤트&amp;컬처</a>
+                    <!-- 서브메뉴 -->
+                    <div class="smenu">
+                        <ol>
+                            <li>
+                                <a href="#">이벤트</a>
+                            </li>
+                            <li>
+                                <a href="#">기프트샵</a>
+                            </li>
+                            <li>
+                                <a href="#">매거진</a>
+                            </li>
+                        </ol>
+                    </div>
                 </li>
             </ul>
         </nav>
