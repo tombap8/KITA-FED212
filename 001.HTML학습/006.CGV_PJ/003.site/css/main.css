@@ -83,7 +83,7 @@ h1.tit{
     transform: translateX(-50%);
     /* 자기크기의 절반만큼 반대방향(왼쪽)이동 */
     width: 60%;
-    outline: 4px dashed yellow;
+    /* outline: 4px dashed yellow; */
 }
 /* li디자인 */
 .mlist ul>li{
@@ -140,7 +140,7 @@ h1.tit{
     color: aqua;
     font-size: 17px;
     letter-spacing: -1px;
-    margin-top: 30px;
+    margin-top: 30%;
 }
 
 /*************** 3. 하단영역 ***************/
