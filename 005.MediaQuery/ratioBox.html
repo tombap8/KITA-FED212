@@ -71,6 +71,19 @@
             /* 부모는? .rbx */
         }
 
+        /* 
+        또는 
+
+            .rbxIn {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+        */
+
 
 
 
@@ -86,11 +99,26 @@
             margin: 0;
             padding: 0;
             color: #fff;
-            font-size: 14px;
+            font-size: .875rem;
+            /* 14px rem만들기 14/16=0.875 */
             font-weight: bold;
             line-height: 2;
             text-shadow: 2px 2px 2px #000;
         }
+
+        /* 800px이하 미디어쿼리 */
+        @media screen and (max-width:800px) {
+            html{
+                font-size: 12px;
+                /* 12*0.875=10.5px */
+                /* Root인 html요소의 글자크기만
+                바꾸면 하위의 모든 rem,em,%로 잡은
+                글자나 줄간격이 모두 변경된다! */
+            }
+            .rbx{
+                width: 100%;
+            }
+        }/* 미디어쿼리 */
 
        
     </style>
@@ -100,18 +128,18 @@
     <div class="rbx">
         <div class="rbxIn">
 
+            <!-- 비율유지 속박스에 내용넣기 -->
+            <dl class="cat">
+                <dt>출연진</dt>
+                <dd>이제훈(김도기역)</dd>
+                <dd>이솜(강하나역)</dd>
+                <dd>김의성(장성철역)</dd>
+            </dl> 
+
         </div>
     </div>
 
 
-<!-- 
-    <dl class="cat">
-        <dt>출연진</dt>
-        <dd>이제훈(김도기역)</dd>
-        <dd>이솜(강하나역)</dd>
-        <dd>김의성(장성철역)</dd>
-    </dl> 
--->
 </body>
 
 </html>
