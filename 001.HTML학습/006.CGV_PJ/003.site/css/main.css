@@ -89,6 +89,9 @@ h1.tit{
     width: 14.66%;
     /* 6등분(16.66%) - 양쪽마진2% */
     margin: 0 1%;
+
+    overflow: hidden;
+    /* .movtxt의 부모자격요소에 줘야 적용됨! */
 }
 /* 포스터 이미지 */
 .mlist img{
@@ -102,7 +105,7 @@ h1.tit{
     position: absolute;
     /* left는 설정하지 않고 젠틀하게 처리함!
     -> 각 li위치에 그대로 있음! */
-    top: 0;
+    top: 100%;/* 아래쪽에 나가있음 */
     /* 나의 부모는? .mlist ul>li */
     width: 100%;
     height: 100%;
@@ -115,7 +118,15 @@ h1.tit{
     font-size: 14px;
     line-height: 25px;
     text-align: center;
+
+    /* 트랜지션: 속시이지 */
+    transition: top .4s ease-out;
 }
+/* 상위li에 오버시 .movtxt 올라오기 */
+.mlist>ul>li:hover .movtxt {
+    top: 0;
+}
+
 /* 영화정보 li */
 .movtxt li {
     float: none;
