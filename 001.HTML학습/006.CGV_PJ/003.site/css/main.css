@@ -387,5 +387,13 @@ h1.tit {
 }
 /* 페이스북 */
 .sns li:first-child {
-    background-position: 507px 426px;
+    background-position: -509px -429px;
+}
+/* 페이스북 */
+.sns li:nth-child(2) {
+    background-position: -551px -429px;
+}
+/* 페이스북 */
+.sns li:last-child {
+    background-position: -593px -429px;
 }
