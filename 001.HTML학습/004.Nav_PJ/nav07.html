@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유형7 : 가로네비 서브없는 디자인형</title>
     <style>
-        
+        /* 타이틀 */
+        .tit{
+            text-align: center;
+            /* 예전엔 그라데이션은 모두 이미지로 제작함
+            CSS3부터 그라데이션을 코딩으로 표현하도록 지원됨 */
+            background-image: 
+            linear-gradient(45deg,red,green 30%,yellow 40%,yellow 80%,blue);
+
+            padding: 10px;
+        }
+
+        /* 원형 그라데이션 연습 */
+        .circ {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            border-radius: 50%;/* 원 */
+            vertical-align: -14px;
+            /* 인라인 요소간 세로정렬 */
+
+            background-image: 
+            radial-gradient(farthest-side at 30px 15px,#fff,blue);
+        }
 
         /* 
             1. 선형그라데이션
