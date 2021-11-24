@@ -104,7 +104,6 @@ h1.tit{
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     /* transparent는 투명색 */
-
 }
 
 /* 서브메뉴 ol */
@@ -126,6 +125,10 @@ h1.tit{
 /* 서브메뉴 li중 보더탑 디자인용 class */
 .bdt{
     border-top: 1px solid #ccc;
+    padding-top: 5px !important;
+    /* 패딩탑은 위에서 패딩설정에 의해 우선순위가
+    밀려서 적용이 안되므로 최종 적용만을 목적으로
+    매우 제한적으로 !important를 주어서 무조건 적용함! */
 }
 
 /* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
