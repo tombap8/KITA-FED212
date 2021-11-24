@@ -177,6 +177,16 @@ h1.tit {
     z-index: 1;
     /* 포지션이 있어야 z-index가 적용됨(영사기가 빔보다위) */
     width: 50px;
+
+    /* 영사기 회전 */
+    transform: rotate(25deg);
+
+    /* 트랜지션: 속시이지 */
+    transition: transform .5s;
+}
+/* .gnb에 마우스 오버시 영사기 회전수평각 */
+.gnb:hover #cam img {
+    transform: rotate(0deg);
 }
 
 /* 빔박스 */
@@ -185,7 +195,7 @@ h1.tit {
     top: -16px;
     right: 6px;
     /* 나의 부모는? #cam */
-    width: 200px;/* 오버시 200px */
+    width: 0;/* 오버시 200px */
     height: 70px;
     background: url(../images/bim.png) no-repeat;
     background-position: right center;
@@ -193,7 +203,14 @@ h1.tit {
     background-size: auto 100%;
     /* 배경이미지 박스 높이값에 맞춤! */
 
-    outline: 2px dashed greenyellow;
+    /* outline: 2px dashed greenyellow; */
+
+    /* 트랜지션: 속시이지 */
+    transition: width .3s linear .5s;
+}
+/* .gnb에 마우스 오버시 빔쏘기 애니 */
+.gnb:hover .bim{
+    width: 200px;
 }
 
 
