@@ -84,6 +84,12 @@ h1.tit{
     border-radius: 5px;
     box-shadow: 0 0 5px #fff;
 
+    display: none;
+    /* 처음에 숨기기 */
+}
+/* 상위메뉴(.glist)의 li에 오버시 서브메뉴(.smenu) 보이기 */
+.glist>li:hover .smenu {
+    display: block;
 }
 /* 서브메뉴 가상요소로 삼각형모양 만들기 */
 .smenu::before{
@@ -132,9 +138,9 @@ h1.tit{
 }
 
 /* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
-.gnb ul>li:first-child~li .smenu{
+/* .gnb ul>li:first-child~li .smenu{
     display: none;
-}
+} */
 
 
 /*************** 2. 메인영역 ***************/
