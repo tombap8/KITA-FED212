@@ -20,7 +20,7 @@ body {
     중앙 정렬되게 크기를 유지하다가 작아지면
     화면에 붙어서 auto로 작동함! */
     margin: 0 auto;
-    outline: 3px dotted yellow;
+    /* outline: 3px dotted yellow; */
 }
 
 /*************** 1. 상단영역 ***************/
