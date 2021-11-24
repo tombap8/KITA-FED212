@@ -154,12 +154,18 @@ h1.tit{
     /* 손가락 이미지가 인라인으로 오른쪽 끝에 옴! */
 }
 
+/* 영사기 박스 */
+#cam {
+    position: absolute;
+    bottom: -14px;
+    right: -52px;
+    /* 부모는? .gnb */
+}
+/* 영사기 이미지 */
+#cam img {
+    width: 50px;
+}
 
-
-/* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
-/* .gnb ul>li:first-child~li .smenu{
-    display: none;
-} */
 
 
 /*************** 2. 메인영역 ***************/
