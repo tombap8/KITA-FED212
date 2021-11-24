@@ -31,6 +31,35 @@
             radial-gradient(farthest-side at 30px 15px,#fff,blue);
         }
 
+        /* GNB 메뉴 박스 */
+        .gnb {
+            width: 900px;
+            height: 40px;
+            margin: 0 auto;/* 마영오! */
+        }
+        .gnb>ul{ /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 가상요소 clear */
+        .gnb>ul::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .gnb li {
+            float: left;/* 옆으로 흐르게 */
+            width: 150px;
+            height: 40px;
+            box-sizing: border-box;
+            /* 보더,패딩 내부포함 크기유지 */
+        }
+
+
+
+
+
         /* 
             1. 선형그라데이션
 
