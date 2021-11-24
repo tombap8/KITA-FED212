@@ -148,8 +148,10 @@ h1.tit{
     color: red;
 }
 /* 서브메뉴 오버시 가상요소로 빨간손가락 보이기 */
-.smenu a::after {
+.smenu a:hover::after {
     content: url(../images/ico_smenu_hand.png);
+    float: right;
+    /* 손가락 이미지가 인라인으로 오른쪽 끝에 옴! */
 }
 
 
