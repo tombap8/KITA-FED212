@@ -80,6 +80,7 @@ h1.tit{
     background: url(../images/bg_smenu.png) no-repeat center/cover;
 
     padding: 3px;
+    margin-top: 5px;
     border-radius: 5px;
     box-shadow: 0 0 5px #fff;
 
@@ -116,6 +117,15 @@ h1.tit{
 .smenu li{    
     font-size: 16px;
     line-height: 2;
+    float: none;
+    /* 플롯해제를 하지 않으면 하나의 width 크기가
+    내용만큼만 생기므로 이를 해제하여 패딩안쪽까지만
+    잡히는 width:auto 설정이 적용되도록한다!
+    왜했나? 보더탑 선 길이때문에!  */
+}
+/* 서브메뉴 li중 보더탑 디자인용 class */
+.bdt{
+    border-top: 1px solid #ccc;
 }
 
 /* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
