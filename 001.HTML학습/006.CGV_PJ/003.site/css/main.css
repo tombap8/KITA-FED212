@@ -206,11 +206,14 @@ h1.tit {
     /* outline: 2px dashed greenyellow; */
 
     /* 트랜지션: 속시이지 */
-    transition: width .3s linear .5s;
+    transition: width .3s linear;
 }
 /* .gnb에 마우스 오버시 빔쏘기 애니 */
 .gnb:hover .bim{
     width: 200px;
+    transition-delay: .5s;
+    /* 원본에 없는 지연시간설정
+    영사기가 도는동안 기다림! */
 }
 
 
