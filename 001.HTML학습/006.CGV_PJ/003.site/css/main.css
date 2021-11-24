@@ -10,7 +10,7 @@ body {
 }
 
 /* 레이아웃 공통 클래스 */
-.part{
+.part {
     max-width: 1200px;
     /* 확장성 있는 셋팅!
     width:1200px로 코딩하면 작은 화면에서는
@@ -24,7 +24,7 @@ body {
 }
 
 /*************** 1. 상단영역 ***************/
-#top{
+#top {
     position: relative;
     /* 부모자격 - .gnb */
     height: 80px;
@@ -32,8 +32,9 @@ body {
     z-index: 9999;
     /* GNB 서브메뉴 때문에 맨위로 올린다! */
 }
+
 /* 1-1.페이지 타이틀 */
-h1.tit{
+h1.tit {
     /* height: 100%; 
     - 안줘도 줄간격이 높이를 만들어줌 */
     color: aquamarine;
@@ -47,13 +48,15 @@ h1.tit{
     /* 그림자를 이용한 Glow효과 */
     text-shadow: 0 0 12px aquamarine;
 }
+
 /* 1-2.전체메뉴(GNB) */
-.gnb{
+.gnb {
     position: absolute;
     bottom: 10px;
     right: 15px;
     /* 나의 부모는? #top */
 }
+
 /* GNB li리스트 */
 .gnb li {
     position: relative;
@@ -87,12 +90,14 @@ h1.tit{
     display: none;
     /* 처음에 숨기기 */
 }
+
 /* 상위메뉴(.glist)의 li에 오버시 서브메뉴(.smenu) 보이기 */
 .glist>li:hover .smenu {
     display: block;
 }
+
 /* 서브메뉴 가상요소로 삼각형모양 만들기 */
-.smenu::before{
+.smenu::before {
     content: '';
     display: block;
     position: absolute;
@@ -105,7 +110,8 @@ h1.tit{
     /* 삼각형 만들기 */
     width: 0;
     height: 0;
-    border-bottom: 10px solid #353535;/* 삼각형 */
+    border-bottom: 10px solid #353535;
+    /* 삼각형 */
     /* border-top: 10px solid red; 역삼각형 */
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -119,7 +125,7 @@ h1.tit{
 }
 
 /* 서브메뉴 li리스트 */
-.smenu li{    
+.smenu li {
     font-size: 16px;
     line-height: 2;
     float: none;
@@ -128,8 +134,9 @@ h1.tit{
     잡히는 width:auto 설정이 적용되도록한다!
     왜했나? 보더탑 선 길이때문에!  */
 }
+
 /* 서브메뉴 li중 보더탑 디자인용 class */
-.bdt{
+.bdt {
     border-top: 1px solid #ccc;
     padding-top: 5px !important;
     /* 패딩탑은 위에서 패딩설정에 의해 우선순위가
@@ -138,15 +145,17 @@ h1.tit{
 }
 
 /* 서브메뉴 a */
-.smenu a{
+.smenu a {
     display: block;
     white-space: nowrap;
     /* 내용이 무조건 한줄에 나옴(줄바꿈금지) */
 }
+
 /* 서브메뉴 a에 오버시 */
 .smenu a:hover {
     color: red;
 }
+
 /* 서브메뉴 오버시 가상요소로 빨간손가락 보이기 */
 .smenu a:hover::after {
     content: url(../images/ico_smenu_hand.png);
@@ -161,10 +170,12 @@ h1.tit{
     right: -52px;
     /* 부모는? .gnb */
 }
+
 /* 영사기 이미지 */
 #cam img {
     width: 50px;
 }
+
 /* 빔박스 */
 .bim {
     position: absolute;
@@ -172,14 +183,18 @@ h1.tit{
     right: 0;
     /* 나의 부모는? #cam */
     width: 300px;
-    height: 100px;
+    height: 70px;
     background: url(../images/bim.png) no-repeat;
+    background-position: right center;
+    /* 배경포지션은 가로 오른쪽끝에 붙이고 세로방향 중간  */
+    background-size: auto 100%;
+    /* 배경이미지 박스 높이값에 맞춤! */
 }
 
 
 
 /*************** 2. 메인영역 ***************/
-#cont{
+#cont {
     position: relative;
     /* 부모자격 - 하위요소 */
     /* height: 788px; */
@@ -188,6 +203,7 @@ h1.tit{
     background-size: 100%;
     /* 배경이미지 가로를 기준으로 비율변경! */
 }
+
 /* 2-1.스크린박스 */
 #screen {
     position: absolute;
@@ -198,6 +214,7 @@ h1.tit{
     height: 50.6%;
     background-color: #000;
 }
+
 /* 스크린 아이프레임 */
 #screen iframe {
     width: 100%;
@@ -205,8 +222,9 @@ h1.tit{
     border: none;
     /* 기본보더 없앰 */
 }
+
 /* 2-2.예고편선택메뉴 */
-.mlist{
+.mlist {
     position: absolute;
     bottom: 6%;
     left: 50%;
@@ -216,8 +234,9 @@ h1.tit{
     width: 60%;
     /* outline: 4px dashed yellow; */
 }
+
 /* li디자인 */
-.mlist ul>li{
+.mlist ul>li {
     position: relative;
     /* 부모자격! */
     width: 14.66%;
@@ -227,19 +246,21 @@ h1.tit{
     overflow: hidden;
     /* .movtxt의 부모자격요소에 줘야 적용됨! */
 }
+
 /* 포스터 이미지 */
-.mlist img{
+.mlist img {
     width: 100%;
     /* 가로만 li박스에 채움!
     세로는 자동으로 비율유지함! */
 }
 
 /* 영화정보박스 */
-.movtxt{
+.movtxt {
     position: absolute;
     /* left는 설정하지 않고 젠틀하게 처리함!
     -> 각 li위치에 그대로 있음! */
-    top: 100%;/* 아래쪽에 나가있음 */
+    top: 100%;
+    /* 아래쪽에 나가있음 */
     /* 나의 부모는? .mlist ul>li */
     width: 100%;
     height: 100%;
@@ -256,6 +277,7 @@ h1.tit{
     /* 트랜지션: 속시이지 */
     transition: top .4s ease-out;
 }
+
 /* 상위li에 오버시 .movtxt 올라오기 */
 .mlist>ul>li:hover .movtxt {
     top: 0;
@@ -266,6 +288,7 @@ h1.tit{
     float: none;
     /* float해제 */
 }
+
 /* 첫번째 li는 영화제목 */
 .movtxt li:first-child {
     color: aqua;
@@ -275,6 +298,6 @@ h1.tit{
 }
 
 /*************** 3. 하단영역 ***************/
-#info{
+#info {
     height: 100px;
 }
