@@ -5,6 +5,46 @@
     <meta charset="utf-8">
     <title>CSS심화 - Sprites, IR</title>
     <style>
+        .icons{
+            /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            overflow: hidden;
+            /* float된 자식요소 높이값인식 */
+
+            outline: 1px solid red;
+        }
+        .icons li {
+            width: 128px;
+            height: 128px;
+            float: left;
+
+            /* 공통 배경이미지 호출! */
+            background: url(./images/icons.png) no-repeat;
+            /* sns이미지 6개가 한꺼번에 저장된 배경이미지임
+            한개당 가로,세로 128px로 일정함! */
+
+            outline: 1px dotted blue;
+        }
+        /* 트위터 */
+        .icons li:nth-child(1){
+            background-position: 0 0;
+        }
+        /* 트위터 오버시 */
+        .icons li:nth-child(1):hover{
+            background-position: 0 -128px;
+        }
+        /* 인스타 */
+        .icons li:nth-child(2){
+            background-position: -128px 0;
+        }
+        /* 페북 */
+        .icons li:nth-child(3){
+            background-position: -256px 0;
+        }
+
         /* 
                 [ 스프라이츠(Sprites) 기법 ]
                 - 하나의 이미지로 배경 이미지 처리하여
