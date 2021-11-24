@@ -55,6 +55,23 @@
             box-sizing: border-box;
             /* 보더,패딩 내부포함 크기유지 */
         }
+        /* li사이 구분선 넣기 - 왼쪽보더를 첫번째만 빼고 모두넣음*/
+        .gnb li+li{
+            border-left: 1px solid #777;
+        }
+
+        /* 둥근 모서리 설정 첫번째 li의 a */
+        .gnb li:first-child a {
+            border-radius: 5px 0 0 5px;
+            /* border-radius: 왼위 오른위 오른아래 왼아래; */
+        }
+        /* 둥근 모서리 설정 마지막째 li의 a */
+        .gnb li:last-child a {
+            border-radius: 0 5px 5px 0;
+            /* border-radius: 왼위 오른위 오른아래 왼아래; */
+        }
+
+
         /* GNB a요소 */
         .gnb a {
             display: block;
