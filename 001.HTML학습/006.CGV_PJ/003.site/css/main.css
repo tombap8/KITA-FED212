@@ -72,7 +72,7 @@ h1.tit{
     transform: translateX(-50%);
     /* 내크기의 절반만큼 반대방향이동 */
 
-    width: 150px;
+    width: 160px;
     /* 앱솔루트 특성상 부모자격이 있는요소의
     폭에 맞춰서 width: auto가 설정된다.
     여기서는 특정 크기를 설정함! */
@@ -136,6 +136,23 @@ h1.tit{
     밀려서 적용이 안되므로 최종 적용만을 목적으로
     매우 제한적으로 !important를 주어서 무조건 적용함! */
 }
+
+/* 서브메뉴 a */
+.smenu a{
+    display: block;
+    white-space: nowrap;
+    /* 내용이 무조건 한줄에 나옴(줄바꿈금지) */
+}
+/* 서브메뉴 a에 오버시 */
+.smenu a:hover {
+    color: red;
+}
+/* 서브메뉴 오버시 가상요소로 빨간손가락 보이기 */
+.smenu a::after {
+    content: url(../images/ico_smenu_hand.png);
+}
+
+
 
 /* 임시로 첫번째만 빼고 나머지 서브메뉴 숨기기 */
 /* .gnb ul>li:first-child~li .smenu{
