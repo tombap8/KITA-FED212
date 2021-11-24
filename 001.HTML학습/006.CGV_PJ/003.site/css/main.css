@@ -369,3 +369,23 @@ h1.tit {
     /* 이미지는 왼쪽에 글자는 오른쪽으로 흐르게 */
     margin-right: 20px;
 }
+/* 3-2.sns버튼 */
+.sns{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* 부모는? #info */
+}
+/* sns li박스 */
+.sns li{
+    width: 34px;
+    height: 34px;
+    /* 배경이미지 넣기(Sprites) */
+    background: url(../images/sprites_logo.png) no-repeat;
+
+    outline: 2px dotted lime;
+}
+/* 페이스북 */
+.sns li:first-child {
+    background-position: 507px 426px;
+}
