@@ -346,5 +346,26 @@ h1.tit {
 
 /*************** 3. 하단영역 ***************/
 #info {
+    position: relative;
+    /* 부모자격 - .sns */
     height: 100px;
+}
+/* 3-1.회사정보박스 */
+#info address {
+    color: #fff;
+    font-style: normal;
+    /* 기본 이탤릭 없앰 */
+    font-family: 'Cute Font', cursive;
+    font-size: 18px;
+    line-height: 20px;
+
+    /* 안쪽여백 */
+    padding-top: 20px;
+    padding-left: 20px;
+}
+/* 하단로고 이미지 */
+#info img {
+    float: left;
+    /* 이미지는 왼쪽에 글자는 오른쪽으로 흐르게 */
+    margin-right: 20px;
 }
