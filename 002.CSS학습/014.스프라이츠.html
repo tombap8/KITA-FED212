@@ -94,18 +94,32 @@
             
             */
         /* IR 숨기기 class */
+        /* 주의- display:none 으로 숨기면 리더기가 못읽는다!*/
+        .ir{
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
     </style>
 </head>
 
 <body>
     <ul class="icons">
         <li>
-
+            <a href="#">
+                <span class="ir">트위터바로가기</span>
+            </a>
         </li>
         <li>
-
+            <a href="#">
+                <span class="ir">인스타그램바로가기</span>
+            </a>
         </li>
         <li>
+            <a href="#">
+                <span class="ir">페이스북바로가기</span>
+            </a>
 
         </li>
     </ul>
