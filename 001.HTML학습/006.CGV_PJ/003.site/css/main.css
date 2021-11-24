@@ -223,7 +223,20 @@ h1.tit {
     transition-delay: .5s;
     /* 원본에 없는 지연시간설정
     영사기가 도는동안 기다림! */
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: bimAni .04s linear infinite alternate;
 }
+
+/* 빔이 너울너울 거리도록 애니메이션 키프레임 */
+@keyframes bimAni {
+    from{
+        opacity: 0.9;
+    }
+    to{
+        opacity: 0.5;
+    }
+}/* 키프레임 */
 
 
 
