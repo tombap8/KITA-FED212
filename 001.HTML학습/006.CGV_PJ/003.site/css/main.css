@@ -389,11 +389,11 @@ h1.tit {
 .sns li:first-child {
     background-position: -509px -429px;
 }
-/* 페이스북 */
+/* 트위터 */
 .sns li:nth-child(2) {
     background-position: -551px -429px;
 }
-/* 페이스북 */
+/* 인스타그램 */
 .sns li:last-child {
     background-position: -593px -429px;
 }
