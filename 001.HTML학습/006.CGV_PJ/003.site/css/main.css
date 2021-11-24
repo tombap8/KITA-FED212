@@ -380,10 +380,13 @@ h1.tit {
 .sns li{
     width: 34px;
     height: 34px;
+
     /* 배경이미지 넣기(Sprites) */
     background: url(../images/sprites_logo.png) no-repeat;
 
-    outline: 2px dotted lime;
+    margin: 2px;
+
+    /* outline: 2px dotted lime; */
 }
 /* 페이스북 */
 .sns li:first-child {
@@ -396,4 +399,11 @@ h1.tit {
 /* 인스타그램 */
 .sns li:last-child {
     background-position: -593px -429px;
+}
+
+/* sns a요소 확장 */
+.sns a{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
