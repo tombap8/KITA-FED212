@@ -32,4 +32,25 @@ html,body{
                     (잘리는 부분이 없으나 빈공간이 생길 수 있음)
     */
     filter: brightness(50%);
+    /* 비디오의 밝기를 어둡게 조정하여 
+    입장버튼이 잘보이게함!(CJY기념) */
+}
+/* 들어가기 버튼박스 */
+#enter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 부모는 화면! */
+    transform: translate(-50%, -50%);
+    /* 정중앙으로 이동하기 */
+}
+/* Click Here 글자박스 */
+#enter span{
+    display: block;
+    /* 옆에 아무도 못오고 width는 끝까지 간다! */
+    text-align: center;
+    /* 글자중앙 */
+    font: bold 34px/1.8 'Audiowide';
+    /* font: 스두크/줄체 */
+
 }
