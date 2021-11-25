@@ -386,7 +386,14 @@ h1.tit {
 
     margin: 2px;
 
+    /* 흑백이미지 설정하기 */
+    filter: grayscale(100%);
+
     /* outline: 2px dotted lime; */
+}
+/* 마우스 오버시 컬러! */
+.sns li:hover {
+    filter: grayscale(0);
 }
 /* 페이스북 */
 .sns li:first-child {
