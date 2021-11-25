@@ -54,3 +54,13 @@ html,body{
     /* font: 스두크/줄체 */
 
 }
+/* 로고 이미지 */
+#enter img {
+    /* 트랜지션: 속시이지 */
+    transition: transform .4s ease-out;
+}
+/* 엔터박스에 오버시 로고이미지변경 */
+#enter:hover img{
+    transform: rotate(-15deg) scale(1.5);
+    /* 반시계방향 15도회전 + 1.5배확대 */
+}
