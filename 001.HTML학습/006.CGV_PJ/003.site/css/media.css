@@ -17,8 +17,6 @@
 @media screen and (max-width:1050px) {
 
     /* glist 숨기기 - 영사기는 살아있음! */
-    .glist {}
-
     /* 전체메뉴 하위 메뉴박스(.glist) */
     .glist {
         position: absolute;
