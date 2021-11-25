@@ -31,4 +31,5 @@ html,body{
         3. contain : 이미지나 동영상이 모두 보이며 비율유지함
                     (잘리는 부분이 없으나 빈공간이 생길 수 있음)
     */
+    filter: brightness(50%);
 }
