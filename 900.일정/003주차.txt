@@ -9,12 +9,13 @@
 2. CSS학습
 1) 글자단위 - 완료!
 2) 트랜스폼(Transform) - 완료!
-3) 스프라이츠(Sprites) + IR(Image Replacement)
+3) 스프라이츠(Sprites) + IR(Image Replacement) - 완료!
 4) 뷰포트 단위 : vw,vh,vmax,vmin
+5) 인라인블록
 
 3. 미디어쿼리 : 레이아웃변경 + 비율유지박스(완료!)
 
-4. 자바스크립트 - 인트로
+4. 자바스크립트 - 인트로(금)
 
 5. 평가일정
 1) HTML + CSS 웹개발 실기 : 
