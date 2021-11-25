@@ -38,7 +38,7 @@ h1.tit {
     /* height: 100%; 
     - 안줘도 줄간격이 높이를 만들어줌 */
     color: aquamarine;
-    font-size: 2.5vmax;
+    font-size: 40px;
     line-height: 80px;
     /* 글자 세로 중앙정렬 높이값과 같은 줄간격! */
     text-align: center;
