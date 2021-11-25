@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CGV 인트로 페이지 CSS - intro.css */
+
+/* 공통 외부파일 CSS 합치기 */
+@import url(reset.css);
+@import url(core.css);
+
