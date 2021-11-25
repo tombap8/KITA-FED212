@@ -71,6 +71,32 @@
             color: #fff;
             text-decoration: none;
         }
+
+        /* GNB ul박스 */
+        .gnb ul,.gnb ol{ /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* 상위ul */
+        .gnb ul{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            /* 세로방향 중앙이동! */
+
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            /* float된 자식인식 */
+            outline: 2px dotted lime;
+        }
+        /* 상위메뉴 li */
+        .gnb ul>li {
+            float: left;/* 메뉴 옆으로 흐르게 */
+            width: 200px;
+            text-align: center;
+        }
         
     
     </style>
