@@ -80,13 +80,15 @@
         }
         /* 상위ul */
         .gnb ul{
-            position: relative;
+            position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            /* 세로방향 중앙이동! */
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* 가로,세로방향 정중앙이동! */
 
             width: 800px;
             margin: 0 auto;
+            /* 포지션이 absolute일때 마영오!가 안먹힘! */
             overflow: hidden;
             /* float된 자식인식 */
             outline: 2px dotted lime;
