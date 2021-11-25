@@ -17,9 +17,7 @@
 @media screen and (max-width:1050px) {
 
     /* glist 숨기기 - 영사기는 살아있음! */
-    .glist {
-        
-    }
+    .glist {}
 
     /* 전체메뉴 하위 메뉴박스(.glist) */
     .glist {
@@ -53,8 +51,24 @@
 
 /***************** 780px 이하 시작 *****************/
 @media screen and (max-width:780px) {
+
     /* 하단영역 배치 변경하기 */
-    
+    #info {
+        height: auto;
+        text-align: center;
+    }
+
+    #info img {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .sns {
+        position: static;
+        margin: 10px auto;
+        width: 114px;
+    }
 
 }
 
