@@ -5,6 +5,10 @@
 @import url(reset.css);
 @import url(core.css);
 
+/* 겉박스 표시 */
+body>div{
+    outline: 2px dashed red;
+}
 
 /* 레이아웃 공통 class */
 .ibx {
@@ -21,7 +25,15 @@
 }
 /******************* 2. 메인영역 *******************/
 .cont{
-    height: 300px;
+    /* height: 300px; */
+}
+/* 메인파트1 */
+.pt1{
+    height: 724px;
+}
+/* 메인파트2 */
+.pt2{
+    height: 650px;
 }
 /******************* 3. 하단영역 *******************/
 .info{
