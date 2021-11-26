@@ -85,7 +85,8 @@ body {
 
     /* Click Here 글자박스 */
     #enter span {
-        font-size: 8vw;
+        font-size: 6vw;
+        white-space: nowrap;
     }
 }
 
