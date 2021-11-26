@@ -97,6 +97,14 @@
     }
 
     /* 4. 스크린 크기, 위치 맞추기 */
+    #screen {
+        top: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* 가로중앙이동 */
+        width: 299px;
+        height: 167px;
+    }
 
 
     /* 2. 하단영역 - 150px */
