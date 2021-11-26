@@ -5,19 +5,43 @@
 @import url(reset.css);
 @import url(core.css);
 
-/* 겉박스 표시 */
-body>div{
-    outline: 2px dashed red;
+/* 아웃라인 표시 */
+body * {
+    outline: 1px dotted #aaa;
 }
 
 /* 레이아웃 공통 class */
+
+/* 속박스 */
 .ibx {
     max-width: 1300px;
     /* 최대1300px유지, 작아지면 auto */
     margin: 0 auto;
     /* 가로중앙정렬 */
-    outline: 3px dotted blue;
 }
+
+/* 비율유지박스 */
+.rbx{
+    position: relative;
+    /* 부모자격 - .rbxIn */
+    /* height값 설정이 없어야함! */
+}
+/* 비율유지박스 가상요소 비율밀기셋팅 */
+.rbx::before {
+    content: '';
+    display: block;
+    padding-top: 50%;
+    /* 부모박스의 가로에 대한 %비율 */
+}
+/* 비율유지속박스 - 가상요소 패딩탑으로 밀리므로 */
+.rbxIn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 
 /******************* 1. 상단영역 *******************/
 .top{
@@ -29,11 +53,11 @@ body>div{
 }
 /* 메인파트1 */
 .pt1{
-    height: 724px;
+    /* height: 724px; */
 }
 /* 메인파트2 */
 .pt2{
-    height: 650px;
+    /* height: 650px; */
 }
 /******************* 3. 하단영역 *******************/
 .info{
