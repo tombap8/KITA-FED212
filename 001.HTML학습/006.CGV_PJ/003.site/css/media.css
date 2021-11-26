@@ -106,25 +106,29 @@
         height: 167px;
     }
 
-    /* 5. 영화정보박스 */
+    /* 5. 예고편 선택메뉴박스 */
+    .mlist {
+        width: 100%;
+    }
+
+    /* 6. 영화정보박스 */
     .movtxt {
         font-size: 2vw;
         line-height: 4vw;
     }
 
-    /* 6. 첫번째 li는 영화제목 */
+    /* 7. 첫번째 li는 영화제목 */
     .movtxt li:first-child {
         font-size: 3vw;
         margin-top: 4vw;
     }
 
-
-    /* 7. 하단영역 - 150px */
+    /* 8. 하단영역 - 150px */
     #info {
         height: 150px;
     }
 
-    /* 8. 하단주소만 없애기 */
+    /* 9. 하단주소만 없애기 */
     #info address span {
         display: none;
     }
