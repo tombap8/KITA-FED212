@@ -238,10 +238,26 @@
                 이유는? 자식요소의 flex속성값으로
                 flex-shrink가 1로 기본설정되어 있기 때문이다!
             */
+            justify-content: space-around;
+            /* 수평정렬 */
+            align-content: flex-end;
+            /* 
+                align-content 속성:
+                - 여러줄일때 수직정렬
+                1) flex-start : 맨위(기본값)
+                2) flex-end : 맨아래
+                3) center : 세로중앙
+                4) space-around : 아이템 요소 상하에 같은간격
+                5) space-between : 아이템 요소 상하간격일정
+                                 (처음과 끝이 구석에 붙어나옴)
+                6) space-evenly : 아이템 요소 상하와 
+                                  사이간격이 모두 일정함
+            */
         }
         /* 글자수를 맞추기 위해 li에 마진을 설정! */
         .t5>li{
-            margin: 0 5px;
+            margin: 0 14px;
+            /* 양쪽마진으로 조정! */
         }
 
 
