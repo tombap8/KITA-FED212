@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>001. 자바스크립트 기본 + DOM선택법</title>
     <!-- 자바스크립트 코딩구역 - 인터널방식 -->
+    
     <script>
         // 한줄주석
         /* 여러줄주석 */
@@ -307,6 +308,10 @@
             // (3) 트랜지션주기
             tg.style.transition = "2s";
 
+            // (4) 배경이미지 넣기
+            tg.style.background = 
+            "url(./images/kimbs.jpg) no-repeat top/cover";
+
 
         } ///////////// showMe 함수 ////////////////
         ///////////////////////////////////////////
@@ -330,7 +335,7 @@
 </head>
 <body>
     
-    <p class="pbox" title="여기를 클릭하세요!" onclick="showMe()">
+    <p class="pbox" onclick="showMe()" title="여기를 클릭하세요!">
         나는 요즘 매일 생각한다! <br>
         도대체 <span id="name"></span>
     </p>
