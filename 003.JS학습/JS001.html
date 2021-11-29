@@ -282,6 +282,15 @@
                     .querySelectorAll(".my>li")[3]
                     -> 4번째 li를 선택함!
 
+                (2) 요소개수 알아오기! : length
+                querySelectorAll(CSS선택자).length
+                -> 개수를 읽어올 수 있다!
+
+                예)
+                document.querySelectorAll(".my").length
+                -> 만약 .my요소가 7개라면 결과로 7이 나온다!
+
+                ____________________________________________
 
 
                 [ JS에서 요소 선택 후 html변경하기 ]
@@ -396,6 +405,22 @@
         } ///////////// showMe 함수 ////////////////
         ///////////////////////////////////////////
 
+
+        /****************************************** 
+            함수명: circle
+            기능: 선택요소를 중앙으로 보낸다!
+        ******************************************/
+       function circle(){
+
+            // 1. 함수호출확인
+            console.log("써클,나야나!!!")
+
+       } //////////// circle 함수 //////////////////
+       /////////////////////////////////////////////
+
+
+
+
     </script>
     <style>
         .pbox{
@@ -445,9 +470,9 @@
     </p>
 
     <!-- 원모양박스 -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
+    <div class="circle" onclick="circle()"></div>
+    <div class="circle" onclick="circle()"></div>
+    <div class="circle" onclick="circle()"></div>
 
     
 </body>
