@@ -410,10 +410,10 @@
             함수명: circle
             기능: 선택요소를 중앙으로 보낸다!
         ******************************************/
-       function circle(){
+       function circle(num){ // num - 숫자값 전달변수
 
             // 1. 함수호출확인
-            console.log("써클,나야나!!!")
+            console.log("써클,나야나!!!"+num)
 
        } //////////// circle 함수 //////////////////
        /////////////////////////////////////////////
@@ -470,9 +470,9 @@
     </p>
 
     <!-- 원모양박스 -->
-    <div class="circle" onclick="circle()"></div>
-    <div class="circle" onclick="circle()"></div>
-    <div class="circle" onclick="circle()"></div>
+    <div class="circle" onclick="circle(0)"></div>
+    <div class="circle" onclick="circle(1)"></div>
+    <div class="circle" onclick="circle(2)"></div>
 
     
 </body>
