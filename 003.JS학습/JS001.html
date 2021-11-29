@@ -407,19 +407,27 @@
 
 
         /****************************************** 
-            함수명: circle
+            함수명: 맘대로해라
             기능: 선택요소를 중앙으로 보낸다!
         ******************************************/
-       function circle(num){ // num - 숫자값 전달변수
+       function 맘대로해라(헐){ // 헐 - 숫자값 전달변수
 
             // 1. 함수호출확인
-            console.log("써클,나야나!!!"+num)
+            console.log("써클,나야나!!!"+헐)
 
-            // 2. 대상선정: .circle
-            var cc = document.querySelectorAll(".circle");
-            console.log("선택요소개수:"+cc.length);
+            // 2. 대상선정: .맘대로해라
+            var 멍청이 = document.querySelectorAll(".맘대로해라");
+            console.log("선택요소개수:"+멍청이.length);
 
-       } //////////// circle 함수 //////////////////
+            // 3. 변경내용: 트랜지션으로 화면중앙으로 이동하기!
+            멍청이.item(헐).style.transition = "1s ease-out";
+            멍청이.item(헐).style.top = "50%";
+            멍청이.item(헐).style.right = "50%";
+            멍청이.item(헐).style.transform = 
+            "translate(50%,-50%)";
+
+
+       } //////////// 맘대로해라 함수 //////////////////
        /////////////////////////////////////////////
 
 
@@ -442,7 +450,7 @@
         }
 
         /* 원모양박스 */
-        .circle {
+        .맘대로해라 {
             position: absolute;
             top: 0;
             right: 0;
@@ -455,16 +463,31 @@
             background-size: cover;
         }
         /* 원박스 개별이미지 */
-        .circle:first-of-type{
+        .맘대로해라:first-of-type{
             right: 400px;
             background-image: url(./images/01.png);
         }
-        .circle:nth-of-type(2){
+        .맘대로해라:nth-of-type(2){
             right: 200px;
             background-image: url(./images/02.png);
         }
-        .circle:last-of-type{
+        .맘대로해라:last-of-type{
             background-image: url(./images/03.png);
+        }
+
+        .넌뭐냐{
+            position: absolute;
+            top: 40%;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            white-space: nowrap;
+            /* 줄바꿈방지 */
+            border-radius: 50%;/* 원 */
+            background: 
+            url(./images/04.png) no-repeat top/cover;
         }
     </style>
 </head>
@@ -476,9 +499,12 @@
     </p>
 
     <!-- 원모양박스 -->
-    <div class="circle" onclick="circle(0)"></div>
-    <div class="circle" onclick="circle(1)"></div>
-    <div class="circle" onclick="circle(2)"></div>
+    <div class="맘대로해라" onclick="맘대로해라(0)"></div>
+    <div class="맘대로해라" onclick="맘대로해라(1)"></div>
+    <div class="맘대로해라" onclick="맘대로해라(2)"></div>
+
+    <!-- 사각형으로 변할 원박스 -->
+    <div class="넌뭐냐" onclick="사각형각()"></div>
 
     
 </body>
