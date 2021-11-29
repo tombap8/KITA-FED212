@@ -197,6 +197,26 @@
             margin-left: auto;
         }
 
+        /* 타이틀4 */
+        .t4{
+            top: 5%;
+            left: 10%;
+            width: 150px;
+            height: 600px;
+
+            /* 플렉스박스 설정 */
+            display: flex;
+            flex-direction: column;
+            /* 진행방행 세로! */
+            align-items: center;
+            /* 진행방향에 따라 가로/세로 정렬방향이 바뀐다! */
+        }
+        /* 4번째 li를 아랫쪽끝으로 보내기 */
+        /* 마진탑값 auto를 사용함! */
+        .t4>li:nth-child(4){
+            margin-top: auto;
+        }
+
 
     </style>
 </head>
