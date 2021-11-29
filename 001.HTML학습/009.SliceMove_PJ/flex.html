@@ -24,15 +24,46 @@
 
         /* ul 파티션 부모박스 */
         #wrap>ul{
+            display: flex;
             height: 100%;
         }
         /* li공통 */
         #wrap>ul>li{
-            width: 20%;
-            height: 100%;
-            float: left;
+            flex: 1;
+            /* flex가 설정된 부모의 자식속성 -> 1은 등분할! */
+
+            /* 
+                기존에 float설정시 필요한 것들:
+                width: 20%; - 가로크기(계산필요)
+                height: 100%; - 높이값 설정
+                float: left; - 옆으로 흐르게 설정
+            */
+
+            /* 배경공통 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
             outline: 2px dotted red;
         }
+
+        /* 각 파티션 li */
+        #wrap>ul>li:nth-child(1){
+            background-image: url(./images/m01_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(2){
+            background-image: url(./images/m02_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(3){
+            background-image: url(./images/m03_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(4){
+            background-image: url(./images/m04_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(5){
+            background-image: url(./images/m05_bg.jpg);
+        }
+
 
     </style>
 </head>
