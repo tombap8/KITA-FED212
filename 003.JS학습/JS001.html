@@ -231,6 +231,38 @@
 
                 __________________________________
 
+                [ CSS 선택자를 그대로 사용하는 선택법! ]
+
+                1. 하나의 요소 선택법
+                querySelector(CSS선택자)
+                -> 선택요소가 여러개여도 처음 만나는 요소
+                단 하나만을 선택한다!
+                따라서 몇번째라는 부가선택이 불필요!
+                예)
+                document.querySelector("#my")
+                -> 아이디가 my인 요소
+                document.querySelector(".say")
+                -> 클래스가 say인 요소(만나는 첫번째 .say)
+                document.querySelector("ul>li")
+                -> ul 직계자식 li중 첫번째요소
+
+                => 이렇게 선택하는게 간단해서 인기많음!
+                왜???? 예컨데 아래 선택을 일반선택법으로 하면...
+                document.querySelector("ul>li")
+                ****************************
+                document.getElementsByTagName("ul").item(0)
+                .getElementsByTagName("li").item(0)
+
+                
+
+                -> 매서드명 분석
+                - query 쿼리 -> 질의(기술적인질문)
+                - Selector 선택자 -> CSS선택자
+                -> 브라우저에게 CSS선택자로 질의를 한다!
+                그러면 요소를 선택한다!
+
+
+
                 [ JS에서 요소 선택 후 html변경하기 ]
 
                 선택요소.innerHTML = html코드
@@ -358,6 +390,30 @@
             color: yellow;
             text-shadow: 1px 1px 1px #000;
         }
+
+        /* 원모양박스 */
+        .circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;/* 원 */
+
+            /* 배경공통 */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* 원박스 개별이미지 */
+        .circle:first-of-type{
+            background-image: url(./images/01.png);
+        }
+        .circle:nth-of-type(2){
+            background-image: url(./images/02.png);
+        }
+        .circle:last-of-type{
+            background-image: url(./images/03.png);
+        }
     </style>
 </head>
 <body>
@@ -366,6 +422,11 @@
         나는 요즘 매일 생각한다! <br>
         도대체 <span id="name"></span>
     </p>
+
+    <!-- 원모양박스 -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
 
     
 </body>
