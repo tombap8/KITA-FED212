@@ -40,6 +40,14 @@
                 - 자식요소의 flex: 1 로 설정하면 등분할 된다!
 
             */
+            flex-direction: row;
+            /* 
+                flex-direction 속성 : 진행방향과 순서를 정함
+                1) row : 좌->우(기본값)
+                2) row-reverse : 우->좌
+                3) column : 위->아래
+                4) column-reverse : 아래->위
+            */
 
             height: 100%;
         }
@@ -47,6 +55,24 @@
         #wrap>ul>li{
             flex: 1;
             /* flex가 설정된 부모의 자식속성 -> 1은 등분할! */
+            /* 
+                [ flex : 플렉스 자식요소에 주는 속성 ]
+
+                -> flex : 한번에 아래 3가지 속성을 줌
+                flex:1 숫자하나만 쓰면 flex:1 1 0 과 동일함
+                해석) 커질래?응, 작아질래?응, 가로크기 없음
+                -> flex: 1 1 0 -> 아래에 따로 설정한것과 같음!
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+
+                1) flex-grow : 1 | 0 -> 커질래? 1응, 0아니
+                2) flex-shrink : 1 | 0 -> 작아질래? 1응, 0아니
+                3) flex-basis : 설정값(px,%,em,rem,vw 등)
+                    -> width 가로크기를 설정하는 속성
+                    -> 만약 0을쓰면 속성값 없음!
+            
+            */
 
             /* 
                 기존에 float설정시 필요한 것들:
@@ -94,7 +120,20 @@
             <li></li>
             <li></li>
         </ul>
-    </div>
+
+        <!-- 타이틀박스1 -->
+        <ol class="tit t1">
+            <li>L</li>
+            <li>O</li>
+            <li>T</li>
+            <li>T</li>
+            <li>E</li>
+        </ol>
+
+
+
+
+    </div><!-- #wrap -->
     
 </body>
 </html>
