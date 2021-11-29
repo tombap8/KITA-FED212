@@ -16,10 +16,38 @@
             padding: 0;
             list-style: none;
         }
+        /* 전체부모 */
+        #wrap{
+            height: 100%;
+            /* 화면채우기 */
+        }
+
+        /* ul 파티션 부모박스 */
+        #wrap>ul{
+            height: 100%;
+        }
+        /* li공통 */
+        #wrap>ul>li{
+            width: 20%;
+            height: 100%;
+            float: left;
+            outline: 2px dotted red;
+        }
 
     </style>
 </head>
 <body>
+    <!-- 전체부모박스 -->
+    <div id="wrap">
+        <!-- 파티션박스 -->
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     
 </body>
 </html>
