@@ -329,6 +329,15 @@
             tg.style.transform = 
             "translate(-50%,-50%) rotate(360deg) scale(.7)";
 
+            // (10) 전체배경색 변경하기
+            // 대상: body
+            // JS에서 body는 특별히 취급하여
+            // document.body 라고 선택함!
+            var bd = document.body;
+
+            bd.style.backgroundColor = "orange";
+            bd.style.transition = "5s";
+
 
 
         } ///////////// showMe 함수 ////////////////
