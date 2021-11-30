@@ -1,13 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>등분할 레이아웃 사이트</title>
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 보이는 화면채우기 - 자식요소의 %기준 필수! */
+        }
 
+        ul,
+        ol {
+            /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 전체부모 */
+        #wrap {
+            height: 100%;
+        }
+
+        /* ul 파티션 부모박스 */
+        #wrap>ul {
+            display: flex;
+            /* 플렉스박스 설정! */
+            height: 100%;
+        }
+
+        /* 파티션 li공통 */
+        #wrap>ul>li {
+            flex: 1;
+            /* 등분할 설정 */
+
+            /* 배경공통 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* 각 파티션 li 셋팅 */
+        #wrap>ul>li:nth-child(1){
+            background-image: url(images/m01_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(2){
+            background-image: url(images/m02_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(3){
+            background-image: url(images/m03_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(4){
+            background-image: url(images/m04_bg.jpg);
+        }
+        #wrap>ul>li:nth-child(5){
+            background-image: url(images/m05_bg.jpg);
+        }
     </style>
 </head>
+
 <body>
     <!-- 전체부모박스 -->
     <div id="wrap">
@@ -35,6 +91,7 @@
             </li>
         </ul>
     </div>
-    
+
 </body>
+
 </html>
