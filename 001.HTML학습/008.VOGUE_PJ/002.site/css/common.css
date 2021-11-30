@@ -21,6 +21,46 @@
 }
 
 /************** 1-1-1.sns박스 *************/
+.sns a{
+    display: inline-block;
+    /* fontisto에서 이미 .fi로 적용했지만 
+    디자인 적용위해 또 설정함(중복코딩) */
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    /* 안줘도 html에서 상속된 사이즈는 16px */
+    text-align: center;
+    /* 박스내의 인라인요소 가로중앙정렬 */
+    vertical-align: top;
+    /* 인라인요소간 세로정렬(top-윗줄맞춤) */
+    line-height: 16px;
+    /* 글자가 박스 세로중앙에 오도록 설정 */
+
+    /* 위치조정 */
+    margin-top: 15px;
+    margin-right: 16px;
+
+    /* 트랜지션: 속시이지 */
+    transition: opacity .2s;
+}
+/* a요소 마우스 오버시 */
+.sns a:hover{
+    opacity: 0.8;
+}
+
+/* 트위터 아이콘 박스 */
+.sns a.fi-twitter{
+    font-size: 13px;
+}
+/* 유튜브 아이콘 박스 */
+.sns a.fi-youtube-play{
+    font-size: 11px;
+}
+/* sns 마지막 a요소에 카스 이미지 넣기 */
+.sns a:last-child{
+    background: 
+    url(../images/sns_kakao.png) no-repeat center/auto 100%;
+}
 
 /************** 1-1-2.사이드메뉴 *************/
 
