@@ -195,6 +195,10 @@
             /* 파티션 박스 아랫방향으로 변경하기 */
             #wrap>ul {
                 flex-direction: column;
+                height: calc(100vh - 97px);
+                /* 보이는 화면높이에서 위아래크기 뺌 */
+                margin-top: 50px;
+                /* 상단 시작위치 조정 */
             }
 
             /* 중앙타이틀 */
@@ -217,12 +221,28 @@
                 margin: 0;
             }
 
+            /* 타이틀이미지 */
+            #wrap>ul>li>img:first-child {
+                width: auto;
+                height: 80%;
+                /* 높이값을 기준으로 변경 */
+            }
+
+            /* 로고이미지 */
+            #wrap>ul>li>img:last-child {
+                top: 50%;
+                bottom: auto;
+                /* 기존 bottom해제 */
+                left: 18%;
+                height: 61%;
+            }
+
             /* 하단로고바 */
             .binfo {
                 width: 100vw;
             }
 
-            
+
         }
 
         /* 미디어쿼리 */
