@@ -72,6 +72,29 @@
             transform: translate(-50%, -50%);
             /* 정중앙이동 */
         }
+        /* 타이틀이미지 */
+        #wrap>ul>li>img:first-child{
+            width: min(80%,240px);
+        }
+        /* 
+            [ CSS 함수기능 ]
+            -> 참고(W3S):
+            https://www.w3schools.com/css/css_math_functions.asp
+
+            1. calc() 
+                -> 특정값을 계산으로 적용하기(사칙연산가능)
+                예) calc(100% - 200px) 
+                -> 100%에서 200px을 뺀 나머지
+            2. max() 
+                -> 나열된 값에서 가장 큰값을 적용함(2개이상가능)
+                예) max(50%,200px) 
+                -> 두값중 큰것이 적용됨
+            3. min() 
+                -> 나열된 값에서 가장 작은값을 적용함(2개이상가능)
+                예) min(50%,200px) 
+                -> 두값중 작은것이 적용됨
+        */
+
     </style>
 </head>
 
