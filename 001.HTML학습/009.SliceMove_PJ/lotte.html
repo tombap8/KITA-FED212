@@ -12,6 +12,7 @@
             padding: 0;
             height: 100%;
             /* 보이는 화면채우기 - 자식요소의 %기준 필수! */
+            overflow: hidden;
         }
 
         ul,
@@ -49,8 +50,9 @@
             /* 트랜지션: 속시이지 */
             transition: flex .4s ease-in-out;
         }
+
         /* 파티션 li에 마우스 오버시 가로 넓어짐 */
-        #wrap>ul>li:hover{
+        #wrap>ul>li:hover {
             flex: 1.4;
             /* 숫자를 1보다 크게하면 다른 등분할 요소의
             몇배라고 해석함! 지금은 1.4배임 */
@@ -73,48 +75,56 @@
             /* 트랜지션: 속시이지 */
             transition: opacity .4s ease-in-out;
         }
+
         /* li에 오버시 가상요소 투명하게하기 */
         #wrap>ul>li:hover::before {
             opacity: 0;
         }
 
         /* 각 파티션 li 셋팅 */
-        #wrap>ul>li:nth-child(1){
+        #wrap>ul>li:nth-child(1) {
             background-image: url(images/m01_bg.jpg);
         }
-        #wrap>ul>li:nth-child(2){
+
+        #wrap>ul>li:nth-child(2) {
             background-image: url(images/m02_bg.jpg);
         }
-        #wrap>ul>li:nth-child(3){
+
+        #wrap>ul>li:nth-child(3) {
             background-image: url(images/m03_bg.jpg);
         }
-        #wrap>ul>li:nth-child(4){
+
+        #wrap>ul>li:nth-child(4) {
             background-image: url(images/m04_bg.jpg);
         }
-        #wrap>ul>li:nth-child(5){
+
+        #wrap>ul>li:nth-child(5) {
             background-image: url(images/m05_bg.jpg);
         }
 
         /* 파트별 타이틀+로고 이미지 공통 */
-        #wrap>ul>li>img{
+        #wrap>ul>li>img {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             /* 정중앙이동 */
         }
+
         /* 타이틀이미지 */
-        #wrap>ul>li>img:first-child{
-            width: min(80%,240px);
+        #wrap>ul>li>img:first-child {
+            width: min(80%, 240px);
             /* min을 사용하여 240px보다 더 커지지 않게함! */
         }
+
         /* 로고이미지 */
-        #wrap>ul>li>img:last-child{
+        #wrap>ul>li>img:last-child {
             top: auto;
             /* 기존top값 해제 */
-            bottom: 20px;
+            bottom: 40px;
             /* 새로 bottom값 설정1 */
         }
+
         /* 
             [ CSS 함수기능 ]
             -> 참고(W3S):
@@ -135,7 +145,7 @@
         */
 
         /* 중앙타이틀 */
-        .tit{
+        .tit {
             position: absolute;
             top: 5%;
             left: 50%;
@@ -152,23 +162,24 @@
             width: 500px;
             /* outline: 4px dotted lime; */
         }
+
         /* 타이틀 li */
-        .tit>li{
+        .tit>li {
             width: 50px;
             height: 50px;
             border: 3px solid #fff;
             border-radius: 50%;
             background-color: #f00;
-            font: bold 14px/50px Verdana; 
+            font: bold 14px/50px Verdana;
             color: #fff;
             text-align: center;
-            
+
             /* 양쪽마진으로 한줄에 오는글자조정 */
             margin: 30px 14px;
         }
 
         /* 하단로고바 */
-        .binfo{
+        .binfo {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -179,6 +190,42 @@
             background-color: #da041c;
         }
 
+        @media only screen and (max-width:800px) {
+
+            /* 파티션 박스 아랫방향으로 변경하기 */
+            #wrap>ul {
+                flex-direction: column;
+            }
+
+            /* 중앙타이틀 */
+            .tit {
+                top: 0;
+                left: 0;
+                transform: none;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                width: 100vw;
+            }
+
+            /* 타이틀 li */
+            .tit>li {
+                flex: 1;
+                width: auto;
+                height: auto;
+                border: none;
+                border-radius: 0;
+                margin: 0;
+            }
+
+            /* 하단로고바 */
+            .binfo {
+                width: 100vw;
+            }
+
+            
+        }
+
+        /* 미디어쿼리 */
     </style>
 </head>
 
