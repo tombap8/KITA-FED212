@@ -45,6 +45,37 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+
+            /* 트랜지션: 속시이지 */
+            transition: flex .4s ease-in-out;
+        }
+        /* 파티션 li에 마우스 오버시 가로 넓어짐 */
+        #wrap>ul>li:hover{
+            flex: 1.4;
+            /* 숫자를 1보다 크게하면 다른 등분할 요소의
+            몇배라고 해석함! 지금은 1.4배임 */
+        }
+
+        /* li에 가상요소로 반투명 가림막 만들기 */
+        #wrap>ul>li::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* 부모는? li */
+            background-color: #000;
+            opacity: 0.5;
+            /* 반투명 */
+
+            /* 트랜지션: 속시이지 */
+            transition: opacity .4s ease-in-out;
+        }
+        /* li에 오버시 가상요소 투명하게하기 */
+        #wrap>ul>li:hover::before {
+            opacity: 0;
         }
 
         /* 각 파티션 li 셋팅 */
@@ -75,6 +106,14 @@
         /* 타이틀이미지 */
         #wrap>ul>li>img:first-child{
             width: min(80%,240px);
+            /* min을 사용하여 240px보다 더 커지지 않게함! */
+        }
+        /* 로고이미지 */
+        #wrap>ul>li>img:last-child{
+            top: auto;
+            /* 기존top값 해제 */
+            bottom: 20px;
+            /* 새로 bottom값 설정1 */
         }
         /* 
             [ CSS 함수기능 ]
