@@ -131,7 +131,7 @@
 }
 
 /* 첫번째 사이드메뉴에 마우스 오버시 커서모양 text */
-.smbx>li:first-child a{
+.smbx>li:first-child>a{/* 직계a로 할것! 서브a엔 미적용! */
     cursor: text;
 }
 
