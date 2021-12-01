@@ -99,14 +99,16 @@
     height: 0;
     overflow: hidden;
 
-    /* 트랜지션 */
-    transition: opacity .4s ease-in-out;
+   
 }
 /* 상위메뉴li에 마우스 오버시 하위메뉴 보이기 */
 .smbx>li:hover .smsub{
     opacity: 1;
     height: auto;
-    /* 원래 자동높이 복원! */
+    /* 원래 자동높이 복원! */ 
+    
+    /* 트랜지션 - 오버시에만 적용됨! */
+    transition: opacity .4s ease-in-out;
 }
 /* 서브메뉴 a요소 */
 .smsub a{
@@ -118,6 +120,19 @@
     font-size: 12px;
     color: #747474;
 
+    /* 트랜지션: 속시이지 */
+    transition: all .2s ease-in-out;
+
+}
+/* 서브메뉴 a에 오버시 */
+.smsub a:hover {
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* 첫번째 사이드메뉴에 마우스 오버시 커서모양 text */
+.smbx>li:first-child a{
+    cursor: text;
 }
 
 /*************  1-2.로고박스 *************/
