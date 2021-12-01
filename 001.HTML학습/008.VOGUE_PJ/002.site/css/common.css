@@ -150,7 +150,7 @@
     /* 글자설정 */
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
-
+    line-height: 57px;
 }
 .gnb>ul{
     display: flex;
@@ -160,7 +160,11 @@
 }
 /* 리스트 요소 */
 .gnb li{
-    margin: 0 20px;
+    margin: 0 23px;
+}
+/* 마지막 리스트li 돋보기 두꺼운체 */
+.gnb li:last-child a{
+    font-weight: bold;
 }
 
 
