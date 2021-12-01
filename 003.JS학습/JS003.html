@@ -35,25 +35,37 @@
             // 아무값도 넣지 않으면 
             // undefined(정의안된값)이 셋팅된다
 
+            // 결과에 따른 색상변수
+            var fc;
+
             // 3. 점수환산하기 //
             if(score>=90){ // 90점이상
                 msg = "매우잘함";
+                fc = "blue";
             }
             else if(score>=80){ // 80점이상
                 msg = "잘함";
+                fc = "green";
             }
             else if(score>=70){ // 70점이상
                 msg = "보통";
+                fc = "purple";
             }
             else if(score>=60){ // 60점이상
                 msg = "노력요함";
+                fc = "orange";
             }
             else{ // 위의 모든 조건에 해당없을때
                 msg = "재시험";
+                fc = "red";
             }
 
             // 4. 결과출력
             jexp.innerText = "평가결과는 " + msg;
+
+            // 5. 글자색 변경하기 
+            //-> fc라는 변수에 각 조건별 색상명을 할당하여 변경
+            jexp.style.color = fc;
 
 
        } //////////// jumsu 함수 //////////////////////
