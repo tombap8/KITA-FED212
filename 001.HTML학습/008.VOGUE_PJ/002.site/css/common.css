@@ -93,6 +93,20 @@
     position: absolute;
     /* 젠틀앱솔루트! */
     border: 1px solid #e5e5e5;
+    opacity: 0;
+
+    /* 투명하기때문에 숨기기 */
+    height: 0;
+    overflow: hidden;
+
+    /* 트랜지션 */
+    transition: opacity .4s ease-in-out;
+}
+/* 상위메뉴li에 마우스 오버시 하위메뉴 보이기 */
+.smbx>li:hover .smsub{
+    opacity: 1;
+    height: auto;
+    /* 원래 자동높이 복원! */
 }
 /* 서브메뉴 a요소 */
 .smsub a{
