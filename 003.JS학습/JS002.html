@@ -351,13 +351,30 @@
                     ${woman>=30 && woman<40}</h1>`);
 
         // 남자의 회원가입
+        // 회원가입조건: 카카오회원이거나 20살 미만인 남자
         var man; //변수선언
+        man = "네이버"; //변수할당
+
+        // 남자의 나이
+        var age = 19;
+
+       document.write(`<h1>
+        한 남자분은 ${man}회원입니다</h1>`);
+       document.write(`<h1>
+        이 분의 나이는 ${age}살입니다</h1>`);
+       document.write(`<h1>
+        이 분은 카카오 회원입니까? 
+                    ${man==="카카오"}</h1>`);
+       document.write(`<h1>
+        이 분은 20살미만입니까? 
+                    ${age<20}</h1>`);
+       document.write(`<h1>
+        이 분은 20살미만이거나 카카오회원입니까? 
+                    ${age<20 || man==="카카오"}</h1>`);
         
-
-
-       document.write(`<h1></h1>`);
-       document.write(`<h1></h1>`);
-
+        // 사람의 성별
+        var person = "여자";
+        document.write(`<h1></h1>`);
 
     </script>
 </head>
