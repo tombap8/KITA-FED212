@@ -30,6 +30,9 @@
             var jexp = document.querySelector("#jexp");
             // querySelector(CSS선택자)
 
+            // 2-4. 칭찬스티커 대상: #jshow
+            var jshow = document.querySelector("#jshow");
+
             // 결과메시지 변수
             var msg;
             // 아무값도 넣지 않으면 
@@ -38,26 +41,35 @@
             // 결과에 따른 색상변수
             var fc;
 
-            // 3. 점수환산하기 //
+            // 결과에 따른 칭찬스티커 위치변수
+            var pos;
+
+            //////////////////////////////////////
+            ///// 3. 점수환산하기 /////////////////
             if(score>=90){ // 90점이상
                 msg = "매우잘함";
                 fc = "blue";
+                pos = "0 0";
             }
             else if(score>=80){ // 80점이상
                 msg = "잘함";
                 fc = "green";
+                pos = "-322px 0";
             }
             else if(score>=70){ // 70점이상
                 msg = "보통";
                 fc = "purple";
+                pos = "-322px -322px";
             }
             else if(score>=60){ // 60점이상
                 msg = "노력요함";
                 fc = "orange";
+                pos = "-322px -644px";
             }
             else{ // 위의 모든 조건에 해당없을때
                 msg = "재시험";
                 fc = "red";
+                pos = "-644px -644px";
             }
 
             // 4. 결과출력
@@ -66,6 +78,10 @@
             // 5. 글자색 변경하기 
             //-> fc라는 변수에 각 조건별 색상명을 할당하여 변경
             jexp.style.color = fc;
+
+            // 6. 칭찬스티커 나오게하기
+            jshow.style.backgroundPosition = pos;
+
 
 
        } //////////// jumsu 함수 //////////////////////
@@ -112,6 +128,30 @@
        ***********************************************/
 
     </script>
+    <style>
+        /* 칭찬스티커 */
+        #jshow{
+            position: absolute;
+            top: -13px;
+            left: 100px;
+            width: 322px;
+            height: 322px;
+            transform: scale(.3);
+            background: url(./images/ifshow.jpg) no-repeat;
+            background-position: 322px 0;
+            /* 처음에 배경이미지 안보이게 셋팅 - 하나당 322px임 */
+
+            /* 트랜지션: 속시이지 */
+            transition: all .4s ease-out;
+        }
+        /* IR(배경이미지설명숨김) */
+        .ir{
+            display: block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <h1>JS 제어문</h1>
@@ -122,6 +162,12 @@
     <label for="jumsu">점수입력 : </label>
     <input type="text" id="jumsu" placeholder="점수를 입력하세요!">
     <button class="sbtn" onclick="jumsu()">평가하기</button>
+
+    <!-- 칭찬스티커 -->
+    <div id="jshow">
+        <span class="ir">칭찬스티커</span>
+    </div>
+
     <!-- 
         input요소 : 입력양식 요소
                     (텍스트, 라디오버튼, 체크박스 등)
