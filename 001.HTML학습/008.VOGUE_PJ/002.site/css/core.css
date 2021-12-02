@@ -105,6 +105,9 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    
+    box-sizing: border-box;
+    /* 패딩,보더 내부포함 */
 
     /* 글자체 */
     font-family: 'Pistilli','NanumBarunGothic';
@@ -113,6 +116,11 @@
     font-weight: lighter;
     text-align: center;
     color: #fff;
+
+    margin: 22px 0;
+    /* 위아래 마진 22px */
+    padding: 0 50px;
+    /* 양쪽패딩 50px */
 }
 
 
