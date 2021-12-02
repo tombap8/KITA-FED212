@@ -211,6 +211,17 @@
             // 1. 함수호출확인
             console.log("지역국번뭐야?");
 
+            // 2-1. 대상선정: 읽어올 대상 - input#local
+            var tg = document.querySelector("#local");
+
+            // 2-2. 대상선정: 출력대상 - #info
+            var info = document.querySelector("#info");
+
+            // 3. 입력값 읽어오기
+            var txt = tg.value;
+            // input에 입력한 값을 읽어옴(value)
+            console.log("지역명:",txt);
+
        } //////////////// local 함수 /////////////////////////
        ///////////////////////////////////////////////////////
 
@@ -288,7 +299,7 @@
 
      <!-- switch case문  -->
      <h2>switch case문 연습</h2>
-     <h3>국번안내</h3>
+     <h3 id="info">국번안내</h3>
      <label for="local">지역명 입력:</label>
      <input type="text" id="local" placeholder="지역명에 '도'를 빼고 쓰세요" onkeypress="if(event.keyCode===13)local()">
      <button class="sbtn" onclick="local()">국번문의</button>
