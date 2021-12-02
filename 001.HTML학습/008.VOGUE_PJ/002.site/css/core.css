@@ -110,6 +110,7 @@
     font-family: 'Pistilli','NanumBarunGothic';
     /* 웹폰트 영문체(Pistilli), 한글체(NanumBarunGothic) */
     font-size: 33px;
+    font-weight: lighter;
     text-align: center;
     color: #fff;
 }
