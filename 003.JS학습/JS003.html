@@ -206,7 +206,7 @@
         *****************************************************/
         function local() {
             // 1. 함수호출확인
-            console.log("지역국번뭐야?");
+            // console.log("지역국번뭐야?");
 
             // 2-1. 대상선정: 읽어올 대상 - input#local
             var tg = document.querySelector("#local");
@@ -217,7 +217,7 @@
             // 3. 입력값 읽어오기
             var txt = tg.value;
             // input에 입력한 값을 읽어옴(value)
-            console.log("지역명:", txt);
+            // console.log("지역명:", txt);
 
             // 메시지변수
             var msg; // 선언만, 할당은 제어문에서!
@@ -275,7 +275,7 @@
                 case "제주":
                     msg = "064";
                     break;
-                default:
+                default: // 위의 모든 case에 해당없을때!
                     msg = "esc";
             } ////////// switch case //////////
 
@@ -401,6 +401,62 @@
     <label for="local">지역명 입력:</label>
     <input type="text" id="local" placeholder="지역명에 '도'를 빼고 쓰세요" onkeypress="if(event.keyCode===13)local()">
     <button class="sbtn" onclick="local()">국번문의</button>
+
+     <hr>
+
+    <!-- for문 연습 -->
+    <h2>for문 연습</h2>
+    <h3>구구단 출력하기</h3>
+    <select name="sel" id="sel">
+        <option value="1">구구단을 선택하세요!</option>
+        <option value="2">2단</option>
+        <option value="3">3단</option>
+        <option value="4">4단</option>
+        <option value="5">5단</option>
+        <option value="6">6단</option>
+        <option value="7">7단</option>
+        <option value="8">8단</option>
+        <option value="9">9단</option>
+        <option value="10">10단</option>
+        <option value="11">11단</option>
+        <option value="12">12단</option>
+        <option value="13">13단</option>
+        <option value="14">14단</option>
+        <option value="15">15단</option>
+        <option value="16">16단</option>
+        <option value="17">17단</option>
+        <option value="18">18단</option>
+        <option value="19">19단</option>
+        <option value="20">20단</option>
+    </select>
+    <!-- 
+        [ select 요소 ]
+        - 어떤 제시된 값을 드롭다운 메뉴에서 선택할 수 있는
+        입력요소
+        - name 속성 : 백엔드코딩에서 값을 얻기위한 구분이름
+                    (name은 id명과 같아도 무관함!)
+        - 하위 필수요소 -> option 요소
+            -> 선택옵션을 셋팅하는 요소
+            -> 데이터로 값을 넣고 이 값을 선택했을때
+            코드를 넣는다! value속성이 구분코드임!
+            -> 만약 value를 안쓰면 데이터를 읽어감
+            (참고: html태그에서 데이터는 꺽쇠사이의 문자임)
+     -->
+
+     <!-- 
+            [ 젠코딩 약어 ]
+            - 젠코딩은 줄여서 코딩하는 법을 말함!
+            - vscode에서는 emmet(에밋)으로 소개됨
+            option[value=$]{$단}*20
+            _________________________
+            대괄호[] - 속성
+            중괄호{} - 데이터
+            $ - 순번(1부터)
+            *숫자 - 여러개 만들때
+
+            (참고: 공유자료 - zencoding.pdf)
+        
+      -->
 
 </body>
 
