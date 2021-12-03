@@ -345,7 +345,10 @@
             // 3. 구구단 만들기
             var code = `<h2>${opt}단</h2>`;
 
-            code += `${opt} × 1 ＝ ${opt*1} <br>`;
+            // for문으로 반복코드 생성하기!!!
+            for(var i=1;i<=9;i++){
+                code += `${opt} × ${i} ＝ ${opt*i} <br>`;
+            } ///////////// for ////////////////
 
             // 4. 화면출력
             gugu.innerHTML = code;
