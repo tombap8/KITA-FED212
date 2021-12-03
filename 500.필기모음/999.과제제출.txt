@@ -1,15 +1,30 @@
 [ 과제제출 구글 드라이브 ]
 - 본인 구글계정 로그인필요!!!
-https://drive.google.com/drive/folders/1SKOIs5vcbCwP4mOJW8JrxnAqKa9U2XMu
+
+1) HTML + CSS 웹개발 실기 : 
+    https://drive.google.com/drive/folders/1O4fJ1mTmH2-2T2LC7xJtKY6xkP8ENQD3
+
+2) 화면설계(NCS) 
+    https://drive.google.com/drive/folders/1_gF0RjoYCT1d11XdGZXWCv58MEgyrQN5
+
 
 [ 제출방법 ]
 - 본인 이름 폴더에 소스전체를 zip으로 만든 후 업로드함!
 
 [ 제출내용 ]
-- 와이어프레임 pdf + 소스폴더
+1) 화면설계(NCS) 
+    - 선정 포트폴리오 분석/설계서 PDF파일
+    - 파일명: 화면설계-자기이름.pdf
+
+2) HTML + CSS 웹개발 실기 : 
+    - CGV PJ를 응용한 웹페이지 소스
+    - 와이어프레임 PDF파일
+    (위의 2개의 파일을 묶어서 제출!)
+    - 파일명: HTML+CSS웹개발-자기이름.zip
+
 
 [ 프로그램언어활용 실기제출 시한은? ]
-- 11/25(목) 자정까지!
+- 12/3(금) 자정까지!
 
 [ 평가기준은? ]
 - 평가시험문제에 준함
