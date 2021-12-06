@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        h1,
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body * {
+            outline: 1px dashed rgb(158, 158, 158);
+        }
+
+        .ibx {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .wrap {
+            max-width: 1657px;
+            margin: 0 auto;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        #side {
+            position: fixed;
+            top: 60px;
+            width: 275px;
+            height: 320px;
+            background-color: rgb(255, 181, 181);
+        }
+
+        #cont {
+            max-width: 1300px;
+            padding-left: 275px;
+        }
+
+        #cont>* {
+            min-height: 400px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="side">
+        </div>
+        <div id="cont">
+            <header class="top"></header>
+            <section class="cont1"></section>
+            <section class="cont2"></section>
+            <section class="cont3"></section>
+            <section class="cont4"></section>
+        </div>
+    </div>
+
+</body>
+
+</html>
