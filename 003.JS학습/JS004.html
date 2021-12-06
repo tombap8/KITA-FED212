@@ -48,8 +48,9 @@
        // addEventListener(이벤트명,함수)
        // -> 특정이벤트와 실행함수를 연결해주는 JS내장함수!
 
-       // 로딩구역 ///////////////////////////////
-       window.addEventListener("load",loadFn);
+       // 로딩구역 ///////////////////////////////////
+       // window객체 : 브라우저 전체창에 관련된 객체
+       window.addEventListener("DOMContentLoaded",loadFn);
        // 파라미터가 없는 함수를 호출할 경우 함수명만 써도됨!
 
        /****************************************** 
@@ -57,6 +58,9 @@
             기능: 페이지로딩시 호출되는 함수
        ******************************************/
       function loadFn(){
+
+        // 로딩후 호출확인
+        console.log("로딩완료!");
 
           // 출력대상: txt1
           var txt1 = document.getElementById("txt1");
