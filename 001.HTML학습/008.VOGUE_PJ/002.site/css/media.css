@@ -12,8 +12,17 @@
 }
 
 /* 3) 로고이미지 크기변경(130px) */
+.logo img{
+    width: 130px;
+}
+.logo {
+    padding-bottom: 10px;
+}
 
-/* 4) 상단영역 min-height:auto */
+/* 4) 상단영역(.top) min-height:auto */
+.top{
+    min-height: auto;
+}
 
 /* 5) 햄버거, 검색버튼 보이기(만들어야함) */
 
