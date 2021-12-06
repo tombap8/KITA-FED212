@@ -15,7 +15,7 @@
 .logo img{
     width: 130px;
 }
-.logo {
+.logo {/* 로고하단여백 */
     padding-bottom: 10px;
 }
 
@@ -30,6 +30,18 @@
 
 /* 1) 1개짜리 박스 */
 /* - 배경이미지 b형으로 변경 */
+/* 컨텐츠1 - 1개 */
+.bg1{
+    background-image: url(../images/cont1b.jpg);
+}
+/* 컨텐츠3 - 1개 */
+.bg5{
+    background-image: url(../images/cont3b.jpg);
+}
+/* 컨텐츠5 - 1개 */
+.bg9{
+    background-image: url(../images/cont5b.jpg);
+}
 
 /* - 비율변경(149.69%) - .pt1.rbx::before */
 
