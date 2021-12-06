@@ -53,11 +53,20 @@
 }
 
 /* 2) 3개짜리 박스 */
-/* - 박스 한개 없앰(display:none) */
+/* - 마지막 박스 한개 없앰(display:none) */
+.pt2 .cbx:last-child{
+    display: none;
+}
 
 /* - 비율변경(75%) - .pt2.rbx::before */
+.pt2.rbx::before{
+    padding-top: 75%;
+}
 
 /* - h2태그 글자크기 20px */
+.pt2 .cbx h2{
+    font-size: 20px;
+}
 
 }
 /************** 모바일 기준 500px이하 끝***************/
