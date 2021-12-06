@@ -69,11 +69,14 @@
 }
 
 /* 3.하단영역 */
-/* 하단박스 패딩변경 */
+/* 1) 하단박스 */
 .info{
     padding: 40px;
+    /* 패딩변경 */
+    min-height: auto;
+    /* 최소높이해제 */
 }
-/* 하단로고 이미지 width 200px */
+/* 2) 하단로고 이미지 width 200px */
 .blogo img{
     width: 200px;
 }
