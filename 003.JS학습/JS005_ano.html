@@ -98,12 +98,29 @@
 
         // 선언적함수 호출
         // callMe("함수 아래에서 호출!");
+
+
+        // 익명함수를 함수 생성 전 위에서 호출하기
+        // myHome("위에서 익명함수호출!");
+
+        // 익명함수는 생성 전에 호출하면 에러가 발생함!
+        // 에러메시지:
+        // Uncaught TypeError: myHome is not a function
+        
+
+        /// 할당형 익명함수 만들기 ///
+        var myHome = function(txt){ // txt는 전달변수
+            console.log("오!나의집!",txt)
+        }; ///// myHome 익명함수 ///////
+
+        // 익명함수를 함수 생성 후 아래에서 호출하기
+        myHome("아래에서 익명함수호출!");
         
     </script>
 </head>
 <body>
 
-    <button id="btngo">
+    <button id="btngo" onclick="myHome('내가 누구게?')">
         익명함수호출하기!
     </button>
     
