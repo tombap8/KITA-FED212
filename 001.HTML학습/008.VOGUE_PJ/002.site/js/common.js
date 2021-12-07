@@ -26,9 +26,20 @@ function(){
         // 구해와야할 것은 대상의 높이값!
         var tgh = tg.offsetHeight;
         console.log("대상높이:",tgh);
-        // 구해와야할 것은 내부박스의 높이값!
-        var inh = mobx.offsetHeight;
-        console.log("내부박스높이:",inh);
+
+        // 기능구현: 높이값이 0이면
+        if(tgh===0){
+            // 구해와야할 것은 내부박스의 높이값!
+            var inh = mobx.offsetHeight;
+            // console.log("내부박스높이:",inh);
+            tg.style.height = inh + "px";
+            tg.style.transition = ".4s ease-out";
+        }
+        else{ // 높이값이 0이 아니면
+            tg.style.height = "0";
+        }
+
+        
 
     }; ///////////// click /////////////////
 
