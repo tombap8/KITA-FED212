@@ -292,6 +292,17 @@
 }
 
 /* 1-5-3.매거진 박스 */
+.magbox{
+    margin: 0;
+    padding: 10px 30px 0 15px;
+    font-family: 'NanumBarunGothic';
+}
+/* 잡지커버이미지 */
+.magbox img{
+    width: 100%;
+}
+/* 잡지설명 */
+
 
 /* 1-5-4.하단링크박스 */
 
