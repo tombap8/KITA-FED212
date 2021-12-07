@@ -304,7 +304,7 @@
 /* 잡지설명 */
 .magbox figcaption{
     font-size: 13px;
-    line-height: 2;
+    line-height: 3;
     color: #222;
 }
 /* 정기구독버튼 */
@@ -332,6 +332,10 @@
 }
 .moblink a{
     color: #222;
+}
+/* 마지막 li만 두꺼운글자 */
+.moblink li:last-child a{
+    font-weight: bold;
 }
 
 
