@@ -351,7 +351,9 @@
                 ratings:"12세관람가",
                 // 6. 예고편
                 trailer:()=>{
-
+                    // 1.호출확인
+                    console.log("예고편!");
+                    
                 } ///// trailer 메서드 ////
 
             }; //////////// 나의 객체 ///////////
@@ -365,19 +367,23 @@
 
             // 출력
             txt6.innerHTML = 
-            `▣영화명: ${myMovie.title} `+
+            `▣영화명: ${myMovie["title"]} `+
             `▣감독: ${myMovie.director} `+
             `▣배우: ${myMovie.actors} <br>`+
             `▣장르: ${myMovie.genre} `+
             `▣등급: ${myMovie.ratings}`;
 
             // 툴팁보이기
-
+            txt6.title = `클릭하시면 ${myMovie.title}예고편을 보실 수 있습니다!`;
             // 손가락모양
+            txt6.style.cursor = "pointer";
 
             // 트레일러 함수 호출하기
             // #txt6 클릭시
-            
+            txt6.onclick = ()=>{
+                myMovie.trailer();
+            }; ////////// click ////////////
+
 
 
 
