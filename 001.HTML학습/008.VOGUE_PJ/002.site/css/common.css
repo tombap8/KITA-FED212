@@ -302,7 +302,11 @@
     width: 100%;
 }
 /* 잡지설명 */
-
+.magbox figcaption{
+    font-size: 13px;
+    line-height: 2;
+    color: #222;
+}
 
 /* 1-5-4.하단링크박스 */
 
