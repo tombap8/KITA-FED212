@@ -15,6 +15,8 @@ function(){
 
         // 2. 변경대상: .mowrap (모바일메뉴 전체박스)
         var tg = document.querySelector(".mowrap");
+        // 내부박스
+        var mobx = document.querySelector("#mobx");
 
         // 3. 변경내용: 
         // (1) 대상의 높이값이 0이면 
@@ -25,6 +27,8 @@ function(){
         var tgh = tg.offsetHeight;
         console.log("대상높이:",tgh);
         // 구해와야할 것은 내부박스의 높이값!
+        var inh = mobx.offsetHeight;
+        console.log("내부박스높이:",inh);
 
     }; ///////////// click /////////////////
 
