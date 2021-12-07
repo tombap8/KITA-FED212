@@ -278,6 +278,18 @@
     text-align: center;
     line-height: 40px;
 }
+/* 트위터 아이콘 박스 */
+.mosns a.fi-twitter{
+    font-size: 16px;
+}
+/* 유튜브 아이콘 박스 */
+.mosns a.fi-youtube-play{
+    font-size: 15px;
+}
+/* .mosns 마지막 a요소에 카스아이콘 넣기 */
+.mosns a:last-child{
+    background: url(../images/sns_kakao.png) no-repeat center/auto 50%;
+}
 
 /* 1-5-3.매거진 박스 */
 
