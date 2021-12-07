@@ -280,10 +280,46 @@
                 // function(){} 대신 ()=>{} 화살표함수
                 msg: (txt)=>{ // txt는 전달변수
                     // 1. 메시지 띄우기
-                    alert("팬레터: ",txt);
+                    alert("팬레터: "+txt);
+                    // 2. 공유 이미지 배경넣기
+                    txt5.style.background = 
+                    "url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Gong_Yoo_%28Sep_2016%29.png/250px-Gong_Yoo_%28Sep_2016%29.png) repeat-x top/auto 100%";
+                    
+
+
                 } ////// msg 메서드 /////
 
             }; /////////// GU 객체 ////////////////
+
+            /// GU객체 출력하기 ////
+            // 출력대상: #txt5
+            var txt5 = document.getElementById("txt5");
+
+            // 줄간격 조정
+            txt5.style.lineHeight = "24px";
+
+            // 내용출력
+            txt5.innerText = 
+            `저는 ${GU.name}입니다. 몸무게는 비밀인데 그래도 말씀드리자면 ${GU.weight}입니다. ㅎㅎㅎ
+            제 대표작은 ${GU.work}입니다. 
+            제 소속사는 잘 모르시는 분들이 많은데 ${GU.com}입니다. 빠이빠이~!   
+            `;
+
+            // 공유박스 마우스 오버시 툴팁보이기
+            // 속성넣기 2가지 방법: 
+            // 요소.속성명=값 or 요소.setAttribute(속성명,값)
+            txt5.setAttribute(
+                "title",
+                "공유의 팬레터를 확인하세요! 바로클릭!");
+            // 오버시 손가락모양
+            txt5.style.cursor = "pointer";
+
+            // 공유박스 클릭시 GU객체의 메서드 호출하기!
+            txt5.onclick = ()=>{
+                GU.msg("\n공유오빠, 서복에서도 멋쩠어요! \n차기작도 기대해요! 화이팅!!!");
+                // alert창은 html태그를 사용할 수 없다
+                // 따라서 줄바꿈은 \n 줄바꿈문자를 사용한다!
+            }; ////// click 함수 ///////
 
 
 
