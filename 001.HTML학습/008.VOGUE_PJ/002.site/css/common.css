@@ -319,6 +319,20 @@
 }
 
 /* 1-5-4.하단링크박스 */
+.moblink{
+    display: flex;
+    margin-left: 15px;
+    line-height: 3.5;
+    font-size: 15px;
+    letter-spacing: -1px;
+
+}
+.moblink li+li{/* 2번째 li부터 */
+    padding-left: 7px;
+}
+.moblink a{
+    color: #222;
+}
 
 
 
