@@ -353,7 +353,19 @@
                 trailer:()=>{
                     // 1.호출확인
                     console.log("예고편!");
-                    
+                    // 2.영화박스만들고 iframe 넣기
+                    // 대상: body 끝에 추가! += 대입연산자 사용!
+                    document.body.innerHTML +=
+                    '<div id="mv">' +
+                    // 유튜브 아이프레임 넣기!
+                    '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lPYxbbKYYmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+                    '</div>';
+
+                    /// 삽입된 동영상박스(#mv) CSS설정하기
+                    var mv = document.getElementById("mv");
+                    mv.style.position = "fixed";
+                    mv.style.top = "50%";
+
                 } ///// trailer 메서드 ////
 
             }; //////////// 나의 객체 ///////////
