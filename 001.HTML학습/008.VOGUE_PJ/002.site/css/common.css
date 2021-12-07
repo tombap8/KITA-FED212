@@ -242,6 +242,13 @@
     display: none;
     /* 처음에 안보임 */
 }
+/* 모바일용 메뉴를 모두 포함하는 부모박스 */
+.mowrap{
+    height: 0;
+    overflow: hidden;
+    /* 내용을 완벽하게 숨겼다가 보여주는
+    박스에는 위아래 패딩이 없어야한다! */
+}
 /* 1-5. 모바일용 메뉴 */
 #mobx{
     padding-left: 15px;
@@ -261,7 +268,7 @@
 }
 /* 1-5-2.모바일 sns메뉴 */
 .mosns{
-    margin-top: 24px;
+    margin-top: 44px;
     margin-left: 13px;
 }
 .mosns a{
