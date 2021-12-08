@@ -69,6 +69,20 @@ function(){
         // 1. 함수호출확인!
         console.log("검색버튼클릭!");
 
+        // 2. 대상선정: .mos
+        let mos = document.querySelector(".mos");
+        // 대상의 높이값
+        let mosh = mos.offsetHeight;
+
+        // 3. 높이값이 0이면 보이게 아니면 숨기기
+        if(mosh===0){
+            mos.style.height = "50px";
+            mos.style.transition = "height .3s ease-out";
+        } //////// if ////////////
+        else {
+            mos.style.height = "0";
+        } //////// else //////////
+
 
 
         // a요소는 기본이동 특성이 있어서
