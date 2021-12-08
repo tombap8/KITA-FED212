@@ -19,6 +19,8 @@ function(){
         var tg = document.querySelector(".mowrap");
         // 내부박스
         var mobx = document.querySelector("#mobx");
+        // 상단영역 최상위박스
+        var top = document.querySelector("#top");
 
         // 3. 변경내용: 
         // (1) 대상의 높이값이 0이면 
@@ -36,10 +38,20 @@ function(){
             // console.log("내부박스높이:",inh);
             tg.style.height = inh + "px";
             tg.style.transition = ".4s ease-out";
-        }
+        } //////// if ////////////////
         else{ // 높이값이 0이 아니면
             tg.style.height = "0";
-        }
+        } ///////// else ////////////
+
+        /// 추가변경: #top에 클래스 .mob 추가하여 
+        // 높이값 보이는 화면 + y축방향 스크롤
+        top.classList.toggle("mob");
+        // classList 객체 : 클래스를 넣거나 빼는 기능객체
+        // 아래 3가지 메서드를 잘알아두자!
+        // (1) add(클래스명) - 클래스넣기
+        // (2) remove(클래스명) - 클래스빼기
+        // (3) toggle(클래스명) - 클래스넣기/빼기
+
 
         // a요소는 기본이동 특성이 있어서
         // 이것을 무효화 해주는 코드가 return false임!
