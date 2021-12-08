@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rolling Gallery</title>
     <style>
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100vh;
             /* 보이는 화면 기준 채우기! */
         }
-        body{
+
+        body {
             background: url(./images/space.jpg) no-repeat center/auto 200%;
         }
+
         /* 공통 */
-        a{
+        a {
             color: #000;
             text-decoration: none;
         }
+
         /* 갤러리부모박스 */
-        #wrap{
+        #wrap {
             width: 520px;
             margin: 0 auto;
             text-align: center;
             padding-top: 20px;
             /* outline: 2px dotted red; */
         }
+
         /* 메인이미지박스 */
-        #mbox{
+        #mbox {
             display: inline-block;
             /* 한줄에 오도록 변경 */
         }
-        #mbox img{
+
+        #mbox img {
             vertical-align: -79px;
         }
     </style>
@@ -40,35 +47,64 @@
     <!-- JS 코딩구역 -->
     <script>
         //////////////// 로드구역 ////////////
-        window.addEventListener("load",()=>{
+        window.addEventListener("load", () => {
 
             console.log("로드완료!");
 
             // 0. 대상선정
             // 버튼대상: .btn
             let btn = document.querySelectorAll(".btn");
-            console.log("버튼개수:"+btn.length);
+            // console.log("버튼개수:"+btn.length);
             // 중앙이미지: #mbox img
             let mimg = document.querySelector("#mbox img");
-            console.log("이미지설명:"+mimg.alt);
+            // console.log("이미지설명:"+mimg.alt);
+
+            // 이미지번호 전역변수
+            let inum = 1;
 
             // 1. 오른쪽버튼 클릭시 다음 이미지변경하기
             // btn[1] -> 두번째 순번 버튼 - 오른쪽버튼
-            btn[1].onclick = ()=>{
-                console.log("오른쪽이양~!");
+            btn[1].onclick = () => {
+                // 1. 함수호출확인
+                // console.log("오른쪽이양~!");
+
+                // 2. 대상선정: #mbox img -> mimg 변수
+
+                // 3. 변경내용: 다음이미지로 변경함
+                // -> 이미지번호를 1씩증가함!
+                inum++;
+                // -> 이미지 한계수 체크
+                if (inum === 8) inum = 1; // 첫이미지로!
+                console.log("이미지번호:" + inum);
+
+                mimg.src = `./images/img${inum}.jpg`;
+
             }; //////////// click ///////////////
 
             // 2. 왼쪽버튼 클릭시 이전 이미지변경하기
             // btn[0] -> 첫번째 순번 버튼 - 왼쪽버튼
-            btn[0].onclick = ()=>{
+            btn[0].onclick = () => {
+                // 1. 함수호출확인
                 console.log("왼쪽이양~!");
+
+                // 2. 대상선정: #mbox img -> mimg 변수
+
+                // 3. 변경내용: 다음이미지로 변경함
+                // -> 이미지번호를 1씩감소함!
+                inum--;
+                // -> 이미지 한계수 체크
+                if (inum === 0) inum = 7; // 첫이미지로!
+                console.log("이미지번호:" + inum);
+
+                mimg.src = `./images/img${inum}.jpg`;
             }; //////////// click ///////////////
-            
+
 
         }); //////// 로드구역 /////////////////
         ///////////////////////////////////////
     </script>
 </head>
+
 <body>
     <div id="wrap">
         <!-- 타이틀 -->
@@ -87,4 +123,5 @@
         </a>
     </div>
 </body>
+
 </html>
