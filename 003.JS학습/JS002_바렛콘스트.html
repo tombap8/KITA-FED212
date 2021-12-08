@@ -44,7 +44,7 @@
 
             4. 중간에 데이터 형이 변경되지 않는 특성때문에
             배열, 객체, 함수 일 경우 const를 사용하는 경우가 많다!
-            
+
             -> 배열일 경우 사용이유: 기본할당 배열유지를 위해!
             https://www.w3schools.com/js/js_array_const.asp
 
@@ -194,6 +194,37 @@
         // unshift() 메서드 - 맨앞 추가
         myArr.unshift("쑥갓");
         console.log("상수 배열 myArr 전체값:"+myArr.valueOf());
+
+        /////////////////////////////
+        ///////// 객체일 경우 ///////
+
+        const myObj = {
+            first:"나야나",
+            second:"너두냐",
+            third:()=>{console.log("객체함수실행!");}
+        } ///// 객체 //////////
+
+        // 값찍기
+        console.log("상수 객체 myObj 중 second값:"+myObj.second);
+        // 값변경
+        myObj.second = "배불러~!";
+        console.log("상수 객체 myObj 중 second값:"+myObj.second);
+
+        // 함수호출
+        myObj.third();
+
+        // 새로할당되나? 불가능!
+        // myObj = "하하하";
+
+        /////////////////////////////////
+        ////////// 함수일 경우 ///////////
+
+        const myfn = x => console.log("성공~!"+x);
+
+        // 함수호출
+        myfn("만세~!");
+
+
 
 
 
