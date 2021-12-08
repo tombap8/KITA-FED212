@@ -247,7 +247,9 @@
 .mos{
     position: relative;
     /* 부모자격 */
-    height: 50px;
+    height: 0;/* 50px; */
+    overflow: hidden;
+    /* 처음에 숨기기 */
 }
 /* 검색내부 검정박스 */
 .mwrap{
