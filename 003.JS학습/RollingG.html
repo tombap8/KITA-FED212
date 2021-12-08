@@ -19,7 +19,46 @@
             color: #000;
             text-decoration: none;
         }
+        /* 갤러리부모박스 */
+        #wrap{
+            width: 520px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+            /* outline: 2px dotted red; */
+        }
+        /* 메인이미지박스 */
+        #mbox{
+            display: inline-block;
+            /* 한줄에 오도록 변경 */
+        }
+        #mbox img{
+            vertical-align: -79px;
+        }
     </style>
+
+    <!-- JS 코딩구역 -->
+    <script>
+        //////////////// 로드구역 ////////////
+        window.addEventListener("load",()=>{
+
+            console.log("로드완료!");
+
+            // 0. 대상선정
+            // 버튼대상: .btn
+            let btn = document.querySelectorAll(".btn");
+            console.log("버튼개수:"+btn.length);
+            // 중앙이미지: #mbox img
+            let mimg = document.querySelector("#mbox img");
+            console.log("이미지설명:"+mimg.alt);
+
+
+            // 1. 왼쪽버튼 클릭시 다음 이미지변경하기
+            
+
+        }); //////// 로드구역 /////////////////
+        ///////////////////////////////////////
+    </script>
 </head>
 <body>
     <div id="wrap">
