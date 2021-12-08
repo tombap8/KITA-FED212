@@ -21,6 +21,12 @@
 
             [ let ] : 블록영역변수 (중괄호는 모두 블록임!)
 
+            1. var 전역변수를 같은 이름의 let 블록변수로 선언하면
+            별도로 관리된다!(별개의 변수임)
+            2. let 전역변수도 같은 이름의 let 블록변수로 사용가능!
+            -> 1,2번으로 부터 지역에변수에서 같은 이름의 변수를
+            변경하게 되면 전역변수에 영향을 주지 않는다!
+            이것이 let을 만든 근본적인 첫번째 이유다!!!
 
 
 
@@ -79,17 +85,37 @@
             // 블록변수 //////////////////////////////
             var seoul = "강남구";
             // 전역변수가 다시 선언되어 할당된 결과임!
+            let jeju = "마라도";
+            // 전역변수 var로 선언된 변수를 같은 이름으로 let재설정
+            let toktok = "라인";
+            // 전역변수 let 선언된 변수를 같은 이름으로 let재설정
+
+            // var sport = "배구";
+            // 전역변수 let 선언된 변수를 같은 이름으로 var재설정
+            // 에러발생이유: let으로 블록선언된 변수를 전역적변경인
+            // var로 재설정하면 이것을 거부하게 된다!
+
+            myitem = "곰인형";
+            // 아무런 선언없이 변수를 블록영역에서 사용하면?
+            // 전역변수에 자동등록된다! 편리한가? 아니다!
+            // 코딩이 많아지면 변수관리가 되지 않는다! 
+            // 절대 선언없이 변수를 사용하지 말것!!!
+            
 
             ///////////////////////////////////////////
             console.log("블록변수를 블록영역에서 확인!");
-            console.log("seoul:"+seoul);
-            console.log("jeju:"+jeju);
-            console.log("toktok:"+toktok);
+            console.log("seoul:"+seoul); // 강남구
+            console.log("jeju:"+jeju); // 마라도
+            console.log("toktok:"+toktok); // 라인
+            console.log("myitem:"+myitem); // 곰인형
 
         } //*********************************************
         
-        console.log("전역변수를 바깥에서 확인!");
-        console.log("seoul:"+seoul);
+        console.log("전역변수를 전역에서 확인!");
+        console.log("seoul:"+seoul); // 강남구 -> 전역변수변경됨!
+        console.log("jeju:"+jeju); // 제주도 -> 전역변수유지!
+        console.log("toktok:"+toktok); // 카톡 -> 전역변수유지!
+        console.log("myitem:"+myitem); // 곰인형
     </script>
 </head>
 <body>
