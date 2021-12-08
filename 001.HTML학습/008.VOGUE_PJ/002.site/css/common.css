@@ -255,11 +255,12 @@
 .mwrap{
     position: absolute;
     top: 7px;
-    bottom: 7px;
     left: 30px;
     right: 30px;
-    /* 부모박스기준 박스당기기 
+    /* 부모박스기준 박스당기기(양쪽방향) 
     -> 유동적인 가로크기가 생성됨! */
+    height: 36px;
+    /* 높이값은 정해줌! */
     background-color: #000;
 }
 /* 검색입력창 */
