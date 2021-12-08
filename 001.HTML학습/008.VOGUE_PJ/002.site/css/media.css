@@ -3,6 +3,19 @@
 
 /************** 모바일 기준 500px이하 시작**************/
 @media only screen and (max-width:500px) {
+    /* 상단영역고정하기 */
+    body{
+        padding-top: 55px;
+        /* 상단영역만큼 공백을 줌 */
+    }
+    /* 상단영역 최상위부모! */
+    #top{
+        position: fixed;
+        top: 0;
+        /* body 패딩탑 때문에 꼭줘야함! */
+        background-color: #fff;
+        /* 아래쪽 요소가 비춰 보이므로 줘야함! */
+    }
 
 /* 1. 상단변경 */
 /* 1) .tmenu없앰 */
