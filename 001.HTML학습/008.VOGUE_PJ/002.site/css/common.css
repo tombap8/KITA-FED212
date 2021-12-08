@@ -243,6 +243,24 @@
     /* 처음에 안보임 */
 }
 
+/* 1-5. 모바일용 검색박스 */
+.mos{
+    position: relative;
+    /* 부모자격 */
+    height: 65px;
+}
+/* 검색내부 검정박스 */
+.mwrap{
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 30px;
+    right: 30px;
+    /* 부모박스기준 박스당기기 
+    -> 유동적인 가로크기가 생성됨! */
+    background-color: #000;
+}
+
 /* 모바일용 메뉴를 모두 포함하는 부모박스 */
 .mowrap{
     height: 0;
