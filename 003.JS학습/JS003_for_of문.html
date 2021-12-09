@@ -17,7 +17,7 @@
         ];
 
         ///////////// 로드구역 ////////////////////////////
-        window.addEventListener("load",()=>{
+        window.addEventListener("load", () => {
 
             // 대상선정:
 
@@ -27,7 +27,7 @@
 
             // 버튼글자
             // 오리지널 for문으로 요소개수만큼 돌면서 셋팅하기!
-            for(let i=0;i<btngo.length;i++){
+            for (let i = 0; i < btngo.length; i++) {
                 btngo.item(i).style.fontSize = "34px";
             }
 
@@ -40,28 +40,54 @@
             ///////////////////////////////////////////////
             // for of문의 해석: btngo의 순서대로 특정요소 x를
             // 가지고 for문 안으로 들어감!
-            for(let x of btngo){
+            for (let x of btngo) {
                 // console.log(x.innerText);
                 // x는 요소 자신임!
 
                 // 클릭설정하기
                 x.onclick = () => {
+
                     // 0. 요소자신(this대신)
                     let ele = event.currentTarget;
+
                     // 1. 버튼 텍스트 읽어오기
                     let btxt = ele.innerText;
-                    console.log("버튼텍스트:",btxt);
+                    // console.log("버튼텍스트:",btxt);
+
+                    // 2. 버튼별 데이터 셋팅하기
+                    // 배열변수를 각각 버튼별로 셋팅함
+
+                    // 데이터 타겟 변수
+                    let data;
+
+                    switch (ele) {
+                        case "조제":
+                            data = mv1;
+                            break;
+                        case "원더 우먼 1984":
+                            data = mv2;
+                            break;
+                        case "도굴":
+                            data = mv3;
+                            break;
+                    } //// switch //////////
+
+                    // 할당된 data변수 확인
+                    console.log("할당배열:",data.toString());
+
+
+
                 }; //////// click ////////
 
             } /////////// for of문 ////////////////////////
 
 
 
-            
+
         }); ////////////// 로드구역 ///////////////////////
         //////////////////////////////////////////////////
 
-        
+
 
         /***************************************************** 
             1. 일반for문
@@ -76,7 +102,6 @@
             -> 추가기능: 문자데이터를 for of문에 넣고
             돌리면 글자 하나씩 잘라서 for문을 돌아준다!
         *****************************************************/
-
     </script>
 </head>
 
