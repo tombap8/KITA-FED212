@@ -81,6 +81,53 @@
             // 변경내용: 대상의 각 내용에 맞게 객체로 부터 정보를 셋팅함
             /////////////////////////////////////////////////////////
 
+            /// 대상 변수 할당하기! ///////
+            // 이벤트 대상: button
+            let btn = document.querySelectorAll("button");
+            // console.log("버튼개수:",btn.length);
+
+            /// 대상 변수 click 설정하기 ////
+            // for of사용!
+            for(let x of btn){ // x는 개별 버튼요소
+
+                // ((중요!)) for문에서 let으로 선언된 지역변수는
+                // for문 내부의 익명함수 내부로 전달된다!
+                // var 로 선언될 경우엔 전달불가!!!(마지막값이 덮어씀)
+
+                x.onclick = ()=>{
+
+                    // 1. 버튼 텍스트 읽어오기
+                    let btxt = x.innerText;
+                    // console.log("버튼텍스트:",btxt);
+                    // x변수는 바깥쪽 for문의 let 선언변수다!
+
+                    // 2. 버튼 텍스트에 해당하는 객체할당하기!
+                    let data = mvi[btxt];
+                    // console.log("할당객체:"+data["문구"]);
+
+                    // 3. 해당 요소에 객체 데이터 넣어주기
+                    // for in문 사용!!!
+                    for(let x in data){
+
+                        // console.log("x는 속성명:",x);
+                        // console.log("속성값:",data[x]);
+
+                        // 각 속성명에 해당하는 데이터 셋팅하기
+                        switch(x){
+                            // 1. 포스터 넣기
+                            case "포스터":
+                                document.querySelector(".photo")
+                                .innerHTML = 
+                                `<img src="${data[x]}" alt="포스터">`;
+
+                        } ///////// switch ///////////
+
+                    } ////////// for in ////////////////
+
+
+                }; ///// click ////////
+
+            } ////// for of ////////////////
 
 
         }); ////////////////// 로드구역 /////////////////////
