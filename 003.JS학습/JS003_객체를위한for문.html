@@ -119,6 +119,12 @@
                                 document.querySelector(".photo")
                                 .innerHTML = 
                                 `<img src="${data[x]}" alt="포스터">`;
+                                break;
+                            // 2. 제목넣기
+                            case "제목":
+                                document.querySelector(".tit")
+                                .innerText = `제목: ${data[x]}`;
+                                break;
 
                         } ///////// switch ///////////
 
