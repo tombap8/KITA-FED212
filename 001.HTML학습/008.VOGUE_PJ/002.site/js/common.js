@@ -1,5 +1,17 @@
 // 공통기능구현 JS - common.js
 
+///////// 윈도우 스크롤시 이벤트 함수 ////////////
+window.addEventListener("scroll",()=>{
+
+    // 스크롤 위치값
+    let scTop = this.scrollY;
+    // scrollY - 세로축 스크롤 위치값 리턴
+
+    console.log("스크롤중~~~",scTop);
+
+}); ////////////// scroll 이벤트함수 ////////////
+////////////////////////////////////////////////
+
 //////////// 로딩구역 /////////////////////////
 window.addEventListener("DOMContentLoaded",
 function(){
