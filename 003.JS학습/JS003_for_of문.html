@@ -46,7 +46,11 @@
 
                 // 클릭설정하기
                 x.onclick = () => {
-                    
+                    // 0. 요소자신(this대신)
+                    let ele = event.currentTarget;
+                    // 1. 버튼 텍스트 읽어오기
+                    let btxt = ele.innerText;
+                    console.log("버튼텍스트:",btxt);
                 }; //////// click ////////
 
             } /////////// for of문 ////////////////////////
