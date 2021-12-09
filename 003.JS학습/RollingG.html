@@ -186,6 +186,37 @@
 
             *****************************************/
 
+            //// 자동넘김 버튼 클릭시 인터발함수 셋팅하기! ///
+            // 이벤트 대상: .abtn button
+            let abtn = document
+            .querySelectorAll(".abtn button"); 
+            // console.log("버튼개수:"+abtn.length);
+            
+            // 자동넘김 버튼 클릭시
+            abtn[0].onclick = ()=>{
+                // 버튼자신 없애기
+                event.currentTarget
+                .style.display = "none";
+                // 화살표함수에서는 this키워드 대신
+                // event.currentTarget을 사용!
+
+                // 멈춤버튼 보이기(원래 display값으로!)
+                abtn[1].style.display = "inline-block";
+
+                // 인터발 셋팅하기
+                let autoI = setInterval(() => {
+                    chgImg(1);
+                }, 1500);
+            };////////// click /////////////
+
+            /// 멈춤버튼 클릭시 인터발지우기!
+            // 인터발함수를 지우려면 인터발셋팅시 변수에 할당!
+            abtn[1].onclick = ()=>{
+                // 
+
+                // 인터발 멈추기
+                clearInterval(autoI);
+            }; /////////// click ////////////
 
         }); //////// 로드구역 /////////////////
         ///////////////////////////////////////
