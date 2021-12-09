@@ -125,10 +125,26 @@
                                 document.querySelector(".tit")
                                 .innerText = `제목: ${data[x]}`;
                                 break;
+                            // 3. 개요넣기
+                            case "개요":
+                                document.querySelector(".sum")
+                                .innerText = `장르: ${data[x]}`;
+                                break;
+                            // 4. 감독넣기
+                            case "감독":
+                                document.querySelector(".dir")
+                                .innerText = `감독: ${data[x]}`;
+                                break;
+                            // 5. 출연넣기
+                            case "출연":
+                                document.querySelector(".act")
+                                .innerText = `배우: ${data[x]}`;
+                                break;
 
                         } ///////// switch ///////////
 
                     } ////////// for in ////////////////
+
 
 
                 }; ///// click ////////
