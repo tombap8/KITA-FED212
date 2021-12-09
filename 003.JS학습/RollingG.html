@@ -26,6 +26,8 @@
 
         /* 갤러리부모박스 */
         #wrap {
+            position: relative;
+            /* 부모자격 - #mini */
             width: 520px;
             margin: 0 auto;
             text-align: center;
@@ -60,6 +62,15 @@
         /* 처음에 멈춤버튼 숨기기 */
         .stop{
             display: none;
+        }
+
+        /* 미니언즈 */
+        #mini {
+            position: absolute;
+            top: 86%;
+            left: -100%;
+            /* 부모는 #wrap */
+            width: 150px;
         }
     </style>
 
@@ -248,6 +259,8 @@
         <a href="#" class="btn rb">
             <img src="./images/right_btn.png" alt="오른쪽버튼">
         </a>
+        <!-- 미니언즈 -->
+        <img src="./images/Minions.png" alt="미니언즈" id="mini">
     </div>
 
     <!-- 이미지별 설명 텍스트 출력박스 -->
