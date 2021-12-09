@@ -191,6 +191,9 @@
             let abtn = document
             .querySelectorAll(".abtn button"); 
             // console.log("버튼개수:"+abtn.length);
+
+            // 인터발용 변수
+            let autoI;
             
             // 자동넘김 버튼 클릭시
             abtn[0].onclick = ()=>{
@@ -204,7 +207,7 @@
                 abtn[1].style.display = "inline-block";
 
                 // 인터발 셋팅하기
-                let autoI = setInterval(() => {
+                autoI = setInterval(() => {
                     chgImg(1);
                 }, 1500);
             };////////// click /////////////
@@ -212,7 +215,12 @@
             /// 멈춤버튼 클릭시 인터발지우기!
             // 인터발함수를 지우려면 인터발셋팅시 변수에 할당!
             abtn[1].onclick = ()=>{
-                // 
+                // 자기자신 숨기기
+                event.currentTarget
+                .style.display = "none";
+
+                // 자동넘김 버튼 보이기
+                abtn[0].style.display = "inline-block";
 
                 // 인터발 멈추기
                 clearInterval(autoI);
