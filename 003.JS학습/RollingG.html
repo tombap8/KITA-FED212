@@ -42,6 +42,13 @@
         #mbox img {
             vertical-align: -79px;
         }
+
+        /* 이미지 텍스트 출력박스 */
+        .imgtxt{
+            text-align: center;
+            color: red;
+            text-shadow: 1px 1px 1px #777;
+        }
     </style>
 
     <!-- JS 코딩구역 -->
@@ -73,13 +80,18 @@
 
             console.log("로드완료!");
 
-            // 0. 대상선정
+            // 0. 대상선정 //////////////////////////////
             // 버튼대상: .btn
             let btn = document.querySelectorAll(".btn");
             // console.log("버튼개수:"+btn.length);
+
             // 중앙이미지: #mbox img
             let mimg = document.querySelector("#mbox img");
             // console.log("이미지설명:"+mimg.alt);
+
+            // 글자출력박스: .imgtxt
+            let imgtxt = document.querySelector(".imgtxt");
+            // console.log("이미지텍스트:"+imgtxt.innerText);
 
 
             // 1. 오른쪽버튼 클릭시 다음 이미지변경하기
@@ -99,7 +111,7 @@
             const chgImg = dir => { // dir - 방향전달값변수
                 
                 // 1. 함수호출확인
-                console.log("이미지바꿔!!"+dir);
+                // console.log("이미지바꿔!!"+dir);
 
 
                 // 2. 대상선정: #mbox img -> mimg 변수
@@ -129,6 +141,15 @@
 
                 // 4. 이미지 변경하기
                 mimg.src = `./images/img${inum}.jpg`;
+
+                // 5. 이미지설명 배열에서 읽어와서 넣기
+                // 배열번호는 이미지번호-1
+                imgtxt.innerText = itxt[inum-1];
+                // 이미지설명박스 = 이미지설명배열[순번]
+
+                // 6. 이미지설명 글자색 배열순번으로 변경하기
+                imgtxt.style.color = tcolor[inum-1];
+                // 이미지설명박스CSS = 글자색배열[순번]
 
             }; //////////// chgImg 함수 /////////////
             ///////////////////////////////////////// 
