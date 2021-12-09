@@ -67,10 +67,18 @@
         /* 미니언즈 */
         #mini {
             position: absolute;
-            top: 86%;
-            left: -100%;
+            top: 86%;/* 0으로! */
+            left: -100%;/* 0으로! */
             /* 부모는 #wrap */
             width: 150px;
+            transform: rotate(720deg);/* 0deg로! */
+            transition: all 1.5s ease-out;
+        }
+        /* 미니언즈 변경클래스 */
+        #mini.on{
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
         }
     </style>
 
