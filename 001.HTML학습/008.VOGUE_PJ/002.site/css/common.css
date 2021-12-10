@@ -34,6 +34,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    background-color: #fff;
 }
 /* 중앙박스에 최소높이값 없앰 */
 #top.on .top {

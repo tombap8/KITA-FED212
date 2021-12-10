@@ -6,8 +6,24 @@ window.addEventListener("scroll",()=>{
     // 스크롤 위치값
     let scTop = this.scrollY;
     // scrollY - 세로축 스크롤 위치값 리턴
+    // this는 화살표함수에서 window를 나타냄
+
+    /******************************************** 
+        윈도우 세로 스크롤 위치값을 가져오는 방법
+        1. this.scrollY
+        2. window.scrollY
+        3. document.scrollingElement.scrollTop
+        4. document.documentElement.scrollTop
+        5. document.querySelector("html").scrollTop
+    ********************************************/
 
     console.log("스크롤중~~~",scTop);
+
+    /////// 스크롤위치값이 100이상일때 /////
+    if(scTop>=100){
+        document.querySelector("#top")
+        .classList.add("on");
+    }
 
 }); ////////////// scroll 이벤트함수 ////////////
 ////////////////////////////////////////////////
