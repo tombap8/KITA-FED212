@@ -17,13 +17,18 @@ window.addEventListener("scroll",()=>{
         5. document.querySelector("html").scrollTop
     ********************************************/
 
-    console.log("스크롤중~~~",scTop);
+    // console.log("스크롤중~~~",scTop);
+
+    // 상단영역
+    let top = document.querySelector("#top");
 
     /////// 스크롤위치값이 100이상일때 /////
-    if(scTop>=100){
-        document.querySelector("#top")
-        .classList.add("on");
-    }
+    if(scTop>=100){ // 100px이상
+        top.classList.add("on");
+    } /////////// if /////////////
+    else{ // 100px 미만
+        top.classList.remove("on");
+    } ///////// else //////////////
 
 }); ////////////// scroll 이벤트함수 ////////////
 ////////////////////////////////////////////////

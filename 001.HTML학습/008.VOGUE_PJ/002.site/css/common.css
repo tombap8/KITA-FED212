@@ -50,6 +50,8 @@
 /* 로고이미지 가로크기변경 */
 #top.on .logo img {
     width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 /* 상단메뉴 없애기 */
 #top.on .tmenu {
