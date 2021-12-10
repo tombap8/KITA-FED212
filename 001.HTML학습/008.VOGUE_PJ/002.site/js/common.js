@@ -21,13 +21,26 @@ window.addEventListener("scroll",()=>{
 
     // 상단영역
     let top = document.querySelector("#top");
+    // 상단이동버튼
+    let tbtn = document.querySelector(".tbtn");
 
+    //// 상단영역 스크롤 반응하기 //////////
     /////// 스크롤위치값이 100이상일때 /////
     if(scTop>=100){ // 100px이상
         top.classList.add("on");
     } /////////// if /////////////
     else{ // 100px 미만
         top.classList.remove("on");
+    } ///////// else //////////////
+
+
+    //// 상단이동버튼 스크롤 반응하기 //////////
+    /////// 스크롤위치값이 200이상일때 /////
+    if(scTop>=200){ // 200px이상
+        tbtn.classList.add("on");
+    } /////////// if /////////////
+    else{ // 200px 미만
+        tbtn.classList.remove("on");
     } ///////// else //////////////
 
 }); ////////////// scroll 이벤트함수 ////////////
