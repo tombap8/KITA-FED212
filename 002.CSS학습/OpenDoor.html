@@ -54,6 +54,17 @@
                     (이 거리는 기준점에서 소실점까지의 거리)
             ***********************************************/
             perspective: 480px;
+
+            /********************************************* 
+                [ 뷰포인트(관찰자위치) 변경옵션 ]
+                perspective-origin: 가로 세로;
+                - 가로값: left, center, right
+                - 세로값: top, center, bottom
+                - 정해지지 않은값: px, % 등 가능
+                -> 두 값 중 하나만 쓸 수 있고 복합일 경우
+                2가지 값을 같이 셋팅할 수 있음!
+
+            *********************************************/
            
         }
 
@@ -67,6 +78,19 @@
             height: 280px;
             background-color: #C90;
 
+            /* 문짝 Y축 회전 */
+            transform: rotateY(45deg);
+
+            /* 회전축 변경하기 */
+            transform-origin: left;
+            /* 
+                [ 회전 기준축 변경하기 ]
+                transform-origin: 가로 세로; 
+                - 가로값: left, center, right
+                - 세로값: top, center, bottom
+                - 정해지지 않은값: px, % 등 가능
+                
+            */
             
             z-index: 1;/* 엘사보다 위 */
         }
