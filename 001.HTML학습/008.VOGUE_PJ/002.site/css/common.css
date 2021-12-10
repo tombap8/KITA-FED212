@@ -53,6 +53,19 @@
     margin-top: 10px;
     margin-left: 10px;
 }
+/* GNB 글자조정 */
+#top.on .gnb{
+    font-size: 14px;
+    line-height: 50px;
+    margin-top: 0;
+    margin-left: 125px;
+}
+#top.on .gnb li{
+    padding-right: 35px;
+}
+#top.on .gnb a{
+    color: #333;
+}
 /* 상단메뉴 없애기 */
 #top.on .tmenu {
     display: none;
