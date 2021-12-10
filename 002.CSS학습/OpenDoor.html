@@ -66,7 +66,17 @@
 
             *********************************************/
            
+            /* 애니메이션: 이시이지반방마 */
+            animation: sea 5s ease-in-out infinite alternate;
+
         }
+
+        /* 바다배경 애니 키프레임 */
+        @keyframes sea {
+            to{
+                background-size: auto 120%;
+            }
+        } /* 키프레임 */
 
       
 
@@ -79,7 +89,7 @@
             background-color: #C90;
 
             /* 문짝 Y축 회전 */
-            transform: rotateY(45deg);
+            transform: rotateY(60deg);
 
             /* 회전축 변경하기 */
             transform-origin: left;
@@ -93,7 +103,20 @@
             */
             
             z-index: 1;/* 엘사보다 위 */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: openDoor 2s ease-in-out infinite alternate;
         }
+
+        /* 문짝열기 키프레임 */
+        @keyframes openDoor {
+            from{
+                transform: rotateY(60deg);
+            }
+            from{
+                transform: rotateY(-60deg);
+            }
+        } /* 키프레임 */
        
 
 
