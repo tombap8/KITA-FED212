@@ -145,8 +145,21 @@
         #elsa img{
             margin-left: 150px;
             margin-top: 50px;
-            
+            transform: rotate(0deg);
+            transform-origin: bottom;
+            /* 기준축 하단으로 변경 */
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: elsa 2s ease-in-out infinite alternate;
         }
+        /* 앨사 키프레임 */
+        @keyframes elsa {
+            to{
+                transform: rotate(-15deg);
+            }
+        }/* 키프레임 */
+
+
 
        
 
@@ -170,6 +183,9 @@
             height: 130px;
             margin: 0 auto;
             background: url(images/seashore.jpg) no-repeat center top/auto 200%;
+
+            /* 원근설정 */
+            perspective: 500px;
             
         }
 
@@ -197,10 +213,23 @@
             border: 5px solid red;
             box-sizing: border-box;
             /*박스크기유지-보더,패딩포함*/
+
+            /* 문짝회전하기 */
+            transform: rotateX(0deg);
             
-            
+            /* 회전기본축변경 */
+            transform-origin: top;
+
+            /* 트랜지션: 속시이지 */
+            transition: all .4s;
            
         }
+
+        /* 문짝오버시 열리기 */
+        .cont2:hover .door2{
+            transform: rotateX(65deg);
+        }
+
 
         
         /*손잡이*/
