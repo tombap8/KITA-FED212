@@ -5,6 +5,11 @@
             하단영역(하단로고, 회사정보)
 */
 
+/* 부드러운 스크롤 */
+html{
+    scroll-behavior: smooth;
+}
+
 /******************* 1. 상단영역 *******************/
 /* 겉박스 */
 #top {
@@ -492,4 +497,29 @@
 /* 마지막 li만 두껍게! */
 .blink li:last-child a{
     font-weight: bold;
+}
+
+
+/* 위로가기 버튼 */
+.tbtn{
+    position: fixed;
+    bottom: 0;
+    right: 75px;
+    width: 48px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    /* 둥근모서리: 왼위 오른위 오른아래 왼아래 */
+    color: #fff;
+    z-index: 9999;
+
+    /* 트랜지션: 속시이지 */
+    transition: background-color .3s;
+
+}
+/* 탑버튼 마우스 오버시 */
+.tbtn:hover {
+    background-color: #f00;
 }
