@@ -28,6 +28,13 @@
 
 /* #top에 클래스 "on"넣을 경우 슬림 사이즈 상단영역변경 */
 
+/* 상단영역 화면에 고정하기 */
+#top.on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 /* 중앙박스에 최소높이값 없앰 */
 #top.on .top {
     min-height: auto;
