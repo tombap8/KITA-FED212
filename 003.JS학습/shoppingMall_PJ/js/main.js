@@ -28,7 +28,16 @@ window.addEventListener("DOMContentLoaded", () => {
         // 1. 함수호출 확인
         console.log("나야나!",dir);
 
-        snum++;
+        // 2. 방향에 따른 분기
+        if(dir){ // 1이면 true이므로 오른쪽방향
+            snum++; // 1씩증가
+            if(snum===5) snum=0;//한계값 - 처음으로!
+        } //////// if ///////
+        else { // 0이므로 왼쪽방향
+            snum--; // 1씩감소
+            if(snum===-1) snum=4;//한계값 - 끝으로!
+        } //////// else ////////
+
         console.log("snum값:",snum);
 
         // 2. 변경대상: #slide -> slide변수에 할당!
