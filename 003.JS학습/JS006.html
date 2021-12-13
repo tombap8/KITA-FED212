@@ -74,25 +74,57 @@
                 // 6. 시간출력
                 // 12시간제로 조작하기
                 let H = today.getHours();
-                // H = 21;// 테스트 조작!
+                // H = 13;// 테스트 조작!
                 // 12보다 크면 12를 빼고 오후라고 변경
                 if(H>12){
                     H = H - 12;
                     noon = "오후";
                 } ////// if ///////
 
+
+                // 시,분,초에 대한 두자릿수 출력하기 //
+                // addZero() 함수임!
+                let addZero = num => num<10 ? "0"+num : num;
+                // 변수 = 함수전달변수 => 리턴값
+                // 리턴값에 사용된 조건연산자(삼항연산자)
+                // 비?집:놀이동산;
+                // 리턴시에 10미만이면 앞에 0을 붙여서 리턴하고
+                // 아니면(10이상이면) 그대로 숫자를 리턴한다!
+
+
                 // 오전/오후출력
                 tt[4].innerText = noon;
                 // 시간출력
-                tt[5].innerText = H;
+                tt[5].innerText = addZero(H);
+
+
+                // 7. 분출력
+                let M = today.getMinutes();
+                // M = 8; // 테스트!
+                tt[6].innerText = addZero(M);
+
+                // 8. 초출력
+                let S = today.getSeconds();
+                // S = 5; // 테스트
+                tt[7].innerText = addZero(S);
 
 
             }; /////////// showTime 함수 /////////
             //////////////////////////////////////
 
+            // 시간함수 최초호출하기!
+            showTime();
+
+            // 시간함수 인터발호출하기!
+            setInterval(showTime,1000);
+            // setInterval(함수,시간)
+            // 인터발함수의 함수는 함수만 호출할 경우 이름만써도됨!
+            // 시간은 1/1000초 (단위없음)
+
+
             
             // 임시호출하기(윈도우클릭시)
-            this.addEventListener("click",showTime);
+            // this.addEventListener("click",showTime);
             // 함수아래쪽에서 호출해야 에러없음!
 
 
