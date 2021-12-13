@@ -41,7 +41,12 @@
                 // Date객체를 메모리에 생성함!
 
                 // 1. 년도 찍기
-                tt[0].innerText = today.getYear();
+                tt[0].innerText = today.getFullYear();
+                // getFullYear() 전체년도
+                // 참고) getYear() 는 1900을 뺀 년도
+
+                // 2. 월찍기
+                tt[1].innerText = today.getMonth();
 
             }; /////////// showTime 함수 /////////
             //////////////////////////////////////
