@@ -12,6 +12,14 @@ window.addEventListener("DOMContentLoaded", () => {
     // 배너 슬라이드 이동 구현하기 //
     ////////////////////////////////
 
+    // 변경대상: #slide
+    let slide = document.querySelector("#slide");
+
+    // 슬라이드 순번 변수
+    let snum = 0;
+    // 순서대로 증감하여 -100에 곱하여 left변경함!
+    // 0~4 사이값으로 변경함!
+
     /*********************************** 
         함수명: goSlide
         기능: 슬라이드 이동하기
@@ -19,6 +27,15 @@ window.addEventListener("DOMContentLoaded", () => {
     const goSlide = (dir) => { // dir - 방향구분
         // 1. 함수호출 확인
         console.log("나야나!",dir);
+
+        snum++;
+        console.log("snum값:",snum);
+
+        // 2. 변경대상: #slide -> slide변수에 할당!
+        // 3. 변경내용: 대상의 left값을 -100% 단위로 이동함
+        slide.style.left = `${-100*snum}%`;
+        slide.style.transition = "left .8s ease-in-out";
+
 
     }; //////////// goSlide 함수 ///////////
     ////////////////////////////////////////
