@@ -2,11 +2,36 @@
 
 //////////////////////// html 로드구역 ////////////////////////
 //// html 태그요소 보다 위에 있는 JS를 요소로딩후 실행구역 //////
-// laod이벤트 / DOMContentLoaded 이벤트 ////
-window.addEventListener("load", () => {
+// load이벤트 / DOMContentLoaded 이벤트 ////
+window.addEventListener("DOMContentLoaded", () => {
 
     // 로딩완료확인
     console.log("로딩완료!");
+
+    ////////////////////////////////
+    // 배너 슬라이드 이동 구현하기 //
+    ////////////////////////////////
+
+    /*********************************** 
+        함수명: goSlide
+        기능: 슬라이드 이동하기
+    ***********************************/
+    const goSlide = (dir) => { // dir - 방향구분
+        // 1. 함수호출 확인
+        console.log("나야나!",dir);
+
+    }; //////////// goSlide 함수 ///////////
+    ////////////////////////////////////////
+
+    // 이벤트 대상: 이동버튼 .abtn
+    let abtn = document.querySelectorAll(".abtn");
+    console.log("버튼개수:", abtn.length);
+
+    // 이동버튼 클릭설정하기 ////////////
+    // 왼쪽버튼
+    abtn[0].onclick = () => goSlide(0);
+    // 오른쪽버튼
+    abtn[1].onclick = () => goSlide(1);
 
 
 }); //////////// load구역 ///////////////////
