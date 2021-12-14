@@ -12,8 +12,12 @@ window.addEventListener("DOMContentLoaded", () => {
     // 배너 슬라이드 이동 구현하기 //
     ////////////////////////////////
 
-    // 변경대상: #slide
+    // 변경대상: 슬라이드 - #slide
     let slide = document.querySelector("#slide");
+
+    // 변경대상: 블릿박스 li - .indic li
+    let indic = document.querySelectorAll(".indic li");
+    console.log("블릿개수:",indic.length);
 
     // 슬라이드 순번 변수
     let snum = 0;
@@ -24,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
         함수명: goSlide
         기능: 슬라이드 이동하기
     ***********************************/
-    const goSlide = (dir) => { // dir - 방향구분
+    const goSlide = dir => { // dir - 방향구분
         // 1. 함수호출 확인
         console.log("나야나!",dir);
 
