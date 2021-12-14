@@ -25,17 +25,17 @@
             // 특이사항 : 각 서브메뉴의 높이만큼 높이값 트랜지션주기!
 
             // 마우스 오버/아웃시 이벤트를 for of문으로 걸어보자!
-            for(let x of smenu){ // x는 li.smenu 각 요소
+            for (let x of smenu) { // x는 li.smenu 각 요소
 
                 // 1. 마우스 오버시
-                x.onmouseover = ()=>{
+                x.onmouseover = () => {
                     // console.log("오버시!");
 
                     // 하위 div요소(서브메뉴박스)
                     let tg = x.querySelector("div");
 
                     // 서브메뉴 ol의 높이값 구하기 (보정+10)
-                    let hv = x.querySelector("ol").offsetHeight+10;
+                    let hv = x.querySelector("ol").offsetHeight + 10;
                     // console.log("높이값:",hv);
 
                     // 서브메뉴 열리기
@@ -45,7 +45,7 @@
                 }; /////// mouseover ///////////
 
                 // 2. 마우스 아웃시
-                x.onmouseout = ()=>{
+                x.onmouseout = () => {
 
                     // 하위 div요소(서브메뉴박스)
                     let tg = x.querySelector("div");
@@ -78,91 +78,101 @@
             // 변경내용: 클릭시 새창으로 사이트열기
 
             /// for of문으로 컬렉션 개수만큼 반복해서 click 셋팅하기
-            for(let x of link){
+            for (let x of link) {
 
                 // 클릭 이벤트 설정하기 //
-                x.onclick = ()=>{
+                x.onclick = () => {
 
                     // 1. a요소의 텍스트 읽어오기
                     let txt = x.innerText;
-                    console.log("링크텍스트:",txt);
+                    console.log("링크텍스트:", txt);
+
+                    // 2. 각 이동할 url 주소 셋팅하기
+                    // url주소 변수
+                    let url;
+                    // 분기를 switch case문으로!
+                    switch (txt) {
+                        case "Google":
+                            url = "http://www.google.com";
+                            break;
+                        case "Naver":
+                            url = "http://www.naver.com";
+                            break;
+                        case "Daum":
+                            url = "http://www.daum.net";
+                            break;
+                        case "Nate":
+                            url = "http://www.nate.com";
+                            break;
+                        case "SK":
+                            url = "http://www.sktelecom.com";
+                            break;
+                        case "KT":
+                            url = "http://www.kt.com";
+                            break;
+                        case "Uplus":
+                            url = "http://www.uplus.co.kr";
+                            break;
+                        case "CGV":
+                            url = "http://www.cgv.co.kr";
+                            break;
+                        case "MEGABOX":
+                            url = "http://www.megabox.co.kr";
+                            break;
+                        case "LOTTE CINEMA":
+                            url = "https://www.lottecinema.co.kr/NLCHS";
+                            break;
+                        case "GMARKET":
+                            url = "http://www.gmarket.co.kr";
+                            break;
+                        case "11번가":
+                            url = "http://www.11st.co.kr";
+                            break;
+                        case "Auction":
+                            url = "http://www.auction.co.kr";
+                            break;
+                        case "스토어팜":
+                            url = "https://shopping.naver.com/";
+                            break;
+                        case "인터파크":
+                            url = "http://www.interpark.co.kr";
+                            break;
+                        case "쿠팡":
+                            url = "http://www.coopang.co.kr";
+                            break;
+                        case "Apple":
+                            url = "http://www.apple.com";
+                            break;
+                        case "Samsung":
+                            url = "http://www.samsung.com";
+                            break;
+                        case "넷마블":
+                            url = "http://www.netmarble.net";
+                            break;
+                        case "넥슨":
+                            url = "https://www.nexon.com";
+                            break;
+                        case "IMC":
+                            url = "http://www.imc.co.kr";
+                            break;
+                    } /////////// switch case ///////
+
+                    console.log(url);
 
                     // a요소 기본이동막기!
                     return false;
 
                 }; ///////// click ///////////////
-                
+
 
             } //////////// for of ////////////////////
 
 
-            
-            /* case "Google":
-                url = "http://www.google.com";
-                break;
-            case "Naver":
-                url = "http://www.naver.com";
-                break;
-            case "Daum":
-                url = "http://www.daum.net";
-                break;
-            case "Nate":
-                url = "http://www.nate.com";
-                break;
-            case "SK":
-                url = "http://www.sktelecom.com";
-                break;
-            case "KT":
-                url = "http://www.kt.com";
-                break;
-            case "Uplus":
-                url = "http://www.uplus.co.kr";
-                break;
-            case "CGV":
-                url = "http://www.cgv.co.kr";
-                break;
-            case "MEGABOX":
-                url = "http://www.megabox.co.kr";
-                break;
-            case "LOTTE CINEMA":
-                url = "https://www.lottecinema.co.kr/NLCHS";
-                break;
-            case "GMARKET":
-                url = "http://www.gmarket.co.kr";
-                break;
-            case "11번가":
-                url = "http://www.11st.co.kr";
-                break;
-            case "Auction":
-                url = "http://www.auction.co.kr";
-                break;
-            case "스토어팜":
-                url = "https://shopping.naver.com/";
-                break;
-            case "인터파크":
-                url = "http://www.interpark.co.kr";
-                break;
-            case "쿠팡":
-                url = "http://www.coopang.co.kr";
-                break;
-            case "Apple":
-                url = "http://www.apple.com";
-                break;
-            case "Samsung":
-                url = "http://www.samsung.com";
-                break;
-            case "넷마블":
-                url = "http://www.netmarble.net";
-                break;
-            case "넥슨":
-                url = "https://www.nexon.com";
-                break;
-            case "IMC":
-                url = "http://www.imc.co.kr";
-                break; */
-                    
 
-               
+
+
+
+
 
             // html 컬렉션 참고:
             // https://www.w3schools.com/js/js_htmldom_collections.asp
@@ -209,7 +219,7 @@
             // 변경 대상: #div02 ul -> ctg 변수에 할당!
             /////////////////////////////////////////////
 
-            
+
 
 
             ////////////////////////////////////////////////////
@@ -217,7 +227,7 @@
             // 이벤트 종류: click
             // 이벤트 대상: .rbt
             ///////////////////////////////////////////////////
-            
+
 
 
             ///// 리스트의 li를 클릭하면 지우기! //////////
@@ -226,7 +236,7 @@
             // 변경대상: 이벤트대상
             // 변경내용: 변경대상 삭제하기
             /////////////////////////////////////////////
-            
+
 
 
 
@@ -241,7 +251,7 @@
             // 사용 메서드: appendChild(요소)
             // -> 기존요소를 선택하면 이동이 됨!
             /////////////////////////////////////////////////
-            
+
 
 
 
@@ -263,7 +273,7 @@
 
 
 
-            
+
             /************************************************* 
                 ※ appendChild() 와 insertBefore()는 대상을
                 정하는 것에 따라 중간에 적용할 수 있다!
@@ -294,7 +304,7 @@
             overflow: hidden;
         }
 
-        #div02 ul{
+        #div02 ul {
             margin: 0;
             padding: 10px;
             list-style: none;
