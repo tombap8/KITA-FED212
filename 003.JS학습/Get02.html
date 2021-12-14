@@ -37,6 +37,13 @@
     </style>
     <script>
         // Get방식으로 넘어온 값 받기!
+        let pm = location.href;
+        // location.href를 오른쪽에 쓰면 url값을 읽어온다!!!
+        
+        // pm값 물음표(?)자르기 split(구분자) + 이퀄(=)로 자르기
+        pm = pm.split("?")[1].split("=")[1];//뒷배열
+
+        console.log("넘어온값:\n",pm);
         
 
         //////// 로드구역 ////////////////////////
