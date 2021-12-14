@@ -39,6 +39,17 @@
         // Get방식으로 넘어온 값 받기!
         let pm = location.href;
         // location.href를 오른쪽에 쓰면 url값을 읽어온다!!!
+
+        // indexOf(찾을문자열) -> 찾는문자열의 순번을 리턴함!
+        // 그.러.나... 없으면 -1을 리턴함!
+        console.log("물음표찾기:"+pm.indexOf("?"));
+
+        // 에러방지를 위해 물음표 존재여부체크하기!
+        if(pm.indexOf("?")===-1){
+            alert("비정상적인 접근입니다!");
+            location.href = "Get01.html";
+            // 첫 페이지로 돌아가!
+        } ///////// if /////////////////
         
         // pm값 물음표(?)자르기 split(구분자) + 이퀄(=)로 자르기
         pm = pm.split("?")[1].split("=")[1];//뒷배열
