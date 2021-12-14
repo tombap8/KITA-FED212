@@ -321,9 +321,18 @@
             // 넣을놈전놈 - 맨처음 li요소
             //////////////////////////////////////////////////
             document.querySelector(".mvf").onclick = ()=>{
-                
+
                 // 1. 호출확인
                 console.log("맨앞이동!");
+
+                // 2. 대상선정
+                let tg = ctg.querySelectorAll("li");
+
+                // 3. 맨뒤li를 맨앞으로 이동!
+                ctg.insertBefore(tg[tg.length-1],tg[0]);
+                // insertBefore(넣을놈, 넣을놈전놈)
+                // tg[tg.length-1] -> 맨 끝 li 개수보다 1작은수가 끝순번
+                // tg[0] 맨앞 li
 
             }; //////////////// click //////////////////////
 
