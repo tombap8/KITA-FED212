@@ -157,21 +157,21 @@
                             break;
                     } /////////// switch case ///////
 
-                    console.log(url);
+                    // console.log(url);
+
+                    // 3. 페이지 이동하기(새창으로!)
+                    window.open().location.href = url;
+                    // window.open() : 새창열기
+                    // location.href = 주소 : 페이지 이동하기
 
                     // a요소 기본이동막기!
                     return false;
+                    // 함수를 나갈때 false를 리턴하면
+                    // 아무것도 하지마! 라는 뜻
 
                 }; ///////// click ///////////////
 
-
             } //////////// for of ////////////////////
-
-
-
-
-
-
 
 
             // html 컬렉션 참고:
