@@ -72,10 +72,28 @@
 
             // 이벤트 대상: .smenu ol a
             let link = document.querySelectorAll(".smenu ol a");
-            console.log("서브링크개수:",link.length);
+            // console.log("서브링크개수:",link.length);
 
             // 이벤트 종류: click
             // 변경내용: 클릭시 새창으로 사이트열기
+
+            /// for of문으로 컬렉션 개수만큼 반복해서 click 셋팅하기
+            for(let x of link){
+
+                // 클릭 이벤트 설정하기 //
+                x.onclick = ()=>{
+
+                    // 1. a요소의 텍스트 읽어오기
+                    let txt = x.innerText;
+                    console.log("링크텍스트:",txt);
+
+                    // a요소 기본이동막기!
+                    return false;
+
+                }; ///////// click ///////////////
+                
+
+            } //////////// for of ////////////////////
 
 
             
