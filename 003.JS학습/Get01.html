@@ -82,6 +82,22 @@
             // 로딩구역 확인
             console.log("로딩완료!!!");
 
+            // a요소 click이벤트 설정하기 //
+            // 대상: #gnb a
+            let gnb = document.querySelectorAll("#gnb a");
+            // console.log("gnb개수:",gnb.length);
+
+            for(let x of gnb){ // x - 각 #gnb 아래 a요소
+                
+                x.onclick = () => {
+
+                    let txt = x.innerText();
+                    console.log("텍스트:",txt);
+
+                }; ////////// click ////////////
+
+            } ////////// for of //////////////////
+
             
             
             /* 
