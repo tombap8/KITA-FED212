@@ -106,7 +106,11 @@ DOM은 프로그램 및 스크립트 문서의 내용, 구조 및 스타일을
     예) document.getElementById("my")
         .addEventListener("mouseover",function(){코드});
 
-※ on이벤트명 방법과 addEventListener방법은 근본적인 차이가 있다! addEventListener는 이벤트 등록 전역메모리 구역에 등록을 해서 중간이 일반적으로 삭제되거나 변경되지 않는다. 반면에 on이벤트명에 할당하는 방법은 중간에 삭제하거나 변경하기가 수월함. 그래서 변경이 중간에 필요할 때는 on이벤트명을 사용하는 것이 좋다!
+※ on이벤트명 방법과 addEventListener방법은 근본적인 차이가 있다! 
+addEventListener는 이벤트 등록 전역메모리 구역에 등록을 해서 중간이 
+일반적으로 삭제되거나 변경되지 않는다. 
+반면에 on이벤트명에 할당하는 방법은 중간에 삭제하거나 변경하기가 수월함. 
+그래서 변경이 중간에 필요할 때는 on이벤트명을 사용하는 것이 좋다!
     
 
 [5] html 요소보다 위에 코딩된 JS를 나중에 실행하는 방법
@@ -121,7 +125,7 @@ DOM은 프로그램 및 스크립트 문서의 내용, 구조 및 스타일을
 (2) DOMContentLoaded 이벤트를 사용함
     - window.addEventListener("DOMContentLoaded",
                                 function(){코드})
-    - DOMContentLoaded 이벤트는 html 태그요소만 그려지만
+    - DOMContentLoaded 이벤트는 html 태그요소만 그려지면
     바로 발생하는 이벤트임(load보다 발생 속도가 빠름!)
 
 [6] 이벤트의 종류:
