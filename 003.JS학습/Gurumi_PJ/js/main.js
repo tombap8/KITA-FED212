@@ -1,9 +1,28 @@
 // 구르미 갤러리 JS - main.js
 
 ///////////////// 로딩구역 ///////////////////////
-window.addEventListener("DOMContentLoaded",()=>{
+window.addEventListener("DOMContentLoaded", () => {
 
     console.log("로딩완료!");
+
+    /***************************************** 
+        함수명: goSlide
+        기능: 슬라이드 순번을 변경하여 이동함
+    *****************************************/
+    const goSlide = () => {
+
+        // 1. 함수호출확인
+        console.log("바꿔라!");
+
+    }; //////////// goSlide 함수 //////////////
+    ///////////////////////////////////////////
+
+    //// 이동버튼 클릭설정하기 ///////////////
+    // 대상: 버튼들 -> .abtn
+    let abtn = document.querySelectorAll(".abtn");
+    //  console.log("버튼개수:",abtn.length);
+
+    
 
 
 }); ///////////// 로딩구역 //////////////////////
