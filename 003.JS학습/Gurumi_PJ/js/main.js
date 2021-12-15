@@ -18,11 +18,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const goSlide = dir => { // dir - 방향(1-오른쪽,0-왼쪽)
 
         // 0. 광클금지 /////////////
-        if(prot) return;//돌아가!
-        prot = 1;//잠금!
-        setTimeout(()=>prot=0,400);
+        if (prot) return; //돌아가!
+        prot = 1; //잠금!
+        setTimeout(() => prot = 0, 400);
         ///////////////////////////
-        
+
         // 0.4초후 prot변수를 처음값으로 변경하여 잠금!
 
         // 광클금지의 원리는 전역변수를 지정하고
@@ -43,11 +43,11 @@ window.addEventListener("DOMContentLoaded", () => {
         // 3. 변경내용
 
         // 3-1. 오른쪽버튼일 경우 : 맨앞 이미지 맨뒤로!
-        if(dir) gbx.appendChild(gimg[0]);
+        if (dir) gbx.appendChild(gimg[0]);
         // appendChild(처음요소) -> 처음요소 맨뒤로 이동
 
         // 3-2. 왼쪽버튼일 경우 : 맨뒤 이미지 맨앞으로!
-        else gbx.insertBefore(gimg[gimg.length-1],gimg[0]);
+        else gbx.insertBefore(gimg[gimg.length - 1], gimg[0]);
         // insertBefore(끝요소,처음요소) 
         // -> 끝요소를 처음요소 앞으로 이동
         // gimg[개수-1] -> 끝요소번호
@@ -63,14 +63,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // 오른쪽버튼 클릭시
     abtn[1].onclick = () => {
-        goSlide(1);//슬라이드함수
-        clearAuto();//인터발지우기
+        goSlide(1); //슬라이드함수
+        clearAuto(); //인터발지우기
     }; //////// click ////////
 
     // 왼쪽버튼 클릭시
     abtn[0].onclick = () => {
-        goSlide(0);//슬라이드함수
-        clearAuto();//인터발지우기
+        goSlide(0); //슬라이드함수
+        clearAuto(); //인터발지우기
     }; //////// click ////////
 
     /////////////////////////////////////
@@ -87,8 +87,8 @@ window.addEventListener("DOMContentLoaded", () => {
         함수명: autoSlide
         기능: 슬라이드함수 인터발호출
     ********************************/
-   const autoSlide = () => 
-    autoI = setInterval(()=>goSlide(1),2000);
+    const autoSlide = () =>
+        autoI = setInterval(() => goSlide(1), 2000);
     ////////// autoSlide 함수 ///////////
 
     // setInterval 을 사용시 함수만 호출할 경우
@@ -110,11 +110,11 @@ window.addEventListener("DOMContentLoaded", () => {
         // 2. 타임아웃지우기(실행쓰나미방지!)
         clearTimeout(autoT);
         // 3. 자동호출 타임아웃셋팅
-        autoT = setTimeout(autoSlide,3000);
+        autoT = setTimeout(autoSlide, 3000);
     }; /////////// clearAuto 함수 ///////////
 
 
-    
+
 
 
 }); ///////////// 로딩구역 //////////////////////
