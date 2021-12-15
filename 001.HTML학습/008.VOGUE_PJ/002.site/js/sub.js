@@ -133,7 +133,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     /************************************* 
         서브 페이지 데이터 셋업하기
     *************************************/
-   // 1. 서브 타이틀 넣기
+   // 1. 서브 타이틀 넣기 ///////////////
    // 대상: .stit -> stit 변수
    stit.innerText = cinfo["제목"];
 
@@ -168,6 +168,11 @@ window.addEventListener('DOMContentLoaded', ()=>{
         lnb.style.display = "none";
 
     } ////////// else ////////////
+
+    // 3. 메인 컨텐츠 박스에 카테고리 클래스 넣기! ///
+    // -> css 셋업에 따라 서브페이지 컨텐츠박스 배경이미지 나옴
+    // 대상: 메인 컨텐츠박스 - .cont -> cont변수
+    cont.classList.add(cinfo["경로"]);
 
 
 
