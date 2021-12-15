@@ -180,6 +180,11 @@
                 // 대상: #cont img -> cimg 변수
                 cimg.setAttribute("src",`images/${opt}.jpg`);
                 // setAttribute(속성명,속성값)
+                // 백틱(`)을 사용한 변수넣기를 "템플릿 리터럴"이라함
+
+                // 5. 주소박스에 다국어 적용하기
+                // 대상: #info address -> info 변수
+                info.innerText = data["주소"];
 
             }; ////////////// change ///////////////
             ////////////////////////////////////////
