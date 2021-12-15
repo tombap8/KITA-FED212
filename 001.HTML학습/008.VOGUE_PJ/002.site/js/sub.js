@@ -118,6 +118,26 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     console.log("서브로딩완료!");
 
+    // 대상선정1 : 메인박스 - .cont
+    let cont = document.querySelector(".cont");
+
+    // 대상선정2 : 서브타이틀 - .stit
+    let stit = document.querySelector(".stit");
+
+    // 대상선정3 : 서브메뉴 - .lnb
+    let lnb = document.querySelector(".lnb");
+
+    // 대상선정4 : 컨텐츠 타이틀 - .cbx h2
+    let ctit = document.querySelectorAll(".ctit");
+
+    /************************************* 
+        서브 페이지 데이터 셋업하기
+    *************************************/
+   // 1. 서브 타이틀 넣기
+   // 대상: .stit -> stit 변수
+   stit.innerText = cinfo["제목"];
+
+
 
 
 
