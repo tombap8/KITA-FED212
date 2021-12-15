@@ -62,10 +62,57 @@ window.addEventListener("DOMContentLoaded", () => {
     //  console.log("버튼개수:",abtn.length);
 
     // 오른쪽버튼 클릭시
-    abtn[1].onclick = () => goSlide(1);
+    abtn[1].onclick = () => {
+        goSlide(1);//슬라이드함수
+        clearAuto();//인터발지우기
+    }; //////// click ////////
 
     // 왼쪽버튼 클릭시
-    abtn[0].onclick = () => goSlide(0);
+    abtn[0].onclick = () => {
+        goSlide(0);//슬라이드함수
+        clearAuto();//인터발지우기
+    }; //////// click ////////
+
+    /////////////////////////////////////
+    // 자동 넘기기 설정 -> 인터발 함수사용!
+    /////////////////////////////////////
+
+    // 인터발용변수
+    let autoI;
+
+    // 타임아웃용변수
+    let autoT;
+
+    /******************************** 
+        함수명: autoSlide
+        기능: 슬라이드함수 인터발호출
+    ********************************/
+   const autoSlide = () => 
+    autoI = setInterval(()=>goSlide(1),2000);
+    ////////// autoSlide 함수 ///////////
+
+    // setInterval 을 사용시 함수만 호출할 경우
+    // 함수명만 써도 되지만 함수에 전달값을 써야할 경우
+    // 익명함수 형식으로 써야한다! ()=>goSlide(1)
+
+    // 인터발호출함수 최초호출
+    autoSlide();
+
+
+    /************************************** 
+        함수명: clearAuto
+        기능: 인터발함수 지우고 타임아웃셋팅
+    **************************************/
+    const clearAuto = () => {
+        console.log("지움!");
+        // 1. 자동호출지우기
+        clearInterval(autoI);
+        // 2. 타임아웃지우기(실행쓰나미방지!)
+        clearTimeout(autoT);
+        // 3. 자동호출 타임아웃셋팅
+        autoT = setTimeout(autoSlide,3000);
+    }; /////////// clearAuto 함수 ///////////
+
 
     
 
