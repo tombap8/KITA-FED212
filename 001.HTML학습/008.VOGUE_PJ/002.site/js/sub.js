@@ -128,7 +128,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
     let lnb = document.querySelector(".lnb");
 
     // 대상선정4 : 컨텐츠 타이틀 - .cbx h2
-    let ctit = document.querySelectorAll(".ctit");
+    let ctit = document.querySelectorAll(".cbx h2");
+    // console.log("타이틀개수:",ctit.length);
 
     /************************************* 
         서브 페이지 데이터 셋업하기
@@ -136,6 +137,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
    // 1. 서브 타이틀 넣기 ///////////////
    // 대상: .stit -> stit 변수
    stit.innerText = cinfo["제목"];
+
+   // 예외: pm값이 "runway"일 경우 흰글자에 배경처리!
+   if(pm==="runway"){
+        stit.style.color = "white";
+        stit.style.background =
+        "url(images/bg_02.jpg) no-repeat center/cover";
+   } /////////// if ///////////////
 
    // 2. 서브메뉴 넣기 //////////
 
@@ -173,6 +181,17 @@ window.addEventListener('DOMContentLoaded', ()=>{
     // -> css 셋업에 따라 서브페이지 컨텐츠박스 배경이미지 나옴
     // 대상: 메인 컨텐츠박스 - .cont -> cont변수
     cont.classList.add(cinfo["경로"]);
+
+    // 4. 각 컨텐츠 박스에 컨텐츠 타이틀 넣기 ///
+    // 대상: .cbx h2 -> ctit변수 : 6개
+
+    let seq=0;//타이틀요소 순번
+
+    for(let x of cinfo["타이틀"]){
+        // 각 h2요쇼 내부에 타이틀글자 넣기
+        ctit[seq].innerHTML = x;
+        seq++;//1씩증가
+    } //////// for of ////////////
 
 
 
