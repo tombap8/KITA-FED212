@@ -5,6 +5,10 @@ window.addEventListener("DOMContentLoaded",()=>{
 
     console.log("링크시스 로딩완료!");
 
+    // 로고클릭시 첫페이지가기!
+    document.querySelector(".logo a").onclick =
+    ()=> location.href = "index.html";
+
     /***************************************** 
         GNB 메뉴 링크 연결하기
         대상: .gnb a
@@ -24,12 +28,17 @@ window.addEventListener("DOMContentLoaded",()=>{
             // toLowerCase() 는 소문자변환
             // trim() 앞뒤공백제거
             // 참고) toUpperCase() 는 대문자변환
-            console.log(txt);
+            // console.log(txt);
 
 
             // 2. 서브페이지 호출하기!
             // Get방식으로 데이타를 넘긴다
             // 넘길데이타: 메뉴텍스트(소문자로!)
+            // 조건: 값이 "search"가 아닌경우
+            if(txt!=="search")
+            location.href = "sub.html?cat="+txt;
+            // 파라미터 키=값을 넘길때
+            // 키이름은 내가 지은 이름이다!
 
         }; /////// click //////////
 
