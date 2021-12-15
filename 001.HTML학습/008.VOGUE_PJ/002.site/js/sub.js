@@ -148,7 +148,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     // "없음"이 아니면 메뉴 만들기
     if(menu !== "없음"){
-        
+
         // 메뉴 코드만들기 //
         tag = "<ul>";
 
@@ -161,8 +161,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
         // 메뉴 코드넣기 //
         lnb.innerHTML = tag;
 
-
     } ////////// if /////////////
+    else { // "없음"일경우 ///////
+
+        // lnb메뉴 박스 없애기
+        lnb.style.display = "none";
+
+    } ////////// else ////////////
 
 
 
