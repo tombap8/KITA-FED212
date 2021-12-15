@@ -107,11 +107,11 @@ if(pm.indexOf("?")===-1){
 
 // 3. 물음표(?)와 이퀄(=)로 각각 자른후 뒤의 배열값 읽기
 pm = pm.split("?")[1].split("=")[1];
-console.log("파라미터:",pm);
+// console.log("파라미터:",pm);
 
 // 4. 해당 카테고리 객체값 설정하기
 let cinfo = sinfo[pm];
-console.log("카테고리값:",cinfo);
+// console.log("카테고리값:",cinfo);
 
 ////// 로딩구역 //////////////////////////////////
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -136,6 +136,33 @@ window.addEventListener('DOMContentLoaded', ()=>{
    // 1. 서브 타이틀 넣기
    // 대상: .stit -> stit 변수
    stit.innerText = cinfo["제목"];
+
+   // 2. 서브메뉴 넣기 //////////
+
+   // 서브메뉴 데이타 가져오기
+   let menu = cinfo["메뉴"];
+//    console.log("메뉴:",menu);
+
+    // 코드변수
+    let tag;
+
+    // "없음"이 아니면 메뉴 만들기
+    if(menu !== "없음"){
+        
+        // 메뉴 코드만들기 //
+        tag = "<ul>";
+
+        for(let x of menu){
+            tag += `<li><a href="#">${x}</a></li>`;
+        } /////// for of ///////
+
+        tag += "</ul>";
+
+        // 메뉴 코드넣기 //
+        lnb.innerHTML = tag;
+
+
+    } ////////// if /////////////
 
 
 
