@@ -139,9 +139,15 @@
         //// 로드구역 //////////
         window.addEventListener("load",()=>{
 
-            // 대상선정: 메뉴 #gnb a
+            // 대상선정1 : 메뉴 - #gnb a
             let gnb = document.querySelectorAll("#gnb a");
             // console.log("메뉴개수:",gnb.length);
+
+            // 대상선정2 : 메인이미지 - #cont img
+            let cimg = document.querySelector("#cont img");
+
+            // 대상선정3 : 주소박스 - #info address
+            let info = document.querySelector("#info address");
 
             // 선택박스 변경시 사이트 다국어 변경하기
             // 이벤트대상: .sel
@@ -168,6 +174,12 @@
                     gnb[i].innerText = x;
                     i++;//요소순번증가
                 } ///////// for of ///////////////
+
+                // 4. 메인이미지 변경하기
+                // 이미지명에 언어코드가 들어감!
+                // 대상: #cont img -> cimg 변수
+                cimg.setAttribute("src",`images/${opt}.jpg`);
+                // setAttribute(속성명,속성값)
 
             }; ////////////// change ///////////////
             ////////////////////////////////////////
