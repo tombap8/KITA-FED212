@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded",()=>{
 
     console.log("링크시스 로딩완료!");
 
-    // 로고클릭시 첫페이지가기!
+    // 로고클릭시 첫페이지가기! ////////////////
     document.querySelector(".logo a").onclick =
     ()=> location.href = "index.html";
 
@@ -39,6 +39,9 @@ window.addEventListener("DOMContentLoaded",()=>{
             location.href = "sub.html?cat="+txt;
             // 파라미터 키=값을 넘길때
             // 키이름은 내가 지은 이름이다!
+
+            // "search"인 경우는 아무일도 없게처리
+            else return false;
 
         }; /////// click //////////
 
