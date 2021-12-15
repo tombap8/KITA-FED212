@@ -18,13 +18,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const goSlide = dir => { // dir - 방향(1-오른쪽,0-왼쪽)
 
         // 0. 광클금지 /////////////
-        if(prot) return;
-        //돌아가!(아래코드실행안함!)
+        if(prot) return;//돌아가!
         prot = 1;//잠금!
-        setTimeout(() => {
-            prot = 0;//해제!
-        }, 400);//작동시간 0.4초후
+        setTimeout(()=>prot=0,400);
         ///////////////////////////
+        
+        // 0.4초후 prot변수를 처음값으로 변경하여 잠금!
+
         // 광클금지의 원리는 전역변수를 지정하고
         // 이값에 따라 return을 주고 바로 변경하여 잠그고
         // 일정시간뒤에 다시 처음 값으로 풀어준다!
