@@ -187,6 +187,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     let seq=0;//타이틀요소 순번
 
+    // "타이틀" 객체값인 배열만큼 돌아준다!
     for(let x of cinfo["타이틀"]){
         // 각 h2요쇼 내부에 타이틀글자 넣기
         ctit[seq].innerHTML = x;
