@@ -301,6 +301,27 @@ $(function () { ////////// jQB ///////////////////////////
         },1000,"easeOutElastic",
         function(){ // 콜백함수
             // 5. 메시지 보이기
+            msg.empty() // empty() 선택요소 텍스트 지우기
+            .delay(1000)
+            .fadeIn(200,()=>{msg.text("무")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.서")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.서.")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.서.워")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.서.워.")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.서.워..")})
+            .delay(500).fadeIn(200,()=>{msg.text("무.서.워...")})
+            .delay(500).fadeIn(200,()=>{// 콜백함수
+                // 6. 좀비달려오기 
+                // -> 7번방 좀비 : bd.eq(7).find(".mz")
+                bd.eq(7).find(".mz")
+                // 윗층으로 올라오기
+                .animate({
+                    top: -tg.hight() + "px"
+                },500,"easeOutElastic")
+                
+            }); /////////////// fadeIn /////////////////////////
+
         }); /////////// animate //////////////
 
 
