@@ -322,7 +322,8 @@ $(function () { ////////// jQB ///////////////////////////
                 },500,"easeOutElastic")
                 // 주인공에게 달려오기
                 .animate({
-                    right: tg.width() + "px"
+                    right: tg.width()*1.2 + "px"
+                    // 가로크기만큼 right값주기(보정)
                 },2000,"easeOutBounce")
                 
             }); /////////////// fadeIn /////////////////////////
