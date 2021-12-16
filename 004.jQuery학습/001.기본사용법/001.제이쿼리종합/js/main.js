@@ -317,8 +317,13 @@ $(function () { ////////// jQB ///////////////////////////
                 bd.eq(7).find(".mz")
                 // 윗층으로 올라오기
                 .animate({
-                    top: -tg.hight() + "px"
+                    bottom: tg.height() + "px"
+                    // -tg.height() -> li의 높이만큼 위로 올라옴
                 },500,"easeOutElastic")
+                // 주인공에게 달려오기
+                .animate({
+                    right: tg.width() + "px"
+                },2000,"easeOutBounce")
                 
             }); /////////////// fadeIn /////////////////////////
 
