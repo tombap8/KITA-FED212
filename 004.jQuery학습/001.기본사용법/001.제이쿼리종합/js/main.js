@@ -328,7 +328,19 @@ $(function () { ////////// jQB ///////////////////////////
                     // 7. 주인공 사색되기(흑백처리)
                     mi.css({
                         filter: "grayscale(100%)"
-                    })
+                    });
+                    // 8. 2초뒤에 좀비되기
+                    setTimeout(()=>{
+                        
+                        mi.find("img")
+                        .attr("src","images/mz1.png");
+                        // attr(속성명,속성값)
+                        // -> 속성값 바꾸는 메서드!
+                        // JS의 setAttribute와 유사!
+                        // 참고) attr(속성명) -> 속성값 가져오기
+                        // -> getAttribute와 유사!
+
+                    }, 2000); /// setTimeout ///
                 });//////////// animate ///////////////
                 
             }); /////////////// fadeIn /////////////////////////
