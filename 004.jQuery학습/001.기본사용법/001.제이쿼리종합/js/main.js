@@ -189,6 +189,35 @@ $(function () { ////////// jQB ///////////////////////////
 
     }); // 3-2. '옆방으로' 버튼 click 끝 /////////
 
+    // 3-3. '윗층으로 도망가!' 버튼 클릭시 /////////
+    btns.eq(2).click(function () {
+        console.log($(this).text(), "버튼!");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(300);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(300);
+
+        // 3. 이동위치
+        // 대상: 7번방
+        let tg = bd.eq(7);
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
+
+        // 4. 위치이동
+        mi.animate({
+            top: tgtop + "px",
+            let: tgleft + "px"
+        }, 1000, "easeOutBounce", // 이징
+        function () { // 콜백함수
+
+        }); /////// animate ///////////////
+
+
+
+    }); // 3-3. '윗층으로 도망가!' 버튼 click 끝 ///////
+
 
 
 
