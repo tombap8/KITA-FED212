@@ -248,8 +248,8 @@ $(function () { ////////// jQB ///////////////////////////
         msg.fadeOut(300);
 
         // 3. 이동위치
-        // 대상: 4번방
-        let tg = bd.eq(4);
+        // 대상: 6번방
+        let tg = bd.eq(6);
         let tgtop = tg.offset().top;
         let tgleft = tg.offset().left + win5;
 
@@ -259,9 +259,20 @@ $(function () { ////////// jQB ///////////////////////////
             left: tgleft + "px"
         },1000,"easeInOutElastic",//이징
         function(){ // 콜백함수
+
             // 5. 메시지 보이기
             msg.text("여긴 없겠지?...")
             .delay(500).fadeIn(200);
+
+            // 6. 다음 메시지 : 2초후 변경
+            setTimeout(() => {
+
+                msg.html("그래도 무서우니까<br>윗층으로 가자!");
+
+                // 7. 다음버튼 보이기
+                btns.eq(4).fadeIn(200);
+
+            }, 2000);/////// setTimeout //////
 
         }); //////// animate ////////////
 
