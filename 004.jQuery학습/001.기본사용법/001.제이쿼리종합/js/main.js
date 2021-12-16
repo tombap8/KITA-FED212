@@ -388,6 +388,7 @@ $(function () { ////////// jQB ///////////////////////////
             top: tgtop + "px",
             left: tgleft + "px"
         },1000,"easeOutElastic",()=>{
+
             // 5. 주사기 돌리기
             // 주의: transform은 animate에서 사용불가!
             // transform은 transition사용!
@@ -396,6 +397,16 @@ $(function () { ////////// jQB ///////////////////////////
                 transition:".5s ease-out 1s",
                 zIndex:"9999" //좀비보다 위!
             }); ////// css ///////////
+
+            // 6. 주사놓은 후(1.5초) 다시 미니언즈2(후유증)
+            setTimeout(() => {
+
+                // 6-1. 미니언즈 흑백모드 풀기
+                mi.css({filter:"grayscale(0%)"})
+                // 6-2. 새로운 미니언즈 이미지 변경!
+                .find("img").attr("src","images/m2.png");
+
+            }, 1500); ///// setTimeout //////////
 
         }); ///////// animate ////////////////
 
