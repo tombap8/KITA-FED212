@@ -121,18 +121,19 @@ $(function () { ////////// jQB ///////////////////////////
             // 대상: .mi -> mi변수
             // animate({css설정},시간,이징,함수)
             mi.animate({
-                top: tgtop + "px",
-                left: tgleft + "px"
-            }, 1000, function () { // 콜백함수(애니후)
+                    top: tgtop + "px",
+                    left: tgleft + "px"
+                }, 1000, "easeInCirc", //이징(이름정확히,UI있어야함)
+                function () { // 콜백함수(애니후)
 
-                // 5. 메시지변경
-                msg.text("와~! 아늑하다! 옆방으로 가보자!")
-                    .fadeIn(200); //메시지 나타나기!
+                    // 5. 메시지변경
+                    msg.text("와~! 아늑하다! 옆방으로 가보자!")
+                        .fadeIn(200); //메시지 나타나기!
 
-                // 6. 다음버튼 보이기
-                btns.eq(1).slideDown(400);
+                    // 6. 다음버튼 보이기
+                    btns.eq(1).slideDown(400);
 
-            }); //////////// animate //////////
+                }); //////////// animate //////////
 
         }); //// 3-1. '들어가기'버튼 click 끝 ///////
 
@@ -159,22 +160,25 @@ $(function () { ////////// jQB ///////////////////////////
         mi.animate({
                 top: tgtop + "px",
                 left: tgleft + "px"
-            }, 500,
-            function () {// 콜백함수
+            }, 1500, "easeInOutElastic",
+            //이징(이름정확히,UI있어야함)
+            function () { // 콜백함수
                 // 5. 좀비 등장 -> 9번방(tg)에 있는 좀비(.mz)
                 tg.find(".mz")
-                .delay(2000)
-                .fadeIn(400,function(){ // 콜백함수
-                    // 6. 메시지 띄우기
-                    msg
-                    .html("악!;;;; 좀비!<br>어서피하자!")
-                    .fadeIn(200)
-                    .css({left:"-134%"});
+                    .delay(2000)
+                    .fadeIn(400, function () { // 콜백함수
+                        // 6. 메시지 띄우기
+                        msg
+                            .html("악!;;;; 좀비!<br>어서피하자!")
+                            .fadeIn(200)
+                            .css({
+                                left: "-134%"
+                            });
 
-                    // 7. 다음버튼 보이기 : '윗층으로 도망가!'
-                    btns.eq(2).slideDown(300);
+                        // 7. 다음버튼 보이기 : '윗층으로 도망가!'
+                        btns.eq(2).slideDown(300);
 
-                }); ///////// fadeIn /////////
+                    }); ///////// fadeIn /////////
 
                 // fadeIn(시간,이징,함수)
                 // find(요소) 내부요소 찾아선택
@@ -182,9 +186,6 @@ $(function () { ////////// jQB ///////////////////////////
                 // html(태그) 내부에 html태그를 넣을때
 
             }); /////// animate //////////
-
-
-
 
     }); // 3-2. '옆방으로' 버튼 click 끝 /////////
 
