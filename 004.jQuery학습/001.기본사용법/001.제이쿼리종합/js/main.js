@@ -415,7 +415,7 @@ $(function () { ////////// jQB ///////////////////////////
                     msg.html("이제, 조금만 더<br>가면 탈출이닷!");
                 }); ///////// fadeIn ////////////
 
-                // 8. 다음버튼 보이기
+                // 8. 다음버튼 보이기 : '3번방으로!'
                 btns.eq(6).slideDown(400);
 
             }, 1500); ///// setTimeout //////////
@@ -423,6 +423,72 @@ $(function () { ////////// jQB ///////////////////////////
         }); ///////// animate ////////////////
 
     });// 3-6. '치료주사방으로!' 버튼 click 끝 ///////
+
+    // 3-7. '3번방으로!' 버튼 클릭시 ///////
+    btns.eq(6).click(function(){
+        console.log($(this).text(), "버튼");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(200);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+
+        // 3. 이동위치
+        // 대상: 3번방
+        let tg = bd.eq(3);
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
+
+        // 4. 위치이동
+        mi.animate({
+            top: tgtop + "px",
+            left: tgleft + "px"
+        },1000,()=>{
+
+            // 5. 메시지 보이기
+            msg.text("어서 윗층으로 가자!").fadeIn(200);
+
+            // 6. 다음버튼 보이기 : '1번방으로!'
+            btns.eq(7).slideDown(300);
+            
+        }); ///////// animate //////////////
+
+    }); // 3-7. '3번방으로!' 버튼 click 끝 ///////
+
+    // 3-8. '1번방으로!' 버튼 클릭시 ///////
+    btns.eq(7).click(function(){
+        console.log($(this).text(), "버튼");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(200);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+
+        // 3. 이동위치
+        // 대상: 1번방
+        let tg = bd.eq(1);
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
+
+        // 4. 위치이동
+        mi.animate({
+            top: tgtop + "px",
+            left: tgleft + "px"
+        },1000,()=>{
+
+            // 5. 메시지 보이기
+            msg.text("이제 곧 탈출이닷!").fadeIn(200);
+
+            // 6. 다음버튼 보이기 : '헬기를 호출!'
+            btns.last().slideDown(300);
+            // last()는 버튼 중 마지막버튼 선택
+
+        }); ///////// animate //////////////
+
+    }); // 3-8. '1번방으로!' 버튼 click 끝 ///////
+
 
 
 
