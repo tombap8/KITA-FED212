@@ -312,26 +312,35 @@ $(function () { ////////// jQB ///////////////////////////
             .delay(500).fadeIn(200,()=>{msg.text("무.서.워..")})
             .delay(500).fadeIn(200,()=>{msg.text("무.서.워...")})
             .delay(500).fadeIn(200,()=>{// 콜백함수
+
                 // 6. 좀비달려오기 
                 // -> 7번방 좀비 : bd.eq(7).find(".mz")
                 bd.eq(7).find(".mz")
+
                 // 6-1.윗층으로 올라오기
                 .animate({
                     bottom: tg.height() + "px"
                     // -tg.height() -> li의 높이만큼 위로 올라옴
                 },500,"easeOutElastic")
+
                 // 6-2.주인공에게 달려오기
                 .animate({
                     right: tg.width()*1.2 + "px"
                     // 가로크기만큼 right값주기(보정)
                 },2000,"easeOutBounce",()=>{ // 좀비온후!
+
                     // 7. 주인공 사색되기(흑백처리)
                     mi.css({
                         filter: "grayscale(100%)"
                     });
-                    // 8. 2초뒤에 좀비되기
+
+                    // 8. 메시지 지우기
+                    msg.hide();
+
+                    // 9. 2초뒤에 좀비되기
                     setTimeout(()=>{
-                        
+
+                        // 9-1. 좀비 이미지변경
                         mi.find("img")
                         .attr("src","images/mz1.png");
                         // attr(속성명,속성값)
@@ -339,6 +348,14 @@ $(function () { ////////// jQB ///////////////////////////
                         // JS의 setAttribute와 유사!
                         // 참고) attr(속성명) -> 속성값 가져오기
                         // -> getAttribute와 유사!
+
+                        // 9-2. 좀비메시지
+                        msg.html("나도좀비!;;;<br>어서치료주사를!")
+                        .css({left:"100%"}) // 메시지위치변경
+                        .fadeIn(400);// 메시지 나타나기
+
+                        // 10. 다음 버튼 보이기 : '치료주사방으로!'
+                        btns.eq(5).slideDown(300);
 
                     }, 2000); /// setTimeout ///
                 });//////////// animate ///////////////
