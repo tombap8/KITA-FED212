@@ -31,6 +31,13 @@ $(function () { ////////// jQB ///////////////////////////
     // 주사기 이미지 태그
     let inj = '<img src="images/inj.png" alt="주사기" class="inj">';
 
+    // 미니언즈 가로위치 보정값
+    // 윈도우 가로크기의 5%
+    let win5 = $(window).width() * 0.05;
+    console.log("가로크기5%:", win5);
+    // width() 가로크기, height() 세로크기
+    // -> 단위없는 px값 리턴함
+
     /****************************************************** 
                     2. 초기화 셋팅
     ******************************************************/
@@ -83,39 +90,55 @@ $(function () { ////////// jQB ///////////////////////////
 
     // 3-1. "들어가기" 버튼 ///////////
     btns.first() // 버튼들중 .첫번째()
-    .click(function(){
-        console.log("들어가기 버튼!");
+        .click(function () {
+            console.log("들어가기 버튼!");
 
-        // 1. 클릭된 버튼 자신(this) 없애기
-        $(this).slideUp(400);
-        // slideUp(시간) -> height값이 0되며 애니메이션
-        // 반대는 slideDown(시간)
+            // 1. 클릭된 버튼 자신(this) 없애기
+            $(this).slideUp(400);
+            // slideUp(시간) -> height값이 0되며 애니메이션
+            // 반대는 slideDown(시간)
 
-        // 2. 메시지 지우기
-        msg.fadeOut(600);
-        // fadeOut(시간) -> opacity값이 0되며 애니메이션
-        // 반대는 fadeIn(시간)
+            // 2. 메시지 지우기
+            msg.fadeOut(200);
+            // fadeOut(시간) -> opacity값이 0되며 애니메이션
+            // 반대는 fadeIn(시간)
 
-        // 3. 이동위치정보 : 이동할 빌딩 li의 위치를 알아내기
-        // 이동할 li 타겟 -> bd변수(.building li)
-        let tg = bd.eq(8); // 8번방
-        // eq(순번) -> 선택요소들중 몇번째 요소를 선택
-        // eq는 seqence(순서) 라는 단어에서 나온말!
-        let tgtop = tg.offset().top; // 화면에서 top값
-        let tgleft = tg.offset().left; // 화면에서 left값
-        console.log(`top:${tgtop} / left:${tgleft}`);
+            // 3. 이동위치정보 : 이동할 빌딩 li의 위치를 알아내기
+            // 이동할 li 타겟 -> bd변수(.building li)
+            let tg = bd.eq(8); // 8번방
+            // eq(순번) -> 선택요소들중 몇번째 요소를 선택
+            // eq는 seqence(순서) 라는 단어에서 나온말!
+            let tgtop = tg.offset().top; // 화면에서 top값
+            let tgleft = tg.offset().left + win5; // 화면에서 left값+보정
+            console.log(`top:${tgtop} / left:${tgleft}`);
+            /* 
+                offset() 메서드 : 요소의 위치나 크기정보를 담고 있음
+                offset().top -> 요소의 top값
+                offset().left -> 요소의 left값
+            */
+
+            // 4. 미니언즈 이동하기
+            // 대상: .mi -> mi변수
+            // animate({css설정},시간,이징,함수)
+            mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 1000, function () { // 콜백함수(애니후)
+
+                // 5. 메시지변경
+                msg.text("와~! 아늑하다! 옆방으로 가보자!")
+                    .fadeIn(200); //메시지 나타나기!
+
+                // 6. 다음버튼 보이기
+                btns.eq(1).slideDown(400);
+
+            }); //////////// animate //////////
 
 
-        /* 
-            offset() 메서드 : 요소의 위치나 크기정보를 담고 있음
-            offset().top -> 요소의 top값
-            offset().left -> 요소의 left값
-        */
 
 
 
-
-    });//////////// click ///////////////
+        }); //////////// click ///////////////
 
 
 }); //////////////////// jQB ///////////////////////////
