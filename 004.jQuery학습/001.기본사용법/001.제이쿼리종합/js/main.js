@@ -315,16 +315,21 @@ $(function () { ////////// jQB ///////////////////////////
                 // 6. 좀비달려오기 
                 // -> 7번방 좀비 : bd.eq(7).find(".mz")
                 bd.eq(7).find(".mz")
-                // 윗층으로 올라오기
+                // 6-1.윗층으로 올라오기
                 .animate({
                     bottom: tg.height() + "px"
                     // -tg.height() -> li의 높이만큼 위로 올라옴
                 },500,"easeOutElastic")
-                // 주인공에게 달려오기
+                // 6-2.주인공에게 달려오기
                 .animate({
                     right: tg.width()*1.2 + "px"
                     // 가로크기만큼 right값주기(보정)
-                },2000,"easeOutBounce")
+                },2000,"easeOutBounce",()=>{ // 좀비온후!
+                    // 7. 주인공 사색되기(흑백처리)
+                    mi.css({
+                        filter: "grayscale(100%)"
+                    })
+                });//////////// animate ///////////////
                 
             }); /////////////// fadeIn /////////////////////////
 
