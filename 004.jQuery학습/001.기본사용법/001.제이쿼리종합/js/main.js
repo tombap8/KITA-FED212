@@ -209,8 +209,26 @@ $(function () { ////////// jQB ///////////////////////////
         mi.animate({
             top: tgtop + "px",
             let: tgleft + "px"
-        }, 1000, "easeOutBounce", // 이징
+        }, 1000, "easeOutElastic", // 이징
         function () { // 콜백함수
+            // 5. 메시지 보이기
+            msg.text("여긴 없겠지?")
+            .fadeIn(200);
+            // 6. 좀비보이기 : 현재방(tg)에 있는 좀비(.mz)
+            tg.find(".mz")
+            .delay(1000)
+            // fadeIn(시간,이징,함수)
+            .fadeIn(1000,//시간
+                "easeInExpo",//이징
+                function () {//함수
+
+                    // 7. 메시지 수정하기
+                    msg.text("악! 여기도!!!");
+
+                    // 8. 다음버튼 보이기 : '다시 옆방으로!'
+                    btns.eq(3).fadeIn(300);
+                    
+                }); //////// fadeIn ///////////
 
         }); /////// animate ///////////////
 
