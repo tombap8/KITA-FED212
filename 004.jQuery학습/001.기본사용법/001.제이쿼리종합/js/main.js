@@ -282,6 +282,28 @@ $(function () { ////////// jQB ///////////////////////////
     btns.eq(4).click(function(){
         console.log($(this).text(),"버튼");
 
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(200);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+
+        // 3. 이동위치
+        // 대상: 4번방
+        let tg = bd.eq(4);
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
+
+        // 4. 위치이동
+        mi.animate({
+            top: tgtop + "px",
+            left: tgleft + "px"
+        },1000,"easeOutElastic",
+        function(){ // 콜백함수
+            // 5. 메시지 보이기
+        }); /////////// animate //////////////
+
+
     });// 3-5. '무서우니 윗층으로!' 버튼 click 끝 ///////
     
 
