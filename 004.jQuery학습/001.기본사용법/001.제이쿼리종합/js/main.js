@@ -405,6 +405,9 @@ $(function () { ////////// jQB ///////////////////////////
                 mi.css({filter:"grayscale(0%)"})
                 // 6-2. 새로운 미니언즈 이미지 변경!
                 .find("img").attr("src","images/m2.png");
+                // 6-3. 주사기 제거하기
+                $(".inj").remove();
+                // remove() 메서드는 태그를 지운다!
 
             }, 1500); ///// setTimeout //////////
 
