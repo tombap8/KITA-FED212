@@ -136,13 +136,38 @@ $(function () { ////////// jQB ///////////////////////////
 
         }); //// 3-1. '들어가기'버튼 click 끝 ///////
 
-        // 3-2. '옆방으로' 버튼 ///////////////////
-        btns.eq(1).click(function(){
-            console.log($(this).text()," 버튼");
-            // $(this)는 btns.eq(1)과 같다!
-            // text()메서드는 읽어오기도 됨!
+    // 3-2. '옆방으로' 버튼 ///////////////////
+    btns.eq(1).click(function () {
+        console.log($(this).text(), " 버튼");
+        // $(this)는 btns.eq(1)과 같다!
+        // text()메서드는 읽어오기도 됨!
 
-        }); // 3-2. '옆방으로' 버튼 click 끝 /////////
+        // 1. 자기자신 버튼 없애기
+        $(this).fadeOut(200);
+        // 서서히 사라짐
+
+        // 2. 메시지 사라지기
+        msg.slideUp(200);
+
+        // 3. 이동위치
+        // 대상: 9번방
+        let tg = bd.eq(9);
+        let tgtop = tg.offset().top;
+        let tgleft = tg.offset().left + win5;
+
+        // 4. 위치이동
+        mi.animate({
+                top: tgtop + "px",
+                left: tgleft + "px"
+            }, 500,
+            function () {// 콜백함수
+
+            }); /////// animate //////////
+
+
+
+
+    }); // 3-2. '옆방으로' 버튼 click 끝 /////////
 
 
 
