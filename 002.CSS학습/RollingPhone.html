@@ -23,7 +23,7 @@
             /* 트랜스폼 입체설정하기! */
             transform-style: preserve-3d;
 
-            outline: 2px solid black;
+            /* outline: 2px solid black; */
         }
 
         /* 각면 공통 */
@@ -31,6 +31,7 @@
             position: absolute;
             width: 200px;
             height: 400px;
+            background-color: #fff;
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
@@ -71,6 +72,12 @@
             background-image: 
             url(./images/ip02.png);
             transform: translateZ(-10px) rotateY(180deg);
+        }
+        /* 6.좌측면 */
+        .phone span:nth-child(6){
+            background-image: 
+            url(./images/ip01.png);
+            transform: translateZ(10px);
         }
 
     </style>
