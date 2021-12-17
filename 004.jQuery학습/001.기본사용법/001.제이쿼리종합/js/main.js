@@ -208,7 +208,7 @@ $(function () { ////////// jQB ///////////////////////////
         // 4. 위치이동
         mi.animate({
             top: tgtop + "px",
-            let: tgleft + "px"
+            left: tgleft + "px"
         }, 1000, "easeOutElastic", // 이징
         function () { // 콜백함수
             // 5. 메시지 보이기
