@@ -540,7 +540,16 @@ $(function () { ////////// jQB ///////////////////////////
                 .delay(1000) // 9. 1초 기다림
                 .animate({ // 10. 오른쪽 끝으로 이동!
                     left:"70%"
-                },3000,"easeInOutQuart")
+                },3000,"easeInOutQuart",
+                function(){ // 콜백함수
+
+                    // 11. 헬기 조정사가 좀비로 바뀐 이미지변경
+                    $(this).attr("src","images/heli3.png");
+
+                }) /////// animate /////
+                .animate({ // 12. 아주 천천히 화면 바깥으로 나감
+                    left: "100%"
+                }, 10000,"easeInOutSine")
 
 
             });///////// fadeIn //////////
