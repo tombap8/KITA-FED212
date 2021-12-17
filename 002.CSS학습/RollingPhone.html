@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회전하는 아이폰</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        /* 
+            font-family: 'Anton', sans-serif;
+        */
+
         html,body{
             margin: 0;
             padding: 0;
@@ -100,10 +105,52 @@
             }
         } /* 키프레임 */
 
+        /* 글자액션박스 */
+        .fbx{
+            width: 100vw;
+        }
+        /* 텍스트 박스 */
+        .tbx{
+            width: 200vw;
+            display: flex;
+            /* 아래ul이 옆으로 흐름 */
+        }
+        .tbx ul{
+            display: flex;
+            /* 아래li가 옆으로 흐름 */
+            flex: 1;/* 등분할 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tbx li{
+            flex: 1;/* 등분할 */
+            text-align: center;
+
+            outline: 2px dotted gray;
+        }
+
 
     </style>
 </head>
 <body>
+
+    <div class="fbx">
+        <div class="tbx">
+            <ul>
+                <li>iPhone 2021</li>
+                <li>iPhone 2021</li>
+                <li>iPhone 2021</li>
+                <li>iPhone 2021</li>
+            </ul>
+            <ul>
+                <li>iPhone 2021</li>
+                <li>iPhone 2021</li>
+                <li>iPhone 2021</li>
+                <li>iPhone 2021</li>
+            </ul>
+        </div>
+    </div>
 
     <!-- 폰박스 -->
     <div class="phone cube-ani">
