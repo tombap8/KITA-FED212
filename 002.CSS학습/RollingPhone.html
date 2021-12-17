@@ -107,14 +107,32 @@
 
         /* 글자액션박스 */
         .fbx{
+            position: absolute;
+            top: 10%;
             width: 100vw;
+            overflow: hidden;
+            /* 넘치는 자식요소 숨기기*/
         }
         /* 텍스트 박스 */
         .tbx{
+            position: relative;
+            left: 0;
+            /* left값이 -100%까지 애니메이션됨! */
             width: 200vw;
             display: flex;
             /* 아래ul이 옆으로 흐름 */
+
+            /* 애니메이션 : 이시이지반방마 */
+            animation: textFlow 5s linear infinite;
         }
+
+        /* 텍스트 흐르기 키프레임 */
+        @keyframes textFlow {
+            to{
+                left: -100%;
+            }
+        }/* 텍스트 흐르기 키프레임 */
+
         .tbx ul{
             display: flex;
             /* 아래li가 옆으로 흐름 */
@@ -126,8 +144,11 @@
         .tbx li{
             flex: 1;/* 등분할 */
             text-align: center;
+            font-family: 'Anton', sans-serif;
+            font-size: 4vw;
+            color: #d3d3d3;
 
-            outline: 2px dotted gray;
+            /* outline: 2px dotted gray; */
         }
 
 
