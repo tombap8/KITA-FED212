@@ -524,6 +524,25 @@ $(function () { ////////// jQB ///////////////////////////
                     // 오른쪽에서 li가로크기의 1.3배만큼 이동애니
                 }, 5000,"easeInOutQuint"); ////// animate /////
 
+                // 6-2. 헬기등장
+                $(".heli").animate({
+                    left: "20%"
+                }, 3000,"easeOutBack",
+                function(){ // 콜백함수
+
+                    // 7. 주인공이 헬기에 탄 이미지로 변경!
+                    $(this).attr("src","images/heli2.png");
+
+                    // 8. 주인공 지우기(헬기에 탔으니까!)
+                    mi.hide(); // display:none 처리됨!
+
+                }) /////// animate ///////
+                .delay(1000) // 9. 1초 기다림
+                .animate({ // 10. 오른쪽 끝으로 이동!
+                    left:"70%"
+                },3000,"easeInOutQuart")
+
+
             });///////// fadeIn //////////
 
         }); //////// animate //////////////
