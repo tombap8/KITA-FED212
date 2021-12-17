@@ -31,7 +31,6 @@
             position: absolute;
             width: 200px;
             height: 400px;
-            background-color: #fff;
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
@@ -80,12 +79,34 @@
             transform: translateZ(10px);
         }
 
+        
+        /* 애니호출 class */
+        .cube-ani {
+            /* 애니메이션: 이시이지반방마 */
+            animation: rolling 2s ease-in-out 1s 2 alternate;
+        }
+
+        /* 큐브회전 애니메이션 키프레임 */
+        @keyframes rolling {
+            to{
+                transform: rotateX(370deg) rotateY(-330deg);
+                /* 
+                    x축은 10도 나가있고 같은 방향(+)으로
+                    한바퀴 회전하려면 360도+10도=370도
+
+                    y축은 30도 나가있고 반대 방향(-)으로
+                    한바퀴 회전하려면 -360도+30도=-330도
+                */
+            }
+        } /* 키프레임 */
+
+
     </style>
 </head>
 <body>
 
     <!-- 폰박스 -->
-    <div class="phone">
+    <div class="phone cube-ani">
         <span></span>
         <span></span>
         <span></span>
