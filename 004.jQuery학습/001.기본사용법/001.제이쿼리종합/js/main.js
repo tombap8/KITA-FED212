@@ -43,7 +43,7 @@ $(function () { ////////// jQB ///////////////////////////
     ******************************************************/
 
     // 2-1. 버튼셋팅 : 모든버튼을 숨기고 첫번째만 보이게 하기
-    btns.hide().first().show();
+    btns.hide().last().prev().prev().show();
     // 버튼들을 .숨겨() .첫번째()는 .보여()
     // 주어는 하나! 뒤에 메서드 체인!
 
@@ -476,7 +476,7 @@ $(function () { ////////// jQB ///////////////////////////
         mi.animate({
             top: tgtop + "px",
             left: tgleft + "px"
-        },1000,()=>{
+        },1000,"easeInOutBack",()=>{
 
             // 5. 메시지 보이기
             msg.text("이제 곧 탈출이닷!").fadeIn(200);
@@ -490,8 +490,45 @@ $(function () { ////////// jQB ///////////////////////////
     }); // 3-8. '1번방으로!' 버튼 click 끝 ///////
 
     // 3-9. '헬기를 호출!' 버튼 클릭시 ///////
-    
-    // 3-9. '헬기를 호출!' 버튼 click 끝 ///////
+    btns.last().click(function(){
+        console.log($(this).text(), "버튼");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(200);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+
+        // 3. 이동위치
+        let tg = bd.eq(0); // 0번방
+        let tgtop = tg.offset().top; // 화면에서 top값
+        let tgleft = tg.offset().left + win5; // 화면에서 left값(보정)
+
+        // 4. 위치이동
+        mi.animate({
+            top: tgtop + "px",
+            left: tgleft + "px"
+        },1000,"easeInOutBack",() => {
+
+            // 5. 메시지 보이기
+            msg.text("도와줘요~!!!").fadeIn(200);
+
+            // 6. 좀비들 최총추적!!!
+            // -> 1번방에 숨겨진 좀비들 -> bd.eq(1).find(".mz")
+            bd.eq(1).find(".mz")
+            .fadeIn(200,function(){ // 콜백함수
+
+                // 6-1. 좀비들 움직이기
+                $(this).animate({
+                    right: tg.width()*1.3 + "px"
+                    // 오른쪽에서 li가로크기의 1.3배만큼 이동애니
+                }, 5000,"easeInOutQuint"); ////// animate /////
+
+            });///////// fadeIn //////////
+
+        }); //////// animate //////////////
+
+    }); // 3-9. '헬기를 호출!' 버튼 click 끝 ///////
 
 
 
