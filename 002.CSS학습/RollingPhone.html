@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회전하는 아이폰</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        /* 폰박스 */
+        .phone{
+            position: absolute;
+            top: calc(50% - 200px);
+            left: calc(50% - 100px);
+            /* 정중앙이동 */
+            width: 200px;
+            height: 400px;
+            transform: rotateX(10deg) rotateY(30deg);
+
+            /* 트랜스폼 입체설정하기! */
+            transform-style: preserve-3d;
+
+            outline: 2px solid black;
+        }
+
+        /* 각면 공통 */
+        .phone span{
+            position: absolute;
+            width: 200px;
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        /* 각면 만들기 */
+        /* 1.윗면 */
+        .phone span:nth-child(1){
+            height: 20px;
+            background-image: url(./images/ip06.png);
+            top: -10px;
+            transform: rotateX(-90deg);
+        }
+        /* 1.윗면 */
+        .phone span:nth-child(1){
+            height: 20px;
+            background-image: url(./images/ip06.png);
+            top: -10px;
+            transform: rotateX(-90deg);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 폰박스 -->
+    <div class="phone">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+</body>
+</html>
