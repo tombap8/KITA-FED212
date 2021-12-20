@@ -8,7 +8,7 @@ const totnum = 7;
 // 3. 광스크롤 상태변수
 let prot_sc = 0; //0-허용, 1-불허용
 // 4. 스크롤애니메이션 시간
-const dur_sc = 400;
+const dur_sc = 600;
 // 광스크롤 금지 시간, 스크롤애니시간
 
 
@@ -123,9 +123,14 @@ $(function () { ////// jQB //////////////////////
                     -> 대소문자 관계없이 'my'문자를 모두 찾아라!
 
             *****************************************/
-           console.log("브라우저정보:",navigator.userAgent);
-           console.log("정보여부:",
-           /firefox/i.test(navigator.userAgent));
+        //    console.log("브라우저정보:",navigator.userAgent);
+        //    console.log("정보여부:",
+        //    /firefox/i.test(navigator.userAgent));
+
+        // 파이어폭스 브라우저 이면 델타값 부호를 반대로 한다!
+        if(/firefox/i.test(navigator.userAgent)){
+            delta = -delta; // 변수앞에 마이너스는 부호반대!
+        } ////////////////// if /////////////////////
 
             //********************************/
             // 2. 방향에 따른 페이지 번호증감하기 ////
