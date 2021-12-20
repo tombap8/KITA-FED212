@@ -10,7 +10,8 @@ let prot_sc = 0; //0-허용, 1-불허용
 // 4. 스크롤애니메이션 시간
 const dur_sc = 600;
 // 광스크롤 금지 시간, 스크롤애니시간
-
+// 5. 스크롤이징
+const easing_sc = "easeInOutQuint";
 
 
 ////////////////// 로딩구역 ////////////////////
@@ -154,7 +155,7 @@ $(function () { ////// jQB //////////////////////
             // 이동애니메이션
             $("html,body").animate({
                 scrollTop: pos + "px"
-            }, dur_sc, "easeInOutQuint");
+            }, dur_sc, easing_sc);
             // dur_sc 상수에 공통시간설정
 
 
