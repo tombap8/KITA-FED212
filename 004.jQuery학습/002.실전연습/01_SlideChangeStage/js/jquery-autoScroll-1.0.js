@@ -158,6 +158,19 @@ $(function () { ////// jQB //////////////////////
             }, dur_sc, easing_sc);
             // dur_sc 상수에 공통시간설정
 
+            // ****************************************
+            // 4. 클릭시 .gnb+.indic 의 li에 클래스 on넣기
+            $(".gnb li").eq(pno).addClass("on")
+            // $(gnb전체li).eq(해당순번).클래스넣기("on")
+            .siblings().removeClass("on");
+            // .다른형제들().클래스제거("on")
+
+            $(".indic li").eq(pno).addClass("on")
+            // $(indic전체li).eq(해당순번).클래스넣기("on")
+            .siblings().removeClass("on");
+            // .다른형제들().클래스제거("on")
+
+
 
         }); //////////// mousewheel //////////////////////
     ///////////////////////////////////////////////////
