@@ -92,7 +92,7 @@ $(function(){ ////// jQB //////////////////////
                 // e.wheelDelta는 일반 브라우저용 방향정보
                 // e.detail은 파이어폭스용 방향정보
                 let delta = e.wheelDelta || e.detail;
-                // console.log("휠델타값:"+delta);
+                console.log("휠델타값:"+delta);
 
                 //********************************/
                 // 2. 방향에 따른 페이지 번호증감하기 ////
