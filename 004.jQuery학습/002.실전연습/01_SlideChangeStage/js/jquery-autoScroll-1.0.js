@@ -73,7 +73,7 @@ $(function(){ ////// jQB //////////////////////
                 //-> 지정시간동안 스크롤막기
                 //-> 지정시간은 dur_sc 상수로 관리함!
 
-                // console.log("마우스휠~!");
+                console.log("마우스휠~!");
 
                 // e.preventDefault();
                 // return false;
