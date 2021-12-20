@@ -226,20 +226,26 @@
         ///////////// 로딩구역 //////////////////////////////////
         $(function () { ////// jQB ///////////////////////////////
 
-            /************************************* 
-                GNB a요소 클릭시 페이지 이동하기
-            *************************************/
-            // 대상: .gnb a
-            $(".gnb a").click(function (e) { // e - 이벤트전달값
-
-                // 기본기능막기 : a의 이동기능막기
+            // a요소 기본이동막기 ///////
+            $("a").click(function (e) {
                 e.preventDefault();
+            }); /////////// click ////////////
 
-                // 1. 클릭된 a요소의 href값 읽어오기
-                // $(this) -> 클릭된 a요소 자신!
-                let idx = $(this).parent().index();
-                // parent().index() 부모요소(li)의 순번
-                console.log("클릭된 a의 부모li순번:", idx);
+            /************************************* 
+                GNB li요소 클릭시 페이지 이동하기
+                + 인디케이터 li요소 클릭시 기능동일!
+            *************************************/
+            // 대상: .gnb li + .indic li
+            $(".gnb li,.indic li").click(function (e) { // e - 이벤트전달값
+
+                // 기본기능막기 : li의 이동기능막기 불필요!
+                // e.preventDefault();
+
+                // 1. 클릭된 li요소의 순번읽어오기
+                // $(this) -> 클릭된 li요소 자신!
+                let idx = $(this).index();
+                // index() 요소(li)의 순번
+                console.log("클릭된 li순번:", idx);
 
                 // 2. 클릭된 순번을 전역 페이지변수 pno에 넣어 일치시키기
                 pno = idx;
@@ -255,10 +261,15 @@
                 }, dur_sc, easing_sc);
                 // dur_sc 상수에 공통시간설정
 
-                // 4. 클릭시 해당 a요소의 부모li에 클래스 on넣기
-                $(this).parent().addClass("on")
-                    // $(클릭된a요소).부모요소().클래스넣기("on")
-                    .siblings().removeClass("on");
+                // 4. 클릭시 .gnb+.indic 의 li에 클래스 on넣기
+                $(".gnb li").eq(pno).addClass("on")
+                // $(gnb전체li).eq(해당순번).클래스넣기("on")
+                .siblings().removeClass("on");
+                // .다른형제들().클래스제거("on")
+
+                $(".indic li").eq(pno).addClass("on")
+                // $(indic전체li).eq(해당순번).클래스넣기("on")
+                .siblings().removeClass("on");
                 // .다른형제들().클래스제거("on")
 
 
