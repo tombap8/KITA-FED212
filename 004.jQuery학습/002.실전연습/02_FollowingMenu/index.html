@@ -31,7 +31,7 @@
 			height: 220px;
 			transition: .6s ease-out;
 			/* 애니메이션을 위해 트랜지션을 줄때 이징설정이 매우중요함!
-	ease-out으로 주면 시작할때 가속도가 빠르게 되므로 자연스럽다! */
+			ease-out으로 주면 시작할때 가속도가 빠르게 되므로 자연스럽다! */
 		}
 
 		div#home {
@@ -118,14 +118,46 @@
 			let mbx = $("#mbx");
 
 			$("body").mousemove(function(e) {
-				// 마우스 위치값 정보 알아내기
-				let posx = e.pageX;
-				let posy = e.pageY;
+
+				// 1. 마우스 위치값 정보 알아내기
+				let posx = e.pageX - 110;
+				let posy = e.pageY - 110;
+
 				// pageX는 현재 마우스포인터 x좌표값
 				// pageY는 현재 마우스포인터 y좌표값
 				// -> 좌표값은 단위없는 px값
-				console.log("x:",posx,"\ny:",posy);
+				// -> 좌표값 - 110은 
+				// 변경대상 박스크기의 절반을뺌
+				// (마우스포인터가 대상의 중앙에 옴!)
+
+				// console.log("x:",posx,"\ny:",posy);
+
+				// 2. 변경대상이 마우스 포인터 위치로 이동하기
+				mbx.css({
+					top: posy+"px", 
+					left: posx+"px"
+				}); //////// css ///////
+
 			}); ////////// mousemove ///////////////
+
+			// #mbx 클릭시 메뉴 보이기 ///////
+			// 변경대상: #menu
+			let menu = $("#menu");
+			// 변경값
+			let mw = 660; // 처음값
+
+			mbx.click(function(){
+				// 메뉴 펼치기/숨기기
+				menu.animate({
+					width: mw + "px"
+				}, 400, "easeOutExpo");
+
+				// 토글 구현 : 한번은 660, 한번은 0 전환
+				mw === 660 ? mw = 0 : mw = 660;
+				
+			}); ////////// click ////////////
+
+
 
 
 		}); //////////////////////////// jQB /////////////////////
