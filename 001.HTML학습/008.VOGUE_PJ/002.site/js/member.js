@@ -209,6 +209,23 @@ $(()=>{ /////////// jQB //////////////////////
             let cv = $(this).val();
             console.log("입력값:",cv);
 
+            // 3. 이메일 뒷주소 셋팅하기
+            let backeml = 
+                cid === "email1" ? seleml.val() : eml2.val();
+                // 변수 = 조건연산자
+                // 변수 = 조건식?값1:값2
+                // -> 조건연산자에서 결정된 값이 변수에 할당됨!
+
+            // 4. 선택박스의 선택값이 "free"(직접입력)이면 이메일 뒷주소변경
+            if(seleml.val()==="free") backeml = eml2.val();
+
+            // 5. 이메일 전체주소 조합하기!
+            let comp = eml1.val() + "@" + backeml;
+            console.log("이멜주소:",comp);
+            
+            // 6. 이메일 검사결과함수 호출!
+            resEml(comp);
+
         }); ////////////// keyup //////////////////
 
 
