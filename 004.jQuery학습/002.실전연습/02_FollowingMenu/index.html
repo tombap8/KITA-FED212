@@ -117,6 +117,16 @@
 			***********************************************/
 			let mbx = $("#mbx");
 
+			$("body").mousemove(function(e) {
+				// 마우스 위치값 정보 알아내기
+				let posx = e.pageX;
+				let posy = e.pageY;
+				// pageX는 현재 마우스포인터 x좌표값
+				// pageY는 현재 마우스포인터 y좌표값
+				// -> 좌표값은 단위없는 px값
+				console.log("x:",posx,"\ny:",posy);
+			}); ////////// mousemove ///////////////
+
 
 		}); //////////////////////////// jQB /////////////////////
 	</script>
