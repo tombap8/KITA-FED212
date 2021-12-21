@@ -30,10 +30,16 @@ $(()=>{ /////////// jQB //////////////////////
         // attr(속성명) -> 해당속성값을 읽어옴!
 
         // 블러발생 요소의 값은?
-        let cv = $(this).val().trim();
+        let cv = $(this).val();
         // cv는 current value 즉, 현재값
         // val() -> 선택요소에 입력값을 읽어옴!
         // trim() -> 문자열 앞뒤공백 제거
+
+        // '이름'일 경우 앞뒤공백만 제거
+        if(cid==="mnm") cv = cv.trim();
+        // 기타 모든 경우는 모든공백 제거
+        else cv = groSpace(cv);
+        // groSpace함수를 호출하여 모든공백제거함!
 
         console.log("블러발생~!!!!",cid,"\n값:",cv);
 
