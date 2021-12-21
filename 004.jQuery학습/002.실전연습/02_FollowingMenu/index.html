@@ -100,10 +100,10 @@
 	<!-- 미리보기: 
 		https://tombap8.github.io/FED211/004.jQuery학습/jQuery-02.실전연습/02.jQuery_naviation/02_FollowingMenu/ready.html 
 	-->
-    <script src="jquery-3.6.0.min.js"></script>
-    <script src="jquery-ui.min.js"></script>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
 	<script>
-		$(()=> { /////////////////////// jQB /////////////////////
+		$(() => { /////////////////////// jQB /////////////////////
 
 			/*********************************************** 
 				마우스 무브 이벤트로 마우스 포인터 따라다니기
@@ -117,7 +117,14 @@
 			***********************************************/
 			let mbx = $("#mbx");
 
-			$("body").mousemove(function(e) {
+			$("body").mousemove(function (e) {
+
+				// 메뉴를 클릭해서 열었을경우
+				// 아래 코드 실행못하게 하기
+				// 조건: mw===0 일때 메뉴가 열린것임!
+				// 왜? 660으로 설정된 후 바로 0으로 바꾸기 때문!
+				if (mw === 0) return;
+				// return 키워드를 만나는 순간 함수를 나감!
 
 				// 1. 마우스 위치값 정보 알아내기
 				let posx = e.pageX - 110;
@@ -134,8 +141,8 @@
 
 				// 2. 변경대상이 마우스 포인터 위치로 이동하기
 				mbx.css({
-					top: posy+"px", 
-					left: posx+"px"
+					top: posy + "px",
+					left: posx + "px"
 				}); //////// css ///////
 
 			}); ////////// mousemove ///////////////
@@ -146,16 +153,33 @@
 			// 변경값
 			let mw = 660; // 처음값
 
-			mbx.click(function(){
+			mbx.click(function () {
 				// 메뉴 펼치기/숨기기
-				menu.animate({
+				menu.stop().animate({
 					width: mw + "px"
 				}, 400, "easeOutExpo");
+				// stop()은 애니가 쌓이는 것을 지움!
 
 				// 토글 구현 : 한번은 660, 한번은 0 전환
 				mw === 660 ? mw = 0 : mw = 660;
-				
+
 			}); ////////// click ////////////
+
+			// 메뉴 li에 마우스 오버시 opacity:1 로 만들기
+			// hover() 메서드 사용!
+			// hover(함수1,함수2) -> 오버시 함수1,아웃시 함수2 실행
+			// 이벤트 대상: #menu li
+			// 사용 메서드: fadeTo(시간,오파,이징,함수)
+			// 시간-1/1000초, 오파-opacity값, 이징-easing, 함수-콜백함수
+			$("#menu li").hover(
+				function () { // over
+					// 자기자신(li)의 opacity를 1로 애니
+					$(this).stop().fadeTo(200, 1);
+				},
+				function () { // out
+					// 자기자신(li)의 opacity를 0.7로 애니
+					$(this).stop().fadeTo(200, .7);
+				}); ///////////// hover //////////
 
 
 
