@@ -5,9 +5,6 @@
 	<meta charset="utf-8">
 
 	<title>어디서나 펼쳐지는 내비게이션</title>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-	
 	<style>
 		* {
 			margin: 0;
@@ -100,8 +97,17 @@
 			display: none;
 		}
 	</style>
-<!-- 미리보기: 
-	https://tombap8.github.io/FED211/004.jQuery학습/jQuery-02.실전연습/02.jQuery_naviation/02_FollowingMenu/ready.html -->
+	<!-- 미리보기: 
+		https://tombap8.github.io/FED211/004.jQuery학습/jQuery-02.실전연습/02.jQuery_naviation/02_FollowingMenu/ready.html 
+	-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+	<script>
+		$(()=> { ///////// jQB ///////////////
+			
+
+		}); ////////////// jQB ///////////////
+	</script>
 </head>
 
 <body>
@@ -112,9 +118,18 @@
 		<div id="home">눌러봐!</div>
 
 		<ul id="menu">
-			<li><img src="th_bg1.jpg" /><span>Google</span></li>
-			<li><img src="th_bg2.jpg" /><span>Naver</span></li>
-			<li><img src="th_bg3.jpg" /><span>Daum</span></li>
+			<li>
+				<img src="th_bg1.jpg" alt="메뉴배경">
+				<span>Google</span>
+			</li>
+			<li>
+				<img src="th_bg2.jpg" alt="메뉴배경">
+				<span>Naver</span>
+			</li>
+			<li>
+				<img src="th_bg3.jpg" alt="메뉴배경">
+				<span>Daum</span>
+			</li>
 		</ul>
 	</div>
 
