@@ -17,7 +17,7 @@
 <body>
 
     <!-- 1. 상단영역 -->
-    
+    <?php include "inc/top.inc" ?>
     <!-- 2. 메인영역 -->
     <div id="cont" class="bgc">
         <main class="cont ibx">
@@ -107,7 +107,7 @@
         </main>
     </div>
     <!-- 3. 하단영역 -->
-    
+    <?php include "inc/info.inc" ?>
     
 </body>
 </html>
