@@ -15,7 +15,7 @@
     <script src="js/common.js"></script>
 </head>
 <body>
-
+    
     <!-- 1. 상단영역 -->
     <?php include "inc/top.inc" ?>
     <!-- 2. 메인영역 -->
