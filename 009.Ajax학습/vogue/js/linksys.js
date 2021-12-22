@@ -15,9 +15,9 @@ $(()=>{ ////////// jQB ////////////////
         // 2. 글자별로 분기하여 url만들기
         let url;
         switch(txt){
-            case "보그 로그인": url="login.html"; break;
-            case "보그 회원가입": url="member.html"; break;
-            case "보그 갤러리": url="gallery.html"; break;
+            case "보그 로그인": url="login.php"; break;
+            case "보그 회원가입": url="member.php"; break;
+            case "보그 갤러리": url="gallery.php"; break;
         } //////// switch case /////////
 
         // 3. 페이지이동하기
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded",()=>{
 
     // 로고클릭시 첫페이지가기! ////////////////
     document.querySelector(".logo a").onclick =
-    ()=> location.href = "index.html";
+    ()=> location.href = "index.php";
 
     /***************************************** 
         GNB 메뉴 링크 연결하기
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded",()=>{
             // 넘길데이타: 메뉴텍스트(소문자로!)
             // 조건: 값이 "search"가 아닌경우
             if(txt!=="search")
-            location.href = "sub.html?cat="+txt;
+            location.href = "sub.php?cat="+txt;
             // 파라미터 키=값을 넘길때
             // 키이름은 내가 지은 이름이다!
 
