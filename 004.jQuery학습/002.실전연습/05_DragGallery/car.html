@@ -115,7 +115,13 @@
                     if(fnum===-1) fnum = 49;//마지막순번으로!
                 } ///////// else ///////////
 
-                console.log("순번:",fnum);
+                // console.log("순번:",fnum);
+
+                // 이미지 순서대로 보이기
+                cbx.find("img:visible").hide();
+                // 이미지 중 보이는(:visible)이미지는 숨겨라(hide())
+                cbx.find("img").eq(fnum).show();
+                // 이미지 중 해당순서(eq(fnum)) 이미지는 보여라(show())
 
             }; /////////////// rotCar 함수 ////////////////
             ///////////////////////////////////////////////
