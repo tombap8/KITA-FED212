@@ -133,9 +133,14 @@ $(() => { /////////// jQB //////////////////////
                                 // 불통과 상태값 변경!
                                 pass = false;
                             } ////////// else ///////////
-                        },
+                        }, ////// success ////////
                         // 7.실패처리
-                        error: function () {}
+                        // xhr - XMLHttpRequest객체
+                        // statuc - 실패상태코드번호
+                        // error - 에러결과값
+                        error: function (xhr,status,error) {
+                            alert("연결실행실패:"+error);
+                        } /////// error //////
                     }); //////////// ajax 메서드 ///////
 
                 } /////// else ///////
