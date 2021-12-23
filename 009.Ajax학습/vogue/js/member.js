@@ -114,19 +114,20 @@ $(() => { /////////// jQB //////////////////////
                         // 4.전송할데이터타입
                         dataType: "html",
                         // 5.비동기옵션
-                        // (false로 해야 JS파일의 다른 전역변수 사용가능!)
-                        async: false,
+                        // 기본값 treu (이대로사용할것!)
+                        async: true,
                         // 6.성공처리
-                        success: function (res) {
+                        success: res => {
+                            console.log("결과:",res);
                             // res 전달변수(ok-성공,no-실패)
                             if (res === "ok") { // 사용가능
-                                $(this).siblings(".msg")
+                                $("#mid").siblings(".msg")
                                     .text("훌륭한 아이디네요~!")
                                     .addClass("on");
                                 // 글자색 변경 클래스주기!(녹색글자)
                             } /////////// if ////////////
                             else { // 사용불가! 
-                                $(this).siblings(".msg")
+                                $("#mid").siblings(".msg")
                                     .text("사용중인 ID입니다!")
                                     .removeClass("on"); // 글자색복원
 
@@ -142,6 +143,8 @@ $(() => { /////////// jQB //////////////////////
                             alert("연결실행실패:"+error);
                         } /////// error //////
                     }); //////////// ajax 메서드 ///////
+
+                    console.log("ajax후 pass:",pass);
 
                 } //////////////// else ///////////////////
 
