@@ -115,7 +115,7 @@ $(() => { /////////// jQB //////////////////////
                         dataType: "html",
                         // 5.비동기옵션
                         // (false로 해야 JS파일의 다른 전역변수 사용가능!)
-                        async: true,
+                        async: false,
                         // 6.성공처리
                         success: function (res) {
                             // res 전달변수(ok-성공,no-실패)
