@@ -44,17 +44,33 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script src="jquery-ui.min.js"></script>
     <script>
+        let temp="red";
         $(() => { /////////// jQB ////////////////////////
+
+            $().click(function(){
+                let txt = $(this).text();
+                switch(txt){
+                    case "red": temp="red"; break;
+                    case "black": temp="black"; break;
+                    case "blue": temp="blue"; break;
+                }
+                mkImg();
+            })
 
             // 대상: .cbx
             let cbx = $(".cbx");
 
+            const mkImg = () => {
+                cbx.html("");// 초기화
                 // 이미지 셋업
                 for (let i = 1; i <= 50; i++) {
                     cbx.append(
-                        `<img src="360view/country${i}.jpg" alt="car">`);
+                        `<img src="360view/${temp}/country${i}.jpg" alt="car">`);
                 } ///////////// for ////////////
 
+            };
+
+            mkImg();
 
             // 이미지 모두 숨기고 첫번째 이미지만 보이게하기
             cbx.find("img").hide().first().show();
