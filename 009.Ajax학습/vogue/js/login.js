@@ -33,17 +33,17 @@ $(()=>{ // jQB ////////////////////////////////
             // Ajax의 post방식으로 로그인페이지 호출
             // $.post(URL,data,callback);
             $.post(
-                // 1.URL
-                "process/login.php",
-                // 2.data
+                // 1.전송할 페이지
+                "process/loginSet.php",
+                // 2.보낼 데이타
                 {
                     "mid": mid.val(), //아이디
                     "mpw": mpw.val() //비번
                 },
-                // 3.callback
+                // 3.처리후 함수
                     function(res){ // res 전달변수
                         console.log("결과값:",res);
-                        
+
                         // 3-1. 로그인성공시 //////
                         if(res==="ok"){
                             alert("로그인에 성공하였습니다~!");
