@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>360 Drag view</title>
     <style>
+        /* 자동차박스 */
         .cbx {
+            position: relative;
+            /* 가상요소의 부모자격 */
             width: 1200px;
             height: 720px;
             margin: 0 auto;
             border: 2px solid #ccc;
         }
+        /* 이미지와 분리커버 가상요소로 만들기! */
+        .cbx::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
 
         .cbx img {
             position: absolute;
             /* 앱솔은 모두 block으로 변환됨! */
-            user-select: none;
+            /* user-select: none; */
             /* 선택안되게함 */
-            -webkit-user-drag: none;
+            /* -webkit-user-drag: none; */
             /* 드래그안되게함 */
         }
     </style>
