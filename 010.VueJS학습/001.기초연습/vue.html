@@ -39,6 +39,12 @@
                     myClick: function(e){
                         // e.target 은 호출한 요소 자신!
                         e.target.innerText = "놀랐지?";
+                        e.target.style.fontSize = "60px";
+                        e.target.style.transition = "2s";
+                        // 2초후에 새로운 요소 추가하기!
+                        setTimeout(
+                            ()=>this.$el.innerHTML += '<div id="my">하하하</div>',
+                            2000);
                     }, ///// myClick함수 ////
                     myOver: function(){
                         // 함수 전달변수 e를 쓰지 않아도
