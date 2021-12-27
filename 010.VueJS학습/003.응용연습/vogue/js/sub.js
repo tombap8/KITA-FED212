@@ -12,11 +12,8 @@ if(pm.indexOf("?")===-1){
 
 // 3. 물음표(?)와 이퀄(=)로 각각 자른후 뒤의 배열값 읽기
 pm = pm.split("?")[1].split("=")[1];
-// console.log("파라미터:",pm);
+console.log("파라미터:",pm);
 
-// 4. 해당 카테고리 객체값 설정하기
-let cinfo = sinfo[pm];
-// console.log("카테고리값:",cinfo);
 
 ////// 로딩구역 //////////////////////////////////
 window.addEventListener('DOMContentLoaded', ()=>{
