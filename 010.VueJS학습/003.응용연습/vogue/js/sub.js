@@ -25,7 +25,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
         el: "#cont", // 바인딩할 대상(변경요소 포함 부모요소)
         data: {
             vals: {}, // json 데이터 종류(빈객체형 셋팅)
-            catName: pm // 파라미터로 넘어온 값을 Vue 데이터 변수에 넣기
+            catName: pm 
+            // 파라미터로 넘어온 값을 Vue 데이터 변수에 넣기
         },
         // Vue 인스턴스가 마운트 되면 실행함수 구역
         mounted: function(){

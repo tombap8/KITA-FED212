@@ -229,13 +229,30 @@
     </div>
     <!-- 2. 메인영역 -->
     <div id="cont" class="bgc">
-        <main class="cont ibx" v-for="(v,i) in vals.data" v-if="v.경로==='beauty'">
+        <main class="cont ibx" v-for="(v,i) in vals.data" v-if="v.경로===catName" v-bind:class="catName">
+            <!-- 
+                v-bind:class="클래스명"
+                데이터 바인드 할때 클래스명을 지정함!
+                catName은 Vue 데이타 변수임! 여기에 pm값이 들어감!
+                
+                주의)
+                내부에 홑따옴표를 해야 문자값이 된다!
+                쌍따옴표안에 그냥 문자를 쓰면 변수다!!!!
+             -->
             <!-- 1. 서브페이지 탑영역 -->
              <header class="subtop">
                 <!-- 1-1. 서브타이틀 -->
                 <h2 class="stit">{{v.제목}}</h2>
                 <!-- 1-2. 서브메뉴(LNB-Local Navigation Bar) -->
-                <nav class="lnb"></nav>
+                <nav class="lnb" v-if="v.메뉴!=='없음'">
+                    <ul>
+                        <li v-for="(m,i) in v.메뉴">
+                            <a href="#">
+                                {{m}}
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
              </header>      
 
             <!-- 2. 서브컨텐츠박스 -->
@@ -243,13 +260,21 @@
             <section class="pt2 rbx">
                 <div class="rbxIn fbx">
                     <div class="cbx bgi bg1-1">
-                        <h2></h2>
+                        <h2 v-html="v.타이틀[0]"></h2>
+                        <!-- <h2>{{v.타이틀[0]}}</h2> -->
+                        <!-- 
+                            콧수염 표시자로 넣으면
+                            html 특수문자,태그가 처리안되고
+                            그대로 보인다! 따라서 html 넣기를 하려면
+                            v-html 디렉티브를 사용해야함!
+                            v-html="값"
+                         -->
                     </div>
                     <div class="cbx bgi bg1-2">
-                        <h2></h2>
+                        <h2 v-html="v.타이틀[1]"></h2>
                     </div>
                     <div class="cbx bgi bg1-3">
-                        <h2></h2>
+                        <h2 v-html="v.타이틀[2]"></h2>
                     </div>
                 </div>
             </section>            
@@ -257,13 +282,13 @@
             <section class="pt2 rbx">
                 <div class="rbxIn fbx">
                     <div class="cbx bgi bg2-1">
-                        <h2></h2>
+                        <h2 v-html="v.타이틀[3]"></h2>
                     </div>
                     <div class="cbx bgi bg2-2">
-                        <h2></h2>
+                        <h2 v-html="v.타이틀[4]"></h2>
                     </div>
                     <div class="cbx bgi bg2-3">
-                        <h2></h2>
+                        <h2 v-html="v.타이틀[5]"></h2>
                     </div>
                 </div>
                 <h2></h2>
