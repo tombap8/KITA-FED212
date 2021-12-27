@@ -20,6 +20,20 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
     console.log("서브로딩완료!");
 
+    //// Vue JS 데이터 바인딩 코드 /////
+    new Vue({
+        el: "#cont", // 바인딩할 대상(변경요소 포함 부모요소)
+        data: {
+            vals: {} // json 데이터 종류(빈객체형 셋팅)
+        },
+        // Vue 인스턴스가 마운트 되면 실행함수 구역
+        mounted: function(){
+            // 제이슨 데이터 읽어오고 할당하기
+            axion.get("js/data.json") // 읽기
+            .then(x=>this.vals=x); // 할당 (x변수로 전달!)
+        }
+    }); //////////// Vue ////////////////
+
 
 
 }); ////////////// 로딩구역 //////////////////
