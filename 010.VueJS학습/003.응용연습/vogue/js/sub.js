@@ -33,6 +33,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
             // 제이슨 데이터 읽어오고 할당하기
             axios.get("js/data.json") // 읽기
             .then(x=>this.vals=x); // 할당 (x변수로 전달!)
+        },
+        methods: {
+            // 탭 타이틀 변경 메서드!
+            chgTit: function(tit){ // tit 제목이 전달됨
+                document.querySelector("title").innerText =
+                tit + " | 보그 코리아 (Vogue Korea)";
+            }
         }
     }); //////////// Vue ////////////////
 
