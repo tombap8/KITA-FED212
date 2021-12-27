@@ -45,6 +45,13 @@
                         setTimeout(
                             ()=>this.$el.innerHTML += '<div id="my">하하하</div>',
                             4000);
+                        /* 
+                            Vue JS의 methods 속성 내부의 함수에서 this는?
+                            this는 Vue 생성된 인스턴스 자신을 말한다!
+                            하위 속성 선택요소인 element를 선택하려면
+                            $el 이라고 표현해야함! -> 여기서는 선택된 부모요소 #app3
+
+                        */
                     }, ///// myClick함수 ////
                     myOver: function(){
                         // 함수 전달변수 e를 쓰지 않아도
