@@ -38,19 +38,19 @@ window.addEventListener("DOMContentLoaded", () => {
         // 2. 대상선정: .gbx -> gbx변수에 할당!
 
         // 대상 하위 img요소
-        let gimg = gbx.querySelectorAll("img");
+        let gibx = gbx.querySelectorAll("div");
 
         // 3. 변경내용
 
         // 3-1. 오른쪽버튼일 경우 : 맨앞 이미지 맨뒤로!
-        if (dir) gbx.appendChild(gimg[0]);
+        if (dir) gbx.appendChild(gibx[0]);
         // appendChild(처음요소) -> 처음요소 맨뒤로 이동
 
         // 3-2. 왼쪽버튼일 경우 : 맨뒤 이미지 맨앞으로!
-        else gbx.insertBefore(gimg[gimg.length - 1], gimg[0]);
+        else gbx.insertBefore(gibx[gibx.length - 1], gibx[0]);
         // insertBefore(끝요소,처음요소) 
         // -> 끝요소를 처음요소 앞으로 이동
-        // gimg[개수-1] -> 끝요소번호
+        // gibx[개수-1] -> 끝요소번호
 
 
     }; //////////// goSlide 함수 //////////////
