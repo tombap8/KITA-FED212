@@ -7,7 +7,7 @@ html,body,h1{
 
 body{
     overflow: hidden;
-    background: url(../images/bg-main.jpg) no-repeat fixed top/cover;
+    background: url(../images/bg-main.jpg) no-repeat fixed center/cover;
 }
 
  /* IR 클래스 */
@@ -27,7 +27,7 @@ body{
     margin-top: 2%;   
     box-shadow: -15px 0 30px #000 inset;
     border-radius: 50%;
-    background: url(../images/img-pd.jpg) no-repeat center/cover;
+    background: url(../images/logo.png) no-repeat center/cover;
 }
 /* 비율유지박스 */
 .mtit::before {
@@ -84,7 +84,7 @@ body{
     top: -20%;
     left: -110%;
     transform: scale(.9);
-    filter: grayscale(50%) blur(1px);
+    filter: grayscale(50%);
 }
 /* 
     css 필터 속성: 이미지에 변형효과를 준다
@@ -103,7 +103,7 @@ body{
     top: -20%;
     left: 110%;
     transform: scale(.9);
-    filter: grayscale(50%) blur(1px);
+    filter: grayscale(50%);
 }
 /* 오른쪽 끝 */
 .gbx img:nth-child(5){
