@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid - Layout</title>
+    <style>
+        .wrap{
+            display: grid;
+            grid-template-columns: 100px 600px 300px;
+            grid-template-rows: 300px 500px 250px;
+            grid-gap: 30px 20px;
+            border: 1px solid red;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .wrap>div{
+            text-align: center;
+        }
+        .logo{
+            background-color: red;
+        }
+        .gnb{
+            background-color: green;
+        }
+        .tside{
+            background-color: blue;
+        }
+        .ban{
+            background-color: lightcoral;
+        }
+        .bside{
+            background-color: blueviolet;
+        }
+        .fleft{
+            background-color: burlywood;
+        }
+        .fcenter{
+            background-color: hotpink;
+        }
+        .fright{
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="logo">logo</div>
+        <div class="gnb">gnb</div>
+        <div class="tside">tside</div>
+        <div class="ban">ban</div>
+        <div class="bside">bside</div>
+        <div class="fleft">fleft</div>
+        <div class="fcenter">fcenter</div>
+        <div class="fright">fright</div>
+    </div>
+    
+</body>
+</html>
