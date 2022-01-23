@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid1 - Gallery</title>
+    <style>
+        .grid{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(5,1fr);
+            grid-row-gap: 2.5vw;
+            grid-column-gap: 2vw;
+
+
+            max-width: 1000px;
+            margin: 0 auto;
+
+        }
+        .grid>div>img{
+            width: 100%;
+        }
+
+        @media screen and (max-width:1000px) {
+            .grid{
+                grid-template-columns: repeat(4,1fr);
+            }
+        }
+        @media screen and (max-width:800px) {
+            .grid{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Grid1 - Gallery</h1>
+    ggggg
+    <div class="grid">
+        <div><img src="img_gallery/1.jpg" alt="dress"></div>
+        <div><img src="img_gallery/2.jpg" alt="dress"></div>
+        <div><img src="img_gallery/3.jpg" alt="dress"></div>
+        <div><img src="img_gallery/4.jpg" alt="dress"></div>
+        <div><img src="img_gallery/5.jpg" alt="dress"></div>
+        <div><img src="img_gallery/6.jpg" alt="dress"></div>
+        <div><img src="img_gallery/7.jpg" alt="dress"></div>
+        <div><img src="img_gallery/8.jpg" alt="dress"></div>
+        <div><img src="img_gallery/9.jpg" alt="dress"></div>
+        <div><img src="img_gallery/10.jpg" alt="dress"></div>
+        <div><img src="img_gallery/11.jpg" alt="dress"></div>
+        <div><img src="img_gallery/12.jpg" alt="dress"></div>
+        <div><img src="img_gallery/13.jpg" alt="dress"></div>
+        <div><img src="img_gallery/14.jpg" alt="dress"></div>
+        <div><img src="img_gallery/15.jpg" alt="dress"></div>
+        <div><img src="img_gallery/16.jpg" alt="dress"></div>
+        <div><img src="img_gallery/17.jpg" alt="dress"></div>
+        <div><img src="img_gallery/18.jpg" alt="dress"></div>
+        <div><img src="img_gallery/19.jpg" alt="dress"></div>
+        <div><img src="img_gallery/20.jpg" alt="dress"></div>
+        <div><img src="img_gallery/21.jpg" alt="dress"></div>
+        <div><img src="img_gallery/22.jpg" alt="dress"></div>
+        <div><img src="img_gallery/23.jpg" alt="dress"></div>
+        <div><img src="img_gallery/24.jpg" alt="dress"></div>
+        <div><img src="img_gallery/25.jpg" alt="dress"></div>
+        <div><img src="img_gallery/26.jpg" alt="dress"></div>
+        <div><img src="img_gallery/27.jpg" alt="dress"></div>
+        <div><img src="img_gallery/28.jpg" alt="dress"></div>
+        <div><img src="img_gallery/29.jpg" alt="dress"></div>
+        <div><img src="img_gallery/30.jpg" alt="dress"></div>
+        <div><img src="img_gallery/31.jpg" alt="dress"></div>
+        <div><img src="img_gallery/32.jpg" alt="dress"></div>
+        <div><img src="img_gallery/33.jpg" alt="dress"></div>
+        <div><img src="img_gallery/34.jpg" alt="dress"></div>
+        <div><img src="img_gallery/35.jpg" alt="dress"></div>
+        <div><img src="img_gallery/36.jpg" alt="dress"></div>
+        <div><img src="img_gallery/37.jpg" alt="dress"></div>
+        <div><img src="img_gallery/38.jpg" alt="dress"></div>
+        <div><img src="img_gallery/39.jpg" alt="dress"></div>
+        <div><img src="img_gallery/40.jpg" alt="dress"></div>
+        <div><img src="img_gallery/41.jpg" alt="dress"></div>
+        <div><img src="img_gallery/42.jpg" alt="dress"></div>
+        <div><img src="img_gallery/43.jpg" alt="dress"></div>
+        <div><img src="img_gallery/44.jpg" alt="dress"></div>
+        <div><img src="img_gallery/45.jpg" alt="dress"></div>
+        <div><img src="img_gallery/46.jpg" alt="dress"></div>
+        <div><img src="img_gallery/47.jpg" alt="dress"></div>
+        <div><img src="img_gallery/48.jpg" alt="dress"></div>
+        <div><img src="img_gallery/49.jpg" alt="dress"></div>
+        <div><img src="img_gallery/50.jpg" alt="dress"></div>
+    </div>
+</body>
+</html>
