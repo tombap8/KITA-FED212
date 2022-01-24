@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid1 - Gallery</title>
     <style>
+        .tit{
+            text-align: center;
+            font-size: 3vw;
+        }
         .grid{
             display: grid;
             /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
@@ -34,6 +38,25 @@
             object-fit: cover;
         }
 
+        .grid h2{
+            position: absolute;
+            bottom: 2vw;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.582);
+            color: #fff;
+            font-size: min(25px,1.8vw);
+        }
+        .grid h3{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.582);
+            color: #fff;
+            font-size: min(20px,1.5vw);
+        }
+
         @media screen and (max-width:1000px) {
             .grid{
                 grid-template-columns: repeat(4,1fr);
@@ -58,9 +81,13 @@
 </head>
 <body>
 
-    <h1>Grid1 - Gallery</h1>
+    <h1 class="tit">그리드1 - 이미지 갤러리</h1>
     <div class="grid">
-        <div><img src="img_gallery/1.jpg" alt="dress"></div>
+        <div>
+            <img src="img_gallery/1.jpg" alt="dress">
+            <h2>상품명</h2>
+            <h3>상품가격</h3>
+        </div>
         <div><img src="img_gallery/2.jpg" alt="dress"></div>
         <div><img src="img_gallery/3.jpg" alt="dress"></div>
         <div><img src="img_gallery/4.jpg" alt="dress"></div>
