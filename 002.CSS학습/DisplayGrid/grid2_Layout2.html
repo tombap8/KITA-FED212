@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid2 - Layout</title>
+    <style>
+        .tit{
+            text-align: center;
+            font-size: 3vw;
+        }
+        .grid{
+            display: grid;
+            max-width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: repeat(12,1fr);
+            grid-template-rows: 200px 400px 300px 200px;
+            grid-row-gap:10px;
+            grid-column-gap: 5px;
+
+
+            max-width: 1000px;
+            margin: 0 auto;
+
+        }
+        .grid>div{
+            position: relative;
+            border: 2px solid #ccc;
+        }
+
+        .logo{
+            grid-column: 1 / 3;
+        }
+        .gnb{
+            grid-column: 3 / 10;
+        }
+        .side{
+            grid-column: 10 / 13;
+            grid-row: 1 / 3;
+        }
+        .ban{
+            grid-column: 1 / 10;
+            /* grid-row: 2 / 3; */
+        }
+        .bside{
+            grid-column: 4 / 13;
+            /* grid-row: 2 / 3; */
+        }
+        .bleft{
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+        }
+        .binfo{
+            grid-column: 1 / 10;
+        }
+        .bright{
+            grid-column: 10 / 13;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1 class="tit">그리드2 - 사이트 레이아웃</h1>
+    <div class="grid">
+        <div class="logo">Logo</div>
+        <div class="gnb">GNB</div>
+        <div class="side">Side</div>
+        <div class="ban">Banner</div>
+        <div class="bside">Bside</div>
+        <div class="bleft">Bleft</div>
+        <div class="binfo">Binfo</div>
+        <div class="bright">Bright</div>
+
+    </div>
+</body>
+</html>
