@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid2 - Layout</title>
+    <style>
+        .tit{
+            text-align: center;
+            font-size: 3vw;
+        }
+        .grid{
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(5,1fr);
+            grid-row-gap: 2.5vw;
+            grid-column-gap: 2vw;
+
+
+            max-width: 1000px;
+            margin: 0 auto;
+
+        }
+        .grid>div{
+            position: relative;
+            border: 2px solid #ccc;
+        }
+        .grid>div::before{
+            content: '';
+            display: block;
+            padding-top: 150%;
+        }
+        .grid>div>img{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <h1 class="tit">그리드2 - 사이트 레이아웃</h1>
+    <div class="grid">
+        <div class="logo">Logo</div>
+        <div class="gnb">GNB</div>
+        <div class="side">Side</div>
+        <div class="ban">Banner</div>
+        <div class="bside">Bside</div>
+        <div class="bleft">Bleft</div>
+        <div class="binfo">Binfo</div>
+        <div class="bright">Bright</div>
+
+    </div>
+</body>
+</html>
