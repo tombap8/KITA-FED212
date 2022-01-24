@@ -11,10 +11,10 @@
         }
         .grid{
             display: grid;
-            width: 1200px;
+            max-width: 1200px;
             margin: 0 auto;
             grid-template-columns: repeat(12,1fr);
-            grid-template-rows: 200px 400px 150px;
+            grid-template-rows: 200px 400px 300px;
             grid-row-gap:10px;
             grid-column-gap: 5px;
 
@@ -37,6 +37,24 @@
         .side{
             grid-column: 10 / 13;
         }
+        .ban{
+            grid-column: 1 / 11;
+            /* grid-row: 2 / 3; */
+        }
+        .bside{
+            grid-column: 11 / 13;
+            /* grid-row: 2 / 3; */
+        }
+        .bleft{
+            grid-column: 1 / 4;
+        }
+        .binfo{
+            grid-column: 4 / 10;
+        }
+        .bright{
+            grid-column: 10 / 13;
+        }
+
 
 
     </style>
