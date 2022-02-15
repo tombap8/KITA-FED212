@@ -145,25 +145,25 @@ function(){
         position: "absolute",
         top: "0",
         left: "0",
-        width:"50px",
-        height:"50px",
+        width:"80px",
+        height:"80px",
         borderRadius: "50%",
         backgroundColor:"blue",
         // opacity: ".5",
         transition: ".4s ease-out",
-        mixBlendMode: "screen",
-        zIndex: "9999"
+        mixBlendMode: "exclusion",
+        zIndex: "999"
     })
     $(window).mousemove(function(e){
         console.log(e.pageX, e.pageY);
         cs.css({
-            top: (e.pageY-25) + "px",
-            left: (e.pageX-25) + "px"
+            top: (e.pageY-40) + "px",
+            left: (e.pageX-40) + "px"
         })
 
     })
 
-    $("a").hover(
+    $("a").css({position:"relative",zIndex: "9999"}).hover(
         ()=>{cs.css({transform:"scale(2)"})},
         ()=>{cs.css({transform:"scale(1)"})});
 
