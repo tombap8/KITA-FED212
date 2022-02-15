@@ -139,6 +139,34 @@ function(){
     }; /////////// click ////////////////////
     /////////////////////////////////////////
 
+    $("body").append("<div id='cs'></div>")
+    let cs = $("#cs");
+    cs.css({
+        position: "absolute",
+        top: "0",
+        left: "0",
+        width:"50px",
+        height:"50px",
+        borderRadius: "50%",
+        backgroundColor:"blue",
+        // opacity: ".5",
+        transition: ".4s ease-out",
+        mixBlendMode: "screen",
+        zIndex: "9999"
+    })
+    $(window).mousemove(function(e){
+        console.log(e.pageX, e.pageY);
+        cs.css({
+            top: (e.pageY-25) + "px",
+            left: (e.pageX-25) + "px"
+        })
+
+    })
+
+    $("a").hover(
+        ()=>{cs.css({transform:"scale(2)"})},
+        ()=>{cs.css({transform:"scale(1)"})});
+
 
 }); ////////////// 로딩구역 //////////////////
 //////////////////////////////////////////////
