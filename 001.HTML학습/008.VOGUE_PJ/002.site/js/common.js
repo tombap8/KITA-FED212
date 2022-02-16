@@ -148,7 +148,7 @@ function(){
         width:"80px",
         height:"80px",
         borderRadius: "50%",
-        backgroundColor:"blue",
+        backgroundColor:"silver",
         // opacity: ".5",
         transition: ".4s ease-out",
         mixBlendMode: "exclusion",
